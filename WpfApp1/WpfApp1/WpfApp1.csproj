@@ -142,5 +142,56 @@
   <ItemGroup>
     <Resource Include="image__1_-removebg-preview.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image__2_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image__3_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image__4_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image__5_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image__6_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image__7_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image__8_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="salad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="hamburger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bibimbap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="hot-pot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="roasted-chicken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pizza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="salad %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="tteok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="drink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="diet.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

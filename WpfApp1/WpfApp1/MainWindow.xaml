@@ -310,7 +310,7 @@
         </Button>
 
 
-        <RadioButton x:Name="foetel_jelzo" Content="" HorizontalAlignment="Center" Margin="0,172,0,0" VerticalAlignment="Top" Height="14" Width="14" FontSize="6" RenderTransformOrigin="0.5,0.5" Background="White" IsEnabled="False">
+        <RadioButton x:Name="foetel_jelzo" Content="" HorizontalAlignment="Center" Margin="0,172,0,0" VerticalAlignment="Top" Height="14" Width="14" FontSize="6" RenderTransformOrigin="0.5,0.5" Background="White" IsEnabled="False" Visibility="Hidden">
             <RadioButton.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="-1"/>
@@ -320,28 +320,7 @@
                 </TransformGroup>
             </RadioButton.RenderTransform>
         </RadioButton>
-        <RadioButton x:Name="leves_jelzo" HorizontalAlignment="Left" Margin="824,172,0,0" VerticalAlignment="Top" Height="14" Width="14" FontSize="6" RenderTransformOrigin="0.5,0.5" Background="White" IsEnabled="False">
-            <RadioButton.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </RadioButton.RenderTransform>
-            <RadioButton Content="RadioButton"/>
-        </RadioButton>
-        <RadioButton x:Name="desszert_jelzo" Content="" HorizontalAlignment="Left" Margin="862,172,0,0" VerticalAlignment="Top" Height="14" Width="14" FontSize="6" RenderTransformOrigin="0.5,0.5" Background="White" IsEnabled="False">
-            <RadioButton.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </RadioButton.RenderTransform>
-        </RadioButton>
-        <RadioButton x:Name="eloetel_jelzo" HorizontalAlignment="Left" Margin="805,172,0,0" VerticalAlignment="Top" Height="14" Width="14" FontSize="6" RenderTransformOrigin="0.5,0.5" Background="White" IsEnabled="False">
+        <RadioButton x:Name="leves_jelzo" HorizontalAlignment="Left" Margin="824,172,0,0" VerticalAlignment="Top" Height="14" Width="14" FontSize="6" RenderTransformOrigin="0.5,0.5" Background="White" IsEnabled="False" Visibility="Hidden">
             <RadioButton.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="-1"/>
@@ -352,7 +331,28 @@
             </RadioButton.RenderTransform>
             <RadioButton Content="RadioButton"/>
         </RadioButton>
-        <RadioButton x:Name="udito_jelzo" HorizontalAlignment="Left" Margin="881,172,0,0" VerticalAlignment="Top" Height="14" Width="14" FontSize="6" RenderTransformOrigin="0.5,0.5" Background="White" IsEnabled="False">
+        <RadioButton x:Name="desszert_jelzo" Content="" HorizontalAlignment="Left" Margin="862,172,0,0" VerticalAlignment="Top" Height="14" Width="14" FontSize="6" RenderTransformOrigin="0.5,0.5" Background="White" IsEnabled="False" Visibility="Hidden">
+            <RadioButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </RadioButton.RenderTransform>
+        </RadioButton>
+        <RadioButton x:Name="eloetel_jelzo" HorizontalAlignment="Left" Margin="805,172,0,0" VerticalAlignment="Top" Height="14" Width="14" FontSize="6" RenderTransformOrigin="0.5,0.5" Background="White" IsEnabled="False" Visibility="Hidden">
+            <RadioButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </RadioButton.RenderTransform>
+            <RadioButton Content="RadioButton"/>
+        </RadioButton>
+        <RadioButton x:Name="udito_jelzo" HorizontalAlignment="Left" Margin="881,172,0,0" VerticalAlignment="Top" Height="14" Width="14" FontSize="6" RenderTransformOrigin="0.5,0.5" Background="White" IsEnabled="False" Visibility="Hidden">
             <RadioButton.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="-1"/>
@@ -376,7 +376,7 @@
             </Button.Background>
         </Button>
 
-        <Grid Name="eloetelek" Margin="84,-5,-84,5">
+        <Grid Name="eloetelek" Margin="84,-5,-84,5" Visibility="Hidden">
             <Rectangle x:Name="etel3_hatter" HorizontalAlignment="Left" Height="351" Margin="1106,214,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
             <Rectangle x:Name="etel2_hatter" HorizontalAlignment="Left" Height="350" Margin="574,214,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
             <Rectangle x:Name="etel1_hatter" HorizontalAlignment="Left" Height="351" Margin="46,214,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
@@ -415,11 +415,76 @@
             <Label x:Name="etel6_ar" Content="Ár: 10000Ft" HorizontalAlignment="Left" Margin="1246,877,0,0" VerticalAlignment="Top" Height="44" Width="134" FontSize="24" FontStyle="Italic"/>
             <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel6" Content="10%" HorizontalAlignment="Left" Margin="1388,883,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
         </Grid>
-        <Grid>
-            
+        <Grid Name="levesek" Margin="89,-5,-89,5" Visibility="Hidden">
+            <Rectangle x:Name="etel7_hatter" HorizontalAlignment="Left" Height="351" Margin="1106,214,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
+            <Rectangle x:Name="etel8_hatter" HorizontalAlignment="Left" Height="350" Margin="574,214,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
+            <Rectangle x:Name="etel9_hatter" HorizontalAlignment="Left" Height="351" Margin="46,214,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
+            <Rectangle x:Name="etel10_hatter" HorizontalAlignment="Left" Height="351" Margin="1106,570,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
+            <Rectangle x:Name="etel11_hatter" HorizontalAlignment="Left" Height="351" Margin="574,570,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
+            <Rectangle x:Name="etel12_hatter" HorizontalAlignment="Left" Height="351" Margin="46,570,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
+
+
+            <Image Margin="68,186,1284,484" Source="/image__2_-removebg-preview.png" Stretch="Fill"/>
+            <Label x:Name="etel7_nev" Content="Paradicsom leves" HorizontalAlignment="Left" Margin="146,214,0,0" VerticalAlignment="Top" Height="42" Width="192" FontSize="24"/>
+            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel7_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="156,0,0,0" VerticalAlignment="Center" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Label x:Name="etel7_ar" Content="Ár: 4500Ft" HorizontalAlignment="Left" Margin="181,524,0,0" VerticalAlignment="Top" Height="44" Width="122" FontSize="24" FontStyle="Italic"/>
+            <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel7" Content="10%" HorizontalAlignment="Left" Margin="328,527,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
+            <Image x:Name="etel8_kep" Margin="598,223,758,445" Source="/image__3_-removebg-preview.png" Stretch="Fill"/>
+            <Label x:Name="etel8_nev" Content="Sajtleves" HorizontalAlignment="Left" Margin="717,214,0,0" VerticalAlignment="Top" Height="42" Width="106" FontSize="24"/>
+            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel8_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="684,473,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Label x:Name="etel8_ar" Content="Ár: 4500Ft" HorizontalAlignment="Left" Margin="709,527,0,0" VerticalAlignment="Top" Height="44" Width="122" FontSize="24" FontStyle="Italic"/>
+            <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel8" Content="10%" HorizontalAlignment="Left" Margin="856,526,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
+            <Image x:Name="etel9_kep" Margin="1160,235,256,468" Source="/image__4_-removebg-preview.png" Stretch="Fill"/>
+            <Label x:Name="etel9_nev" Content="Bableves" HorizontalAlignment="Left" Margin="1249,214,0,0" VerticalAlignment="Top" Height="42" Width="106" FontSize="24"/>
+            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel9_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="1216,478,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Label x:Name="etel9_ar" Content="Ár: 4500Ft" HorizontalAlignment="Left" Margin="1241,527,0,0" VerticalAlignment="Top" Height="44" Width="122" FontSize="24" FontStyle="Italic"/>
+            <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel9" Content="10%" HorizontalAlignment="Left" Margin="1388,527,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
+            <Image x:Name="etel10_kep" Margin="86,573,1302,107" Source="/image__5_-removebg-preview.png" Stretch="Fill"/>
+            <Label x:Name="etel10_nev" Content="Fokhagymaleves" HorizontalAlignment="Left" Margin="146,573,0,0" VerticalAlignment="Top" Height="42" Width="192" FontSize="24"/>
+            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel10_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="156,829,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Label x:Name="etel10_ar" Content="Ár: 4500Ft" HorizontalAlignment="Left" Margin="181,877,0,0" VerticalAlignment="Top" Height="44" Width="122" FontSize="24" FontStyle="Italic"/>
+            <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel10" Content="10%" HorizontalAlignment="Left" Margin="328,883,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
+            <Image x:Name="etel11_kep" Margin="619,586,779,112" Source="/image__7_-removebg-preview.png" Stretch="Fill"/>
+            <Label x:Name="etel11_nev" Content="Halászlé" HorizontalAlignment="Left" Margin="722,573,0,0" VerticalAlignment="Top" Height="42" Width="96" FontSize="24"/>
+            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel11_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="684,823,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Label x:Name="etel11_ar" Content="Ár: 4500Ft" HorizontalAlignment="Left" Margin="709,877,0,0" VerticalAlignment="Top" Height="44" Width="122" FontSize="24" FontStyle="Italic"/>
+            <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel11" Content="10%" HorizontalAlignment="Left" Margin="856,883,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
+            <Image Margin="1146,573,242,107" Source="/image__8_-removebg-preview.png" Stretch="Fill" Width="312" Height="320"/>
+            <Label x:Name="etel12_nev" Content="Ramen" HorizontalAlignment="Left" Margin="1260,570,0,0" VerticalAlignment="Top" Height="42" Width="84" FontSize="24"/>
+            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel12_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="1216,829,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Label x:Name="etel12_ar" Content="Ár: 4500Ft" HorizontalAlignment="Left" Margin="1241,881,0,0" VerticalAlignment="Top" Height="44" Width="122" FontSize="24" FontStyle="Italic"/>
+            <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel12" Content="10%" HorizontalAlignment="Left" Margin="1388,883,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
         </Grid>
-        <Button x:Name="tovabb" Style="{DynamicResource ButtonStyle3}" Content="&gt;" HorizontalAlignment="Left" Margin="1579,459,0,0" VerticalAlignment="Top" Height="179" Width="121" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="tovabb_Click"/>
-        <Button x:Name="vissza" Style="{DynamicResource ButtonStyle3}" Content=" &lt;" HorizontalAlignment="Left" Margin="-38,459,0,0" VerticalAlignment="Top" Height="179" Width="122" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="vissza_Click"/>
+        <Grid Name="foetelek">
+
+        </Grid>
+        <Grid Name="regisztralas">
+            <Rectangle x:Name="registralas_hatter" HorizontalAlignment="Center" Height="769" Margin="0,160,0,0" VerticalAlignment="Top" Width="1161" Fill="White" Opacity="0.65"/>
+            <Label Content="Felhasználónév:" HorizontalAlignment="Left" Margin="671,244,0,0" VerticalAlignment="Top" Height="40" Width="182" FontSize="24"/>
+            <TextBox x:Name="felhasznalonev_input" HorizontalAlignment="Left" Margin="762,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="257"/>
+            <Label Content="Életkor:" HorizontalAlignment="Left" Margin="671,312,0,0" VerticalAlignment="Top" Height="40" Width="182" FontSize="24"/>
+            <TextBox x:Name="eletkor_input" HorizontalAlignment="Left" Margin="762,357,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="257"/>
+            <Label Content="Email cím:" HorizontalAlignment="Left" Margin="671,380,0,0" VerticalAlignment="Top" Height="40" Width="182" FontSize="24"/>
+            <TextBox x:Name="email_input" HorizontalAlignment="Left" Margin="762,425,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="257"/>
+            <PasswordBox x:Name="jelszo1_input" HorizontalAlignment="Left" Margin="762,0,0,0" VerticalAlignment="Center" Width="257" Height="18"/>
+            <Label Content="Jelszó:" HorizontalAlignment="Left" Margin="671,448,0,0" VerticalAlignment="Top" Height="40" Width="182" FontSize="24"/>
+            <Label Content="Jelszó mégegyszer:" HorizontalAlignment="Left" Margin="671,516,0,0" VerticalAlignment="Top" Height="46" Width="214" FontSize="24"/>
+            <PasswordBox x:Name="jelszo2_input" HorizontalAlignment="Left" Margin="762,567,0,0" VerticalAlignment="Top" Width="257" Height="18"/>
+            <Button x:Name="regisztralas_gomb" Content="Regisztálás" HorizontalAlignment="Center" Margin="0,720,0,0" VerticalAlignment="Top" Height="86" Width="576" BorderBrush="{x:Null}" Background="White" FontSize="36" Click="regisztralas_gomb_Click"/>
+            <Image x:Name="regisztralas_kep_fo" Margin="10,10,1540,864" Source="/eatopia-high-resolution-logo-black-on-transparent-background.png" Stretch="Fill" Width="150" Height="126" Visibility="Hidden"/>
+            <Image Margin="285,298,1283,575" Source="/hamburger.png" Stretch="Fill"/>
+            <Image Margin="1210,332,358,541" Source="/bibimbap.png" Stretch="Fill" Width="132" Height="127"/>
+            <Image Margin="455,458,1113,415" Source="/hot-pot.png" Stretch="Fill" Width="132" Height="127"/>
+            <Image Margin="1120,539,448,334" Source="/roasted-chicken.png" Stretch="Fill" Width="132" Height="127"/>
+            <Image Margin="1054,205,514,668" Source="/pizza.png" Stretch="Fill" Width="132" Height="127"/>
+            <Image Margin="1186,734,382,138" Source="/tteok.png" Stretch="Fill" Width="132" Height="127"/>
+            <Image Margin="464,180,1104,693" Source="/drink.png" Stretch="Fill" Width="132" Height="127"/>
+            <Image Margin="337,700,1231,174" Source="/diet.png" Stretch="Fill" Width="132" Height="127"/>
+
+        </Grid>
+        <Button x:Name="tovabb" Style="{DynamicResource ButtonStyle3}" Content="&gt;" HorizontalAlignment="Left" Margin="1579,459,0,0" VerticalAlignment="Top" Height="179" Width="121" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="tovabb_Click" Visibility="Hidden"/>
+        <Button x:Name="vissza" Style="{DynamicResource ButtonStyle3}" Content=" &lt;" HorizontalAlignment="Left" Margin="-38,459,0,0" VerticalAlignment="Top" Height="179" Width="122" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="vissza_Click" Visibility="Hidden"/>
+        <Button Style="{DynamicResource ButtonStyle1}" x:Name="bejelentkezes_gomb" Content="Van már fiókod? Lépj be!" HorizontalAlignment="Center" Margin="0,635,0,0" VerticalAlignment="Top" Height="40" Width="570" BorderBrush="{x:Null}" Click="kosar_button_Click" Background="{x:Null}" FontSize="24"/>
 
     </Grid>
 </Window>

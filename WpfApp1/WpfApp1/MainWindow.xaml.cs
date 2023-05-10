@@ -23,12 +23,28 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
-
-            eloetelek.Visibility = Visibility.Visible;
-            eloetel_jelzo.IsChecked = true;
+            //design főoldal
+            regisztralas.Visibility = Visibility.Visible;
+            eloetelek.Visibility = Visibility.Hidden;
+            levesek.Visibility = Visibility.Hidden;
+            var etelek_jelzok = new[] { eloetel_jelzo, leves_jelzo, foetel_jelzo,
+                                        desszert_jelzo, udito_jelzo};
+            foreach (var item in etelek_jelzok)
+            {
+                item.Visibility = Visibility.Hidden;
+            }
             vissza.Visibility = Visibility.Hidden;
+            tovabb.Visibility = Visibility.Hidden;
+            fo_button.Visibility = Visibility.Hidden;
+            coupon_button.Visibility = Visibility.Hidden;
+            account_gomb.Visibility = Visibility.Hidden;
+            kosar_button.Visibility = Visibility.Hidden;
+            kijelzo.Content = "Regisztrálás";
+            felhasznalonev_input.Focus();
+            regisztralas_kep_fo.Visibility = Visibility.Visible;
+            //design főoldal
         }
-        //design 
+        //design főoldal
         private void kosar_button_Click(object sender, RoutedEventArgs e)
         {
             kosar.Visibility = Visibility.Visible;
@@ -72,24 +88,86 @@ namespace WpfApp1
             if (eloetelek.IsVisible == true)
             {
                 eloetelek.Visibility = Visibility.Hidden;
+                levesek.Visibility = Visibility.Visible;
                 vissza.Visibility = Visibility.Visible;
                 kijelzo.Content = "Levesek";
                 eloetel_jelzo.IsChecked = false;
                 leves_jelzo.IsChecked = true;
+                foetel_jelzo.IsChecked = false;
             }
+            else if(levesek.IsVisible == true)
+            {
+                eloetelek.Visibility = Visibility.Hidden;
+                levesek.Visibility = Visibility.Hidden;
+                vissza.Visibility = Visibility.Visible;
+                kijelzo.Content = "Főétel";
+                eloetel_jelzo.IsChecked = false;
+                leves_jelzo.IsChecked = false;
+                foetel_jelzo.IsChecked = true;
+            }
+            else if(foetelek.IsVisible == true)
+            {
+                eloetelek.Visibility = Visibility.Hidden;
+                levesek.Visibility = Visibility.Hidden;
+                foetelek.Visibility = Visibility.Hidden;
+                vissza.Visibility = Visibility.Visible;
+                kijelzo.Content = "Desszertek";
+                eloetel_jelzo.IsChecked = false;
+                leves_jelzo.IsChecked = false;
+                foetel_jelzo.IsChecked = false;
+                desszert_jelzo.IsChecked = true;
+            }
+            
+
         }
 
         private void vissza_Click(object sender, RoutedEventArgs e)
         {
-            if (eloetelek.IsVisible == false)
+            if (levesek.IsVisible == true)
             {
                 eloetelek.Visibility = Visibility.Visible;
+                levesek.Visibility = Visibility.Hidden;
                 vissza.Visibility = Visibility.Hidden;
                 kijelzo.Content = "Előételek";
                 eloetel_jelzo.IsChecked = true;
                 leves_jelzo.IsChecked = false;
+                foetel_jelzo.IsChecked = false;
             }
+            else if(foetelek.IsVisible == true)
+            {
+                eloetelek.Visibility = Visibility.Hidden;
+                levesek.Visibility = Visibility.Visible;
+                vissza.Visibility = Visibility.Visible;
+                kijelzo.Content = "Levesek";
+                eloetel_jelzo.IsChecked = false;
+                leves_jelzo.IsChecked = true;
+                foetel_jelzo.IsChecked = false;
+            }
+            
         }
-        //design
+
+        private void regisztralas_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            eloetelek.Visibility = Visibility.Visible;
+            kijelzo.Content = "Előételek";
+            eloetel_jelzo.IsChecked = true;
+            eloetel_jelzo.Visibility = Visibility.Visible;
+            leves_jelzo.Visibility = Visibility.Visible;
+            foetel_jelzo.Visibility= Visibility.Visible;
+            desszert_jelzo.Visibility = Visibility.Visible;
+            udito_jelzo.Visibility = Visibility.Visible;
+            tovabb.Visibility = Visibility.Visible;
+            fo_button.Visibility = Visibility.Visible;
+            coupon_button.Visibility = Visibility.Visible;
+            account_gomb.Visibility = Visibility.Visible;
+            kosar_button.Visibility = Visibility.Visible;
+
+            regisztralas_kep_fo.Visibility = Visibility.Hidden;
+            regisztralas.Visibility = Visibility.Hidden;
+            bejelentkezes_gomb.Visibility = Visibility.Hidden;
+
+            //minden féle mentés fájlba meg ellenőrzések
+        }
+        //design főoldal
     }
 }
