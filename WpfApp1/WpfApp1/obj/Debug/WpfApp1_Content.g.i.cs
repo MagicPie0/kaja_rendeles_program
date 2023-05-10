@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("user.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dall%c2%b7e%202023-05-10%2020.09.20%20-%20cartoon%20style%20bruschetta.png")]
 
 

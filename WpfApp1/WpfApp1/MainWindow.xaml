@@ -149,6 +149,147 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="FocusVisual3">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background3" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border3" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background3" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border3" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background3" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border3" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background3" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border3" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground3" Color="#FF838383"/>
+        <Style x:Key="ButtonStyle4" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual3}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background3}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border3}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background3}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border3}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground3}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="FocusVisual4">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background4" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border4" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background4" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border4" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background4" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border4" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background4" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border4" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground4" Color="#FF838383"/>
+        <Style x:Key="ButtonStyle5" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual4}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background4}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border4}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background4}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border4}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground4}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="FocusVisual5">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background5" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border5" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background5" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border5" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background5" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border5" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background5" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border5" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground5" Color="#FF838383"/>
+        <Style x:Key="ButtonStyle6" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual5}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background5}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border5}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background5}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border5}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground5}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Grid x:Name="fooldal" Height="1000" Width="1700">
         <Grid.Background>
@@ -156,8 +297,8 @@
         </Grid.Background>
         <Rectangle HorizontalAlignment="Center" Height="134" VerticalAlignment="Top" Width="1700" Fill="White" Opacity="0.7"/>
         <Label Content="Your one-stop Eatopia for delicious food." HorizontalAlignment="Center" VerticalAlignment="Top" Height="68" Width="660" FontSize="36" Margin="0,10,0,0" FontStyle="Italic"/>
-        <Grid x:Name="kosar" Margin="0,134,0,5" Background="Black" Visibility="Hidden"/>
-        <Button Style="{DynamicResource ButtonStyle1}" x:Name="kosar_button" Content="" HorizontalAlignment="Left" Margin="1534,5,0,0" VerticalAlignment="Top" Height="128" Width="141" BorderBrush="{x:Null}" Click="kosar_button_Click">
+
+        <Button Style="{DynamicResource ButtonStyle1}" x:Name="kosar_button" Content="" HorizontalAlignment="Left" Margin="1534,4,0,0" VerticalAlignment="Top" Height="128" Width="141" BorderBrush="{x:Null}" Click="kosar_button_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/shopping-cart-empty-side-view.png" Stretch="Fill"/>
             </Button.Background>
@@ -167,13 +308,8 @@
                 <ImageBrush ImageSource="/eatopia-high-resolution-logo-black-on-transparent-background.png" Stretch="Fill"/>
             </Button.Background>
         </Button>
-        <Rectangle HorizontalAlignment="Left" Height="351" Margin="1106,214,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
-        <Button x:Name="tovabb" Style="{DynamicResource ButtonStyle3}" Content="&gt;" HorizontalAlignment="Left" Margin="1554,214,0,0" VerticalAlignment="Top" Height="707" Width="121" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}"/>
-        <Rectangle HorizontalAlignment="Left" Height="350" Margin="574,214,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
-        <Rectangle HorizontalAlignment="Left" Height="351" Margin="46,214,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
-        <Rectangle HorizontalAlignment="Left" Height="351" Margin="1106,570,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
-        <Rectangle HorizontalAlignment="Left" Height="351" Margin="574,570,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
-        <Rectangle HorizontalAlignment="Left" Height="351" Margin="46,570,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
+
+
         <RadioButton x:Name="foetel_jelzo" Content="" HorizontalAlignment="Center" Margin="0,172,0,0" VerticalAlignment="Top" Height="14" Width="14" FontSize="6" RenderTransformOrigin="0.5,0.5" Background="White" IsEnabled="False">
             <RadioButton.RenderTransform>
                 <TransformGroup>
@@ -195,7 +331,7 @@
             </RadioButton.RenderTransform>
             <RadioButton Content="RadioButton"/>
         </RadioButton>
-        <RadioButton x:Name="vacsora_jelzo" Content="" HorizontalAlignment="Left" Margin="862,172,0,0" VerticalAlignment="Top" Height="14" Width="14" FontSize="6" RenderTransformOrigin="0.5,0.5" Background="White" IsEnabled="False">
+        <RadioButton x:Name="desszert_jelzo" Content="" HorizontalAlignment="Left" Margin="862,172,0,0" VerticalAlignment="Top" Height="14" Width="14" FontSize="6" RenderTransformOrigin="0.5,0.5" Background="White" IsEnabled="False">
             <RadioButton.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="-1"/>
@@ -227,12 +363,63 @@
             </RadioButton.RenderTransform>
             <RadioButton Content="RadioButton"/>
         </RadioButton>
-        <Label Content="Előétel" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="660" FontSize="36" Margin="0,74,0,0" HorizontalContentAlignment="Center" Foreground="#FF194886"/>
-        <Button Style="{DynamicResource ButtonStyle2}" x:Name="account_gomb" Content="" HorizontalAlignment="Left" Margin="207,5,0,0" VerticalAlignment="Top" Height="127" Width="127" BorderBrush="{x:Null}">
+        <Label x:Name="kijelzo" Content="Előétel" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="660" FontSize="36" Margin="0,74,0,0" HorizontalContentAlignment="Center" Foreground="#FF194886"/>
+        <Button Style="{DynamicResource ButtonStyle2}" x:Name="account_gomb" Content="" HorizontalAlignment="Left" Margin="1291,6,0,0" VerticalAlignment="Top" Height="127" Width="127" BorderBrush="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/user.png" Stretch="Fill"/>
             </Button.Background>
         </Button>
+        <Grid x:Name="kosar" Margin="0,134,0,5" Background="Black" Visibility="Hidden"/>
+        <Button Style="{DynamicResource ButtonStyle2}" x:Name="coupon_button" Content="" HorizontalAlignment="Left" Margin="242,6,0,0" VerticalAlignment="Top" Height="126" Width="137" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/promo-code.png" Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+
+        <Grid Name="eloetelek" Margin="84,-5,-84,5">
+            <Rectangle x:Name="etel3_hatter" HorizontalAlignment="Left" Height="351" Margin="1106,214,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
+            <Rectangle x:Name="etel2_hatter" HorizontalAlignment="Left" Height="350" Margin="574,214,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
+            <Rectangle x:Name="etel1_hatter" HorizontalAlignment="Left" Height="351" Margin="46,214,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
+            <Rectangle x:Name="etel6_hatter" HorizontalAlignment="Left" Height="351" Margin="1106,570,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
+            <Rectangle x:Name="etel5_hatter" HorizontalAlignment="Left" Height="351" Margin="574,570,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
+            <Rectangle x:Name="etel4_hatter" HorizontalAlignment="Left" Height="351" Margin="46,570,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
+
+            <Image x:Name="etel1_kep" Margin="83,214,1299,529" Source="/DALL_E_2023-05-10_20.09.20_-_cartoon_style_BRUSCHETTA-removebg-preview.png" Stretch="UniformToFill"/>
+            <Label x:Name="etel1_nev" Content="Bruschetta" HorizontalAlignment="Left" Margin="178,214,0,0" VerticalAlignment="Top" Height="42" Width="128" FontSize="24"/>
+            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel1_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="156,0,0,0" VerticalAlignment="Center" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Label x:Name="etel1_ar" Content="Ár: 4500Ft" HorizontalAlignment="Left" Margin="181,524,0,0" VerticalAlignment="Top" Height="44" Width="122" FontSize="24" FontStyle="Italic"/>
+            <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel1" Content="10%" HorizontalAlignment="Left" Margin="328,527,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
+            <Image x:Name="etel2_kep" Margin="611,214,771,506" Source="/DALL_E_2023-05-10_20.44.36_-_cartoon_style_cheese_scone-removebg-preview.png" Stretch="UniformToFill" Width="318"/>
+            <Label x:Name="etel2_nev" Content="Pogácsa" HorizontalAlignment="Left" Margin="734,214,0,0" VerticalAlignment="Top" Height="42" Width="97" FontSize="24"/>
+            <Button Style="{DynamicResource ButtonStyle5}" x:Name="etel2_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="696,0,0,0" VerticalAlignment="Center" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Label x:Name="etel2_ar" Content="Ár: 500Ft" HorizontalAlignment="Left" Margin="734,524,0,0" VerticalAlignment="Top" Height="44" Width="109" FontSize="24" FontStyle="Italic"/>
+            <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel2" Content="10%" HorizontalAlignment="Left" Margin="856,526,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
+            <Image x:Name="etel3_kep" Margin="1140,224,236,478" Source="/DALL_E_2023-05-10_20.51.17_-_cartoon_style_sandwitch-removebg-preview.png" Stretch="Fill"/>
+            <Label x:Name="etel3_nev" Content="Szendvics" HorizontalAlignment="Left" Margin="1244,214,0,0" VerticalAlignment="Top" Height="42" Width="116" FontSize="24"/>
+            <Button Style="{DynamicResource ButtonStyle6}" x:Name="etel3_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="1216,478,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Label x:Name="etel3_ar" Content="Ár: 6000Ft" HorizontalAlignment="Left" Margin="1244,525,0,0" VerticalAlignment="Top" Height="44" Width="121" FontSize="24" FontStyle="Italic"/>
+            <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel3" Content="10%" HorizontalAlignment="Left" Margin="1388,526,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
+            <Image x:Name="etel4_kep" Margin="103,573,1319,157" Source="/DALL_E_2023-05-10_21.07.18_-_cartoon_style_Caponata-removebg-preview.png" Stretch="Fill"/>
+            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel4_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="156,821,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Label x:Name="etel4_nev" Content="Caponata" HorizontalAlignment="Left" Margin="194,559,0,0" VerticalAlignment="Top" Height="42" Width="116" FontSize="24"/>
+            <Label x:Name="etel4_ar" Content="Ár: 8000Ft" HorizontalAlignment="Left" Margin="173,877,0,0" VerticalAlignment="Top" Height="44" Width="122" FontSize="24" FontStyle="Italic"/>
+            <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel4" Content="10%" HorizontalAlignment="Left" Margin="328,883,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
+            <Label x:Name="etel5_nev" Content="Chorizos Fritata" HorizontalAlignment="Left" Margin="695,559,0,0" VerticalAlignment="Top" Height="42" Width="187" FontSize="24"/>
+            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel5_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="711,823,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Label x:Name="etel5_ar" Content="Ár: 10000Ft" HorizontalAlignment="Left" Margin="722,881,0,0" VerticalAlignment="Top" Height="44" Width="134" FontSize="24" FontStyle="Italic"/>
+            <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel5" Content="10%" HorizontalAlignment="Left" Margin="856,883,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
+            <Image Margin="642,573,776,145" Source="/image-removebg-preview.png" Stretch="Fill"/>
+            <Image x:Name="etel6_kep" Margin="1183,587,257,157" Source="/image__1_-removebg-preview.png" Stretch="Fill"/>
+            <Label x:Name="etel6_nev" Content="Hidegtál" HorizontalAlignment="Left" Margin="1261,559,0,0" VerticalAlignment="Top" Height="42" Width="104" FontSize="24"/>
+            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel6_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="1227,821,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Label x:Name="etel6_ar" Content="Ár: 10000Ft" HorizontalAlignment="Left" Margin="1246,877,0,0" VerticalAlignment="Top" Height="44" Width="134" FontSize="24" FontStyle="Italic"/>
+            <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel6" Content="10%" HorizontalAlignment="Left" Margin="1388,883,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
+        </Grid>
+        <Grid>
+            
+        </Grid>
+        <Button x:Name="tovabb" Style="{DynamicResource ButtonStyle3}" Content="&gt;" HorizontalAlignment="Left" Margin="1579,459,0,0" VerticalAlignment="Top" Height="179" Width="121" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="tovabb_Click"/>
+        <Button x:Name="vissza" Style="{DynamicResource ButtonStyle3}" Content=" &lt;" HorizontalAlignment="Left" Margin="-38,459,0,0" VerticalAlignment="Top" Height="179" Width="122" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="vissza_Click"/>
 
     </Grid>
 </Window>

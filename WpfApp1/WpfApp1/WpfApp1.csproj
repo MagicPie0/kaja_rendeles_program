@@ -115,5 +115,32 @@
   <ItemGroup>
     <Resource Include="user.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="promo-code.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DALL·E 2023-05-10 20.09.20 - cartoon style BRUSCHETTA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DALL_E_2023-05-10_20.09.20_-_cartoon_style_BRUSCHETTA-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DALL_E_2023-05-10_20.44.36_-_cartoon_style_cheese_scone-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DALL_E_2023-05-10_20.51.17_-_cartoon_style_sandwitch-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DALL_E_2023-05-10_21.07.18_-_cartoon_style_Caponata-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DALL_E_2023-05-10_21.18.28_-_cartoon_style_muffin-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image__1_-removebg-preview.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
