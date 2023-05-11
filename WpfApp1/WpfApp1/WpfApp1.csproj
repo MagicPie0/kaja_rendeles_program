@@ -193,5 +193,116 @@
   <ItemGroup>
     <Resource Include="diet.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="coupon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="trolley.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="eatopia-high-resolution-logo-color-on-transparent-background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image__9_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image__10_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image__11_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image__12_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image__13_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image__14_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image__15_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img-pSTgMwEeNVH88I0xJE8Ol-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img-kYUjchRZUy0RamM0yHBiq-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ice-cream.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="meat-pie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="omelette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="macaroni.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kofte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="fish-and-chips.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="steak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="stinky-tofu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="meatball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="soup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="red-bean-soup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="garlic-soup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="fish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ramen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bruschetta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cake %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sandwich.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="salad %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="fried-rice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="meatballs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="macaron.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="choco-chip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="donut.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
