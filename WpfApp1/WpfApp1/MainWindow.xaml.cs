@@ -30,6 +30,7 @@ namespace WpfApp1
             foetelek.Visibility = Visibility.Hidden;
             desszertek.Visibility = Visibility.Hidden;
             uditok.Visibility = Visibility.Hidden;
+            hiba.Visibility = Visibility.Hidden;
             var etelek_jelzok = new[] { eloetel_jelzo, leves_jelzo, foetel_jelzo,
                                         desszert_jelzo, udito_jelzo};
             foreach (var item in etelek_jelzok)
@@ -225,30 +226,162 @@ namespace WpfApp1
             
         }
         //design főoldal
+
         //regisztrációs oldal
         private void regisztralas_gomb_Click(object sender, RoutedEventArgs e)
         {
             //design
-            eloetelek.Visibility = Visibility.Visible;
-            kijelzo.Content = "Előételek";
-            eloetel_jelzo.IsChecked = true;
-            eloetel_jelzo.Visibility = Visibility.Visible;
-            leves_jelzo.Visibility = Visibility.Visible;
-            foetel_jelzo.Visibility= Visibility.Visible;
-            desszert_jelzo.Visibility = Visibility.Visible;
-            udito_jelzo.Visibility = Visibility.Visible;
-            tovabb.Visibility = Visibility.Visible;
-            fo_button.Visibility = Visibility.Visible;
-            coupon_button.Visibility = Visibility.Visible;
-            account_gomb.Visibility = Visibility.Visible;
-            kosar_button.Visibility = Visibility.Visible;
 
-            regisztralas_kep_fo.Visibility = Visibility.Hidden;
-            regisztralas.Visibility = Visibility.Hidden;
-            bejelentkezes_gomb.Visibility = Visibility.Hidden;
             //design
+            //ellenőrzés
+            int engedély = 0;
+            string nev = felhasznalonev_input.Text;
+            string be_kor = eletkor_input.Text;
+            int kor;
+            string email = email_input.Text;
+            string jelszo1 = jelszo1_input.Password;
+            string jelszo2 = jelszo2_input.Password;
 
+            if (nev == "" & be_kor == "" & email == "" & jelszo1 == "" & jelszo2 == "")
+            {
+                hiba.Visibility = Visibility.Visible;
+                hiba_out.Text = "Nem lehet üresen hagyott mező!";
+                return;
+            }
+            else
+            {
+                if (int.TryParse(be_kor, out kor))
+                {
+                    //tovább enged
+                    engedély++; //1
+                }
+                else
+                {
+                    //hiba
+                    hiba.Visibility = Visibility.Visible;
+                    hiba_out.Text = "A kor nem tartalmazhat nem szám karaktereket!";
+                    return;
+                }
+
+                if (email.Contains("@") == true)
+                {
+                    //tovább enged
+                    engedély++; //2
+                }
+                else
+                {
+                    //hiba
+                    hiba.Visibility = Visibility.Visible;
+                    hiba_out.Text = "Az email címnek tartalmaznia kell @ karaktert!";
+                    return;
+                }
+
+                if (email.Contains(".") == true)
+                {
+                    //tovább enged
+                    engedély++; //3
+                }
+                else
+                {
+                    //hiba
+                    hiba.Visibility = Visibility.Visible;
+                    hiba_out.Text = "Az email címnek tartalmaznia kell . karaktert!";
+                    return;
+                }
+
+
+                if (jelszo1 == jelszo2)
+                {
+                    engedély++; //4
+                    //tovább enged
+                    if (jelszo1.Length >= 8)
+                    {
+                        //tovább enged
+                        engedély++; //5
+                    }
+                    else
+                    {
+                        //hiba
+                        hiba.Visibility = Visibility.Visible;
+                        hiba_out.Text = "A jelszóknak legalább 8 karakteresnek kell lennie!";
+                        return;
+                    }
+                }
+                else
+                {
+                    //hiba
+                    hiba.Visibility = Visibility.Visible;
+                    hiba_out.Text = "A két jelszónak egyeznie kell!";
+                    return;
+                }
+            }
+
+            if (hiba.IsVisible == true)
+            {
+                regisztralas_gomb.IsEnabled = false;
+                bejelentkezes_gomb.IsEnabled = false;
+                felhasznalonev_input.IsEnabled = false;
+                email_input.IsEnabled = false;
+                jelszo1_input.IsEnabled = false;
+                jelszo2_input.IsEnabled = false;
+                eletkor_input.IsEnabled = false;
+                engedély = 0;
+            }
+            else
+            {
+                regisztralas_gomb.IsEnabled = true;
+                bejelentkezes_gomb.IsEnabled = true;
+                felhasznalonev_input.IsEnabled = true;
+                email_input.IsEnabled = true;
+                jelszo1_input.IsEnabled = true;
+                jelszo2_input.IsEnabled = true;
+                eletkor_input.IsEnabled = true;
+                if (engedély == 5)
+                {
+                    eloetelek.Visibility = Visibility.Visible;
+                    kijelzo.Content = "Előételek";
+                    eloetel_jelzo.IsChecked = true;
+                    eloetel_jelzo.Visibility = Visibility.Visible;
+                    leves_jelzo.Visibility = Visibility.Visible;
+                    foetel_jelzo.Visibility = Visibility.Visible;
+                    desszert_jelzo.Visibility = Visibility.Visible;
+                    udito_jelzo.Visibility = Visibility.Visible;
+                    tovabb.Visibility = Visibility.Visible;
+                    fo_button.Visibility = Visibility.Visible;
+                    coupon_button.Visibility = Visibility.Visible;
+                    account_gomb.Visibility = Visibility.Visible;
+                    kosar_button.Visibility = Visibility.Visible;
+
+                    regisztralas_kep_fo.Visibility = Visibility.Hidden;
+                    regisztralas.Visibility = Visibility.Hidden;
+                    bejelentkezes_gomb.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    return;
+                }
+            }
+
+            //ellenőrzés
             //minden féle mentés fájlba meg ellenőrzések
+        }
+
+        private void rendben_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            hiba.Visibility = Visibility.Hidden;
+            regisztralas_gomb.IsEnabled = true;
+            bejelentkezes_gomb.IsEnabled = true;
+            felhasznalonev_input.IsEnabled = true;
+            email_input.IsEnabled = true;
+            jelszo1_input.IsEnabled = true;
+            jelszo2_input.IsEnabled = true;
+            eletkor_input.IsEnabled = true;
+
+            felhasznalonev_input.Text = null;
+            email_input.Text = null;
+            jelszo1_input.Password = null;
+            jelszo2_input.Password = null;
+            eletkor_input.Text = null;
         }
         //regisztrációs oldal
     }
