@@ -381,7 +381,7 @@
             <ImageBrush ImageSource="/512873.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
         <Rectangle HorizontalAlignment="Center" Height="134" VerticalAlignment="Top" Width="1700" Fill="White" Opacity="0.7"/>
-        <Label Content="Your one-stop Eatopia for delicious food." HorizontalAlignment="Center" VerticalAlignment="Top" Height="68" Width="660" FontSize="36" Margin="0,10,0,0" FontStyle="Italic"/>
+        <Label Content="Your one-stop Eatopia for delicious food." HorizontalAlignment="Center" VerticalAlignment="Top" Height="57" Width="660" FontSize="36" Margin="0,17,0,0" FontStyle="Italic" FontFamily="Modern No. 20"/>
 
         <Button Style="{DynamicResource ButtonStyle1}" x:Name="kosar_button" Content="" HorizontalAlignment="Left" Margin="1534,4,0,0" VerticalAlignment="Top" Height="128" Width="141" BorderBrush="{x:Null}" Click="kosar_button_Click">
             <Button.Background>
@@ -667,19 +667,19 @@
             <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel31" Content="10%" HorizontalAlignment="Left" Margin="1388,883,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
 
         </Grid>
-        <Grid Name="regisztralas">
+        <Grid Name="regisztralas" Visibility="Hidden">
             <Rectangle x:Name="registralas_hatter" HorizontalAlignment="Center" Height="769" Margin="0,160,0,0" VerticalAlignment="Top" Width="1161" Fill="White" Opacity="0.65"/>
-            <Label Content="Felhasználónév:" HorizontalAlignment="Left" Margin="671,244,0,0" VerticalAlignment="Top" Height="40" Width="182" FontSize="24"/>
-            <TextBox x:Name="felhasznalonev_input" HorizontalAlignment="Left" Margin="762,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="257"/>
-            <Label Content="Életkor:" HorizontalAlignment="Left" Margin="671,312,0,0" VerticalAlignment="Top" Height="40" Width="182" FontSize="24"/>
-            <TextBox x:Name="eletkor_input" HorizontalAlignment="Left" Margin="762,357,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="257"/>
-            <Label Content="Email cím:" HorizontalAlignment="Left" Margin="671,380,0,0" VerticalAlignment="Top" Height="40" Width="182" FontSize="24"/>
-            <TextBox x:Name="email_input" HorizontalAlignment="Left" Margin="762,425,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="257"/>
-            <PasswordBox x:Name="jelszo1_input" HorizontalAlignment="Left" Margin="762,0,0,0" VerticalAlignment="Center" Width="257" Height="18"/>
-            <Label Content="Jelszó:" HorizontalAlignment="Left" Margin="671,448,0,0" VerticalAlignment="Top" Height="40" Width="182" FontSize="24"/>
-            <Label Content="Jelszó mégegyszer:" HorizontalAlignment="Left" Margin="671,516,0,0" VerticalAlignment="Top" Height="46" Width="214" FontSize="24"/>
-            <PasswordBox x:Name="jelszo2_input" HorizontalAlignment="Left" Margin="762,567,0,0" VerticalAlignment="Top" Width="257" Height="18"/>
-            <Button Style="{DynamicResource ButtonStyle7}" x:Name="regisztralas_gomb" Content="Regisztálás" HorizontalAlignment="Center" Margin="0,632,0,0" VerticalAlignment="Top" Height="86" Width="576" BorderBrush="{x:Null}" Background="White" FontSize="36" Click="regisztralas_gomb_Click"/>
+            <Label Content="Felhasználónév:" HorizontalAlignment="Left" Margin="671,244,0,0" VerticalAlignment="Top" Height="40" Width="219" FontSize="24" FontFamily="Cascadia Mono SemiBold"/>
+            <TextBox x:Name="felhasznalonev_input" HorizontalAlignment="Left" Margin="762,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="257" FontSize="22"/>
+            <Label Content="Életkor:" HorizontalAlignment="Left" Margin="671,312,0,0" VerticalAlignment="Top" Height="40" Width="182" FontSize="24" FontFamily="Cascadia Mono SemiBold"/>
+            <TextBox x:Name="eletkor_input" HorizontalAlignment="Left" Margin="762,346,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="257" FontSize="20"/>
+            <Label Content="Email cím:" HorizontalAlignment="Left" Margin="671,380,0,0" VerticalAlignment="Top" Height="40" Width="182" FontSize="24" FontFamily="Cascadia Mono SemiBold"/>
+            <TextBox x:Name="email_input" HorizontalAlignment="Left" Margin="762,414,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="257" FontSize="20"/>
+            <PasswordBox x:Name="jelszo1_input" HorizontalAlignment="Left" Margin="762,482,0,0" VerticalAlignment="Top" Width="257" Height="30" FontSize="20"/>
+            <Label Content="Jelszó:" HorizontalAlignment="Left" Margin="671,442,0,0" VerticalAlignment="Top" Height="40" Width="106" FontSize="24" FontFamily="Cascadia Mono SemiBold"/>
+            <Label Content="Jelszó mégegyszer:" HorizontalAlignment="Left" Margin="671,512,0,0" VerticalAlignment="Top" Height="46" Width="262" FontSize="24" FontFamily="Cascadia Mono SemiBold"/>
+            <PasswordBox x:Name="jelszo2_input" HorizontalAlignment="Left" Margin="762,555,0,0" VerticalAlignment="Top" Width="257" Height="30" FontSize="20"/>
+            <Button Style="{DynamicResource ButtonStyle7}" x:Name="regisztralas_gomb" Content="Regisztrálás" HorizontalAlignment="Center" Margin="0,632,0,0" VerticalAlignment="Top" Height="86" Width="576" BorderBrush="{x:Null}" Background="White" FontSize="36" Click="regisztralas_gomb_Click" FontFamily="Cascadia Mono SemiBold"/>
             <Image x:Name="regisztralas_kep_fo" Margin="0,0,1492,868" Source="/eatopia-high-resolution-logo-color-on-transparent-background.png" Stretch="UniformToFill" Visibility="Hidden"/>
             <Image Margin="285,298,1283,575" Source="/hamburger.png" Stretch="Fill"/>
             <Image Margin="1210,332,358,541" Source="/bibimbap.png" Stretch="Fill" Width="132" Height="127"/>
@@ -689,15 +689,67 @@
             <Image Margin="1186,734,382,138" Source="/tteok.png" Stretch="Fill" Width="132" Height="127"/>
             <Image Margin="464,180,1104,693" Source="/drink.png" Stretch="Fill" Width="132" Height="127"/>
             <Image Margin="337,700,1231,174" Source="/diet.png" Stretch="Fill" Width="132" Height="127"/>
-            <Button Style="{DynamicResource ButtonStyle1}" x:Name="bejelentkezes_gomb" Content="Van már fiókod? Lépj be!" HorizontalAlignment="Left" Margin="565,769,0,0" VerticalAlignment="Top" Height="40" Width="573" BorderBrush="{x:Null}" Click="kosar_button_Click" Background="{x:Null}" FontSize="24"/>
+            <Button Style="{DynamicResource ButtonStyle1}" x:Name="bejelentkezes_gomb" Content="Van már fiókod? Lépj be!" HorizontalAlignment="Left" Margin="565,769,0,0" VerticalAlignment="Top" Height="40" Width="573" BorderBrush="{x:Null}" Click="bejelentkezes_gomb_Click" Background="{x:Null}" FontSize="24" FontFamily="Cascadia Mono SemiBold"/>
         </Grid>
-        <Grid x:Name="hiba" Background="#FFAA0000" Margin="487,336,486,362">
-            <Button x:Name="rendben_gomb" Content="Rendben" HorizontalAlignment="Left" Margin="0,203,0,0" VerticalAlignment="Top" Width="727" Height="99" Background="#FF79DE4A" Style="{DynamicResource ButtonStyle8}" Click="rendben_gomb_Click"/>
-            <TextBlock x:Name="hiba_out" HorizontalAlignment="Left" Margin="0,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" Width="727" Height="49" FontSize="36" Foreground="White"/>
-            <Image Margin="36,0,612,212" Source="server.png" Stretch="Fill"/>
-            <Image Margin="612,0,36,212" Source="dizzy-robot.png" Stretch="Fill"/>
+
+
+        <Grid Name="bejelentkezes" Visibility="Hidden">
+            <Image x:Name="bejelentkezes_kep_fo" Margin="0,0,1492,868" Source="/eatopia-high-resolution-logo-color-on-transparent-background.png" Stretch="UniformToFill" Visibility="Hidden"/>
+            <Rectangle x:Name="bejelentkezes_hatter" HorizontalAlignment="Center" Height="769" Margin="0,160,0,0" VerticalAlignment="Top" Width="1161" Fill="White" Opacity="0.65"/>
+            <Label Content="Felhasználónév:" HorizontalAlignment="Center" Margin="0,222,0,0" VerticalAlignment="Top" Height="38" Width="182" FontSize="20" FontFamily="Cascadia Mono SemiBold"/>
+            <Label Content="Jelszó:" HorizontalAlignment="Center" Margin="0,307,0,0" VerticalAlignment="Top" Height="38" Width="90" FontSize="20" FontFamily="Cascadia Mono SemiBold"/>
+            <Button Style="{DynamicResource ButtonStyle7}" x:Name="bejelentekezes_fo_gomb" Content="Bejelentkezés" HorizontalAlignment="Center" Margin="0,502,0,0" VerticalAlignment="Top" Height="86" Width="576" BorderBrush="{x:Null}" Background="White" FontSize="36" Click="bejelentekezes_fo_gomb_Click" FontFamily="Cascadia Mono SemiBold"/>
+            <TextBox x:Name="felhasznalonev_input_bejelenktezes" HorizontalAlignment="Center" Margin="0,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" FontSize="20"/>
+            <PasswordBox x:Name="jelszo_input_bejelentkezes" HorizontalAlignment="Center" Margin="0,350,0,0" VerticalAlignment="Top" Width="276" FontSize="20"/>
+            <Button Style="{DynamicResource ButtonStyle1}" x:Name="elfelejtett_jelszo" Content="Elfelejtetted a jelszavad?" HorizontalAlignment="Left" Margin="565,653,0,0" VerticalAlignment="Top" Height="40" Width="573" BorderBrush="{x:Null}" Click="elfelejtett_jelszo_Click" Background="{x:Null}" FontSize="24" FontFamily="Cascadia Mono SemiBold"/>
+            <Image Margin="367,373,1201,500" Source="/pizza (1).png" Stretch="Fill"/>
+            <Image Margin="1194,404,374,469" Source="/taco.png" Stretch="Fill"/>
+            <Image Margin="318,610,1250,264" Source="/sandwich (1).png" Stretch="Fill" Width="132" Height="125"/>
+            <Image Margin="1033,710,535,164" Source="/fast-food.png" Stretch="Fill" Width="132" Height="127"/>
+            <Image Margin="720,727,848,146" Source="/hot.png" Stretch="Fill" Width="132" Height="127"/>
+            <Image Margin="1112,218,456,655" Source="/donut (1).png" Stretch="Fill" Width="132" Height="127"/>
+            <Image Margin="463,218,1105,655" Source="/buns.png" Stretch="Fill" Width="132" Height="127"/>
+            <Image Margin="397,774,1171,104" Source="/dimsum.png" Stretch="Fill" Width="132" Height="123"/>
+            <Image Margin="1260,608,308,264" Source="/noodles.png" Stretch="Fill" Width="132" Height="127"/>
 
         </Grid>
+        <Grid x:Name="elfelejtett_jelszo_oldal">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="101*"/>
+                <RowDefinition Height="149*"/>
+            </Grid.RowDefinitions>
+            <Rectangle x:Name="elfelejtett_jelszo_hatter" HorizontalAlignment="Center" Height="769" Margin="0,160,0,0" VerticalAlignment="Top" Width="1160" Fill="White" Opacity="0.65" Grid.RowSpan="2"/>
+            <Label Content="Felhasználónév:" HorizontalAlignment="Center" Margin="0,222,0,0" VerticalAlignment="Top" Height="38" Width="182" FontSize="20" FontFamily="Cascadia Mono SemiBold"/>
+            <Label Content="Email:" HorizontalAlignment="Center" Margin="0,307,0,0" VerticalAlignment="Top" Height="38" Width="90" FontSize="20" FontFamily="Cascadia Mono SemiBold"/>
+            <TextBox x:Name="felhasznalonev_input_elfelejtett" HorizontalAlignment="Center" Margin="0,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" FontSize="20"/>
+            <TextBox x:Name="email_input_elfelejtett" HorizontalAlignment="Center" Margin="0,350,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" FontSize="20"/>
+            <Button Style="{DynamicResource ButtonStyle7}" x:Name="elfelejtett_fo_gomb" Content="Lekérés" HorizontalAlignment="Center" Margin="0,98,0,0" VerticalAlignment="Top" Height="86" Width="576" BorderBrush="{x:Null}" Background="White" FontSize="36" Click="elfelejtett_fo_gomb_Click" FontFamily="Cascadia Mono SemiBold" Grid.Row="1"/>
+            <Image Margin="367,373,1201,500" Source="/pizza (1).png" Stretch="Fill" Grid.RowSpan="2" />
+            <Image Margin="1194,0,374,470" Source="/taco.png" Stretch="Fill" Grid.Row="1"/>
+            <Image Margin="331,206,1237,265" Source="/sandwich (1).png" Stretch="Fill" Width="132" Height="125" Grid.Row="1"/>
+            <Image Margin="1046,298,522,171" Source="/fast-food.png" Stretch="Fill" Width="132" Height="127" Grid.Row="1"/>
+            <Image Margin="718,326,850,143" Source="/hot.png" Stretch="Fill" Width="132" Height="127" Grid.Row="1"/>
+            <Image Margin="1112,218,456,59" Source="/donut (1).png" Stretch="Fill" Width="132" Height="127"/>
+            <Image Margin="463,218,1105,59" Source="/buns.png" Stretch="Fill" Width="132" Height="127"/>
+            <Image Margin="397,362,1171,111" Source="/dimsum.png" Stretch="Fill" Width="132" Height="123" Grid.Row="1"/>
+            <Image Margin="1260,204,308,265" Source="/noodles.png" Stretch="Fill" Width="132" Height="127" Grid.Row="1"/>
+
+            <Grid x:Name="jelszo" Margin="530,342,530,254" Grid.RowSpan="2">
+                <Rectangle HorizontalAlignment="Center" Height="404" VerticalAlignment="Center" Width="640" Fill="White" Opacity="0.65"/>
+                <TextBlock x:Name="jelszo_ki" HorizontalAlignment="Center" Height="32" TextWrapping="Wrap" VerticalAlignment="Top" Width="412" FontSize="22" TextAlignment="Center" Margin="0,106,0,0"/>
+                <Button Style="{DynamicResource ButtonStyle7}" x:Name="vissza_a_bejelentkezes_oldalra" Content="Vissza a főoldalra" HorizontalAlignment="Center" Margin="0,268,0,0" VerticalAlignment="Top" Height="86" Width="576" BorderBrush="{x:Null}" Background="White" FontSize="36" Click="vissza_a_bejelentkezes_oldalra_Click" FontFamily="Cascadia Mono SemiBold"/>
+
+
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="hiba" Background="#FFAA0000" Margin="487,336,486,362" Visibility="Hidden">
+            <Button x:Name="rendben_gomb" Content="Rendben" HorizontalAlignment="Left" Margin="0,203,0,0" VerticalAlignment="Top" Width="727" Height="99" Background="#FF79DE4A" Style="{DynamicResource ButtonStyle8}" Click="rendben_gomb_Click"/>
+            <TextBlock x:Name="hiba_out" HorizontalAlignment="Left" Margin="94,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" Width="546" Height="49" FontSize="36" Foreground="White"/>
+            <Image Margin="10,70,638,142" Source="server.png" Stretch="Fill"/>
+            <Image Margin="645,70,3,142" Source="dizzy-robot.png" Stretch="Fill" RenderTransformOrigin="1.038,1.012"/>
+        </Grid>
+
         <Button x:Name="tovabb" Style="{DynamicResource ButtonStyle3}" Content="&gt;" HorizontalAlignment="Left" Margin="1579,459,0,0" VerticalAlignment="Top" Height="179" Width="121" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="tovabb_Click"/>
         <Button x:Name="vissza" Style="{DynamicResource ButtonStyle3}" Content=" &lt;" HorizontalAlignment="Left" Margin="-38,459,0,0" VerticalAlignment="Top" Height="179" Width="122" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="vissza_Click"/>
 

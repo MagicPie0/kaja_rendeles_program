@@ -331,5 +331,32 @@
   <ItemGroup>
     <Resource Include="dizzy-robot.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pizza %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="taco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sandwich %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="fast-food.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="hot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="donut %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="buns.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="dimsum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="noodles.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace WpfApp1
 {
@@ -24,29 +25,26 @@ namespace WpfApp1
         {
             InitializeComponent();
             //design főoldal
-            regisztralas.Visibility = Visibility.Visible;
-            eloetelek.Visibility = Visibility.Hidden;
-            levesek.Visibility = Visibility.Hidden;
-            foetelek.Visibility = Visibility.Hidden;
-            desszertek.Visibility = Visibility.Hidden;
-            uditok.Visibility = Visibility.Hidden;
-            hiba.Visibility = Visibility.Hidden;
+            
+            var oldalak = new[] { eloetelek, levesek, foetelek, desszertek, uditok, hiba, bejelentkezes,
+                                  elfelejtett_jelszo_oldal, jelszo};
+
             var etelek_jelzok = new[] { eloetel_jelzo, leves_jelzo, foetel_jelzo,
                                         desszert_jelzo, udito_jelzo};
-            foreach (var item in etelek_jelzok)
-            {
-                item.Visibility = Visibility.Hidden;
-            }
-            vissza.Visibility = Visibility.Hidden;
-            tovabb.Visibility = Visibility.Hidden;
-            fo_button.Visibility = Visibility.Hidden;
-            coupon_button.Visibility = Visibility.Hidden;
-            account_gomb.Visibility = Visibility.Hidden;
-            kosar_button.Visibility = Visibility.Hidden;
+
+            var gombok = new[] { vissza, tovabb, fo_button, coupon_button, account_gomb, kosar_button };
+
+
+            foreach (var item in oldalak) item.Visibility = Visibility.Hidden;
+            foreach (var item in etelek_jelzok) item.Visibility = Visibility.Hidden;
+            foreach (var item in gombok) item.Visibility = Visibility.Hidden;
+
             kijelzo.Content = "Regisztrálás";
             felhasznalonev_input.Focus();
+            regisztralas.Visibility = Visibility.Visible;
             regisztralas_kep_fo.Visibility = Visibility.Visible;
             bejelentkezes_gomb.Visibility = Visibility.Visible;
+
             //design főoldal
         }
         //design főoldal
@@ -57,14 +55,8 @@ namespace WpfApp1
                                  etel4_hatter, etel5_hatter, etel6_hatter,};
             var etelek_jelzok = new[] { eloetel_jelzo, leves_jelzo, foetel_jelzo,
                                         desszert_jelzo, udito_jelzo};
-            foreach (var item in etelek)
-            {
-                item.Visibility = Visibility.Hidden;
-            }
-            foreach (var item in etelek_jelzok)
-            {
-                item.Visibility = Visibility.Hidden;
-            }
+            foreach (var item in etelek) item.Visibility = Visibility.Hidden;
+            foreach (var item in etelek_jelzok) item.Visibility = Visibility.Hidden;
 
 
         }
@@ -75,14 +67,8 @@ namespace WpfApp1
                                  etel4_hatter, etel5_hatter, etel6_hatter};
             var etelek_jelzok = new[] { eloetel_jelzo, leves_jelzo, foetel_jelzo,
                                         desszert_jelzo, udito_jelzo};
-            foreach (var item in etelek)
-            {
-                item.Visibility = Visibility.Visible;
-            }
-            foreach (var item in etelek_jelzok)
-            {
-                item.Visibility = Visibility.Hidden;
-            }
+            foreach (var item in etelek) item.Visibility = Visibility.Visible;
+            foreach (var item in etelek_jelzok) item.Visibility = Visibility.Hidden;
 
             kosar.Visibility = Visibility.Hidden;
             fooldal.Visibility = Visibility.Visible;
@@ -92,147 +78,154 @@ namespace WpfApp1
         {
             if (eloetelek.IsVisible == true)
             {
-                eloetelek.Visibility = Visibility.Hidden;
+                var eltun = new[] { eloetelek, foetelek, desszertek, uditok };
+                var jelzok = new[] { eloetel_jelzo, foetel_jelzo, desszert_jelzo, udito_jelzo };
+
+                foreach (var item in eltun) item.Visibility = Visibility.Hidden;   
+                foreach(var item in jelzok) item.IsChecked = false;
+                
                 levesek.Visibility = Visibility.Visible;
-                foetelek.Visibility = Visibility.Hidden;
-                desszertek.Visibility = Visibility.Hidden;
-                uditok.Visibility = Visibility.Hidden;
                 vissza.Visibility = Visibility.Visible;
                 tovabb.Visibility = Visibility.Visible;
                 kijelzo.Content = "Levesek";
-                eloetel_jelzo.IsChecked = false;
                 leves_jelzo.IsChecked = true;
-                foetel_jelzo.IsChecked = false;
-                desszert_jelzo.IsChecked = false;
-                udito_jelzo.IsChecked = false;
             }
             else if(levesek.IsVisible == true)
             {
-                eloetelek.Visibility = Visibility.Hidden;
-                levesek.Visibility = Visibility.Hidden;
+                var eltun = new[] { eloetelek, levesek, desszertek, uditok };
+                var jelzok = new[] { eloetel_jelzo, leves_jelzo, desszert_jelzo, udito_jelzo };
+
+                foreach (var item in eltun) item.Visibility = Visibility.Hidden;
+                foreach (var item in jelzok) item.IsChecked = false;
+
                 foetelek.Visibility = Visibility.Visible;
-                desszertek.Visibility = Visibility.Hidden;
-                uditok.Visibility = Visibility.Hidden;
                 vissza.Visibility = Visibility.Visible;
                 tovabb.Visibility = Visibility.Visible;
                 kijelzo.Content = "Főétel";
-                eloetel_jelzo.IsChecked = false;
-                leves_jelzo.IsChecked = false;
                 foetel_jelzo.IsChecked = true;
-                desszert_jelzo.IsChecked = false;
-                udito_jelzo.IsChecked = false;
             }
             else if(foetelek.IsVisible == true)
             {
-                eloetelek.Visibility = Visibility.Hidden;
-                levesek.Visibility = Visibility.Hidden;
-                foetelek.Visibility = Visibility.Hidden;
+                var eltun = new[] { eloetelek, levesek, foetelek, uditok };
+                var jelzok = new[] { eloetel_jelzo, leves_jelzo, foetel_jelzo, udito_jelzo };
+
+                foreach (var item in eltun) item.Visibility = Visibility.Hidden;
+                foreach (var item in jelzok) item.IsChecked = false;
+
                 desszertek.Visibility = Visibility.Visible;
-                uditok.Visibility = Visibility.Hidden;
                 vissza.Visibility = Visibility.Visible;
                 tovabb.Visibility = Visibility.Visible;
                 kijelzo.Content = "Desszertek";
-                eloetel_jelzo.IsChecked = false;
-                leves_jelzo.IsChecked = false;
-                foetel_jelzo.IsChecked = false;
                 desszert_jelzo.IsChecked = true;
-                udito_jelzo.IsChecked = false;
             }
             else if(desszertek.IsVisible == true)
             {
-                eloetelek.Visibility = Visibility.Hidden;
-                levesek.Visibility = Visibility.Hidden;
-                foetelek.Visibility = Visibility.Hidden;
-                desszertek.Visibility = Visibility.Hidden;
+                var eltun = new[] { eloetelek, levesek, foetelek, desszertek };
+                var jelzok = new[] { eloetel_jelzo, leves_jelzo, foetel_jelzo, desszert_jelzo };
+
+                foreach (var item in eltun) item.Visibility = Visibility.Hidden;
+                foreach (var item in jelzok) item.IsChecked = false;
+
                 uditok.Visibility = Visibility.Visible;
                 vissza.Visibility = Visibility.Visible;
                 tovabb.Visibility = Visibility.Hidden;
                 kijelzo.Content = "Üdítők";
-                eloetel_jelzo.IsChecked = false;
-                leves_jelzo.IsChecked = false;
-                foetel_jelzo.IsChecked = false;
-                desszert_jelzo.IsChecked = false;
                 udito_jelzo.IsChecked = true;
             }
-            
-
         }
 
         private void vissza_Click(object sender, RoutedEventArgs e)
         {
             if (levesek.IsVisible == true)
             {
+                var eltun = new[] {levesek, foetelek, desszertek, uditok };
+                var jelzok = new[] {leves_jelzo, foetel_jelzo, desszert_jelzo, udito_jelzo };
+
+                foreach (var item in eltun) item.Visibility = Visibility.Hidden;
+                foreach (var item in jelzok) item.IsChecked = false;
+
                 eloetelek.Visibility = Visibility.Visible;
-                levesek.Visibility = Visibility.Hidden;
-                foetelek.Visibility = Visibility.Hidden;
-                desszertek.Visibility = Visibility.Hidden;
-                uditok.Visibility = Visibility.Hidden;
                 vissza.Visibility = Visibility.Hidden;
                 tovabb.Visibility = Visibility.Visible;
                 kijelzo.Content = "Előételek";
                 eloetel_jelzo.IsChecked = true;
-                leves_jelzo.IsChecked = false;
-                foetel_jelzo.IsChecked = false;
-                desszert_jelzo.IsChecked = false;
             }
             else if(foetelek.IsVisible == true)
             {
-                eloetelek.Visibility = Visibility.Hidden;
+                var eltun = new[] { eloetelek, foetelek, desszertek, uditok };
+                var jelzok = new[] { eloetel_jelzo, foetel_jelzo, desszert_jelzo, udito_jelzo };
+
+                foreach (var item in eltun) item.Visibility = Visibility.Hidden;
+                foreach (var item in jelzok) item.IsChecked = false;
+
                 levesek.Visibility = Visibility.Visible;
-                foetelek.Visibility = Visibility.Hidden;
-                desszertek.Visibility = Visibility.Hidden;
-                uditok.Visibility = Visibility.Hidden;
                 vissza.Visibility = Visibility.Visible;
                 tovabb.Visibility = Visibility.Visible;
-
                 kijelzo.Content = "Levesek";
-                eloetel_jelzo.IsChecked = false;
                 leves_jelzo.IsChecked = true;
-                foetel_jelzo.IsChecked = false;
-                desszert_jelzo.IsChecked = false;
-                udito_jelzo.IsChecked = false;
             }
             else if(desszertek.IsVisible == true)
             {
-                eloetelek.Visibility = Visibility.Hidden;
-                levesek.Visibility = Visibility.Hidden;
+                var eltun = new[] { eloetelek, levesek, desszertek, uditok };
+                var jelzok = new[] { eloetel_jelzo, leves_jelzo, desszert_jelzo, udito_jelzo };
+
+                foreach (var item in eltun) item.Visibility = Visibility.Hidden;
+                foreach (var item in jelzok) item.IsChecked = false;
+
                 foetelek.Visibility = Visibility.Visible;
-                desszertek.Visibility = Visibility.Hidden;
                 vissza.Visibility = Visibility.Visible;
                 tovabb.Visibility = Visibility.Visible;
                 kijelzo.Content = "Főételek";
-                eloetel_jelzo.IsChecked = false;
-                leves_jelzo.IsChecked = false;
                 foetel_jelzo.IsChecked = true;
-                desszert_jelzo.IsChecked = false;
-                udito_jelzo.IsChecked = false;
             }
             else if(uditok.IsVisible == true)
             {
-                eloetelek.Visibility = Visibility.Hidden;
-                levesek.Visibility = Visibility.Hidden;
-                foetelek.Visibility = Visibility.Hidden;
+                var eltun = new[] { eloetelek, levesek, foetelek, uditok };
+                var jelzok = new[] { eloetel_jelzo, leves_jelzo, foetel_jelzo, udito_jelzo };
+
+                foreach (var item in eltun) item.Visibility = Visibility.Hidden;
+                foreach (var item in jelzok) item.IsChecked = false;
+
                 desszertek.Visibility = Visibility.Visible;
-                uditok.Visibility = Visibility.Hidden;
                 vissza.Visibility = Visibility.Visible;
                 tovabb.Visibility = Visibility.Visible;
                 kijelzo.Content = "Desszertek";
-                eloetel_jelzo.IsChecked = false;
-                leves_jelzo.IsChecked = false;
-                foetel_jelzo.IsChecked = false;
                 desszert_jelzo.IsChecked = true;
-                udito_jelzo.IsChecked = false;
             }
-            
         }
         //design főoldal
 
         //regisztrációs oldal
+
+        static string Jelszo_titkositas(string jelszo)
+        {
+            char[] titkositott_jelszo = jelszo.ToCharArray();
+
+            for (int i = 0; i < titkositott_jelszo.Length; i++)
+            {
+                titkositott_jelszo[i] = (char)(titkositott_jelszo[i] + 10);
+            }
+            string titkos_jelszo = new string(titkositott_jelszo);
+            return titkos_jelszo;
+        }
+
+        static string Jelszo_visszaallitas(string nev)
+        {
+            string x = File.ReadAllText(nev + ".txt");
+            string[] adatok = x.Split(';');
+
+            char[] visszaforditando_jelszo = adatok[3].ToCharArray();
+
+            for (int i = 0; i < visszaforditando_jelszo.Length; i++)
+            {
+                visszaforditando_jelszo[i] = (char)(visszaforditando_jelszo[i] - 10);
+            }
+            string titkos_jelszo = new string(visszaforditando_jelszo);
+            return titkos_jelszo;
+        }
+
         private void regisztralas_gomb_Click(object sender, RoutedEventArgs e)
         {
-            //design
-
-            //design
             //ellenőrzés
             int engedély = 0;
             string nev = felhasznalonev_input.Text;
@@ -253,7 +246,18 @@ namespace WpfApp1
                 if (int.TryParse(be_kor, out kor))
                 {
                     //tovább enged
-                    engedély++; //1
+                    if (kor > 0 & kor < 120)
+                    {
+                        //tovább enged
+                        engedély++; //1
+                    }
+                    else
+                    {
+                        //hiba
+                        hiba.Visibility = Visibility.Visible;
+                        hiba_out.Text = "A kornak adott érték szürreális!";
+                        return;
+                    }
                 }
                 else
                 {
@@ -289,7 +293,6 @@ namespace WpfApp1
                     return;
                 }
 
-
                 if (jelszo1 == jelszo2)
                 {
                     engedély++; //4
@@ -315,74 +318,179 @@ namespace WpfApp1
                     return;
                 }
             }
-
+            var gombok = new[] { regisztralas_gomb, bejelentkezes_gomb};
+            var beviteli_mezok = new[] { felhasznalonev_input, email_input, eletkor_input };
+            var jelszavak = new[] { jelszo1_input, jelszo2_input };
             if (hiba.IsVisible == true)
             {
-                regisztralas_gomb.IsEnabled = false;
-                bejelentkezes_gomb.IsEnabled = false;
-                felhasznalonev_input.IsEnabled = false;
-                email_input.IsEnabled = false;
-                jelszo1_input.IsEnabled = false;
-                jelszo2_input.IsEnabled = false;
-                eletkor_input.IsEnabled = false;
+                foreach(var item in gombok) item.IsEnabled = false;
+                foreach (var item in beviteli_mezok) item.IsEnabled = false;
+                foreach (var item in jelszavak) item.IsEnabled = false;
+
                 engedély = 0;
+                felhasznalonev_input.Focus();
             }
             else
             {
-                regisztralas_gomb.IsEnabled = true;
-                bejelentkezes_gomb.IsEnabled = true;
-                felhasznalonev_input.IsEnabled = true;
-                email_input.IsEnabled = true;
-                jelszo1_input.IsEnabled = true;
-                jelszo2_input.IsEnabled = true;
-                eletkor_input.IsEnabled = true;
+                foreach (var item in gombok) item.IsEnabled = true;
+                foreach (var item in beviteli_mezok) item.IsEnabled = true;
+                foreach (var item in jelszavak) item.IsEnabled = true;
+
                 if (engedély == 5)
                 {
+                    var jelzok = new[] { eloetel_jelzo, leves_jelzo, foetel_jelzo, desszert_jelzo, udito_jelzo };
+                    var gombok2 = new[] { tovabb, fo_button, coupon_button, account_gomb, kosar_button };
+
+                    foreach (var item in jelzok) item.Visibility = Visibility.Visible;
+                    foreach (var item in gombok2) item.Visibility = Visibility.Visible;
+
                     eloetelek.Visibility = Visibility.Visible;
                     kijelzo.Content = "Előételek";
                     eloetel_jelzo.IsChecked = true;
-                    eloetel_jelzo.Visibility = Visibility.Visible;
-                    leves_jelzo.Visibility = Visibility.Visible;
-                    foetel_jelzo.Visibility = Visibility.Visible;
-                    desszert_jelzo.Visibility = Visibility.Visible;
-                    udito_jelzo.Visibility = Visibility.Visible;
-                    tovabb.Visibility = Visibility.Visible;
-                    fo_button.Visibility = Visibility.Visible;
-                    coupon_button.Visibility = Visibility.Visible;
-                    account_gomb.Visibility = Visibility.Visible;
-                    kosar_button.Visibility = Visibility.Visible;
-
                     regisztralas_kep_fo.Visibility = Visibility.Hidden;
                     regisztralas.Visibility = Visibility.Hidden;
                     bejelentkezes_gomb.Visibility = Visibility.Hidden;
+
+                    //fájlba mentés
+                    string file_name = nev + ".txt";
+                    File.WriteAllText(file_name, nev + ";" + kor + ";" + email + ";" + Jelszo_titkositas(jelszo1));
+                    //fájlba mentés
                 }
                 else
                 {
                     return;
                 }
             }
-
             //ellenőrzés
-            //minden féle mentés fájlba meg ellenőrzések
         }
 
         private void rendben_gomb_Click(object sender, RoutedEventArgs e)
         {
-            hiba.Visibility = Visibility.Hidden;
-            regisztralas_gomb.IsEnabled = true;
-            bejelentkezes_gomb.IsEnabled = true;
-            felhasznalonev_input.IsEnabled = true;
-            email_input.IsEnabled = true;
-            jelszo1_input.IsEnabled = true;
-            jelszo2_input.IsEnabled = true;
-            eletkor_input.IsEnabled = true;
+            var gombok = new[] { regisztralas_gomb, bejelentkezes_gomb};
+            var inputok = new[] { email_input, eletkor_input, eletkor_input };
+            var jelszavak = new[] { jelszo1_input, jelszo2_input };
+
+            foreach (var item in gombok) item.IsEnabled = true;
+            foreach (var item in inputok) item.IsEnabled = true;
+            foreach (var item in jelszavak) item.IsEnabled = true;
+
+            foreach (var item in inputok) item.Text = null;
+            foreach (var item in jelszavak) item.Password = null;
 
             felhasznalonev_input.Text = null;
-            email_input.Text = null;
-            jelszo1_input.Password = null;
-            jelszo2_input.Password = null;
-            eletkor_input.Text = null;
+            hiba.Visibility = Visibility.Hidden;
         }
         //regisztrációs oldal
+        //bejelentekzős oldal
+        private void bejelentkezes_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            regisztralas.Visibility = Visibility.Hidden;
+            bejelentkezes.Visibility = Visibility.Visible;
+            kijelzo.Content = "Bejelentkezés";
+        }
+        static string nev = ""; 
+        private void bejelentekezes_fo_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            nev = felhasznalonev_input_bejelenktezes.Text;
+            string jelszo = jelszo_input_bejelentkezes.Password;
+
+            string titkos_jelszo = Jelszo_titkositas(jelszo);
+
+            if (File.Exists(nev + ".txt"))
+            {
+                string x = File.ReadAllText(nev + ".txt");
+                string[] adatok = x.Split(';');
+                if (adatok[3] == titkos_jelszo)
+                {
+                    //tovább enged
+                    var jelzok = new[] { eloetel_jelzo, leves_jelzo, foetel_jelzo, desszert_jelzo, udito_jelzo };
+                    var gombok = new[] { tovabb, fo_button, coupon_button, account_gomb, kosar_button };
+                    foreach(var item in jelzok) item.Visibility = Visibility.Visible;
+                    foreach (var item in gombok) item.Visibility = Visibility.Visible;
+
+                    eloetelek.Visibility = Visibility.Visible;
+                    kijelzo.Content = "Előételek";
+                    eloetel_jelzo.IsChecked = true;
+                    bejelentkezes.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    //hiba
+                    hiba.Visibility = Visibility.Visible;
+                    hiba_out.Text = "Rossz jelszó!";
+                    return;
+                }
+            }
+            else
+            {
+                //hiba
+                hiba.Visibility = Visibility.Visible;
+                hiba_out.Text = "Nincs ilyen nevű fiók!";
+                return;
+            }
+        }
+
+        //bejelentkezős oldal
+        //elfelejtett jelszo
+        private void elfelejtett_jelszo_Click(object sender, RoutedEventArgs e)
+        {
+            bejelentkezes.Visibility = Visibility.Hidden;
+            elfelejtett_jelszo_oldal.Visibility = Visibility.Visible;
+            kijelzo.Content = "Elfelejtett jelszó";
+
+            if (nev != "")
+            {
+                felhasznalonev_input_elfelejtett.Text = nev;
+                email_input_elfelejtett.Focus();
+            }
+            else
+            {
+                felhasznalonev_input_elfelejtett.Focus();
+            }
+        }
+
+        private void elfelejtett_fo_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            if (File.Exists(nev + ".txt"))
+            {
+                string x = File.ReadAllText(nev + ".txt");
+                string[] adatok = x.Split(';');
+
+                string email = email_input_elfelejtett.Text;
+
+;               string titkos_jelszo = Jelszo_visszaallitas(nev);
+
+                if (email == adatok[2])
+                {
+                    //tovább enged
+
+                    jelszo.Visibility = Visibility.Visible;
+                    jelszo_ki.Text = "A jelszó: " + titkos_jelszo;
+                }
+                else
+                {
+                    //hiba
+                    hiba.Visibility = Visibility.Visible;
+                    hiba_out.Text = "Nincs ilyen email cím tárolva!";
+                    return;
+                }
+            }
+            else
+            {
+                //hiba
+                hiba.Visibility = Visibility.Visible;
+                hiba_out.Text = "Nincs ilyen nevű felhasználó!";
+                return;
+            }
+        }
+
+        private void vissza_a_bejelentkezes_oldalra_Click(object sender, RoutedEventArgs e)
+        {
+            jelszo.Visibility = Visibility.Hidden;
+            elfelejtett_jelszo_oldal.Visibility = Visibility.Hidden;
+            bejelentkezes.Visibility = Visibility.Visible;
+            kijelzo.Content = "Bejelentkezés";
+        }
+        //elfelejtett jelszo
     }
 }
