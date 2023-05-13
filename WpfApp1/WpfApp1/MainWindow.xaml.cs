@@ -212,7 +212,7 @@ namespace WpfApp1
         static string Jelszo_visszaallitas(string nev)
         {
             string x = File.ReadAllText(nev + ".txt");
-            string[] adatok = x.Split(';');
+            string[] adatok = x.Split(' ');
 
             char[] visszaforditando_jelszo = adatok[3].ToCharArray();
 
@@ -353,7 +353,7 @@ namespace WpfApp1
 
                     //fájlba mentés
                     string file_name = nev + ".txt";
-                    File.WriteAllText(file_name, nev + ";" + kor + ";" + email + ";" + Jelszo_titkositas(jelszo1));
+                    File.WriteAllText(file_name, nev + " " + kor + " " + email + " " + Jelszo_titkositas(jelszo1));
                     //fájlba mentés
                 }
                 else
@@ -399,7 +399,7 @@ namespace WpfApp1
             if (File.Exists(nev + ".txt"))
             {
                 string x = File.ReadAllText(nev + ".txt");
-                string[] adatok = x.Split(';');
+                string[] adatok = x.Split(' ');
                 if (adatok[3] == titkos_jelszo)
                 {
                     //tovább enged
@@ -454,7 +454,7 @@ namespace WpfApp1
             if (File.Exists(nev + ".txt"))
             {
                 string x = File.ReadAllText(nev + ".txt");
-                string[] adatok = x.Split(';');
+                string[] adatok = x.Split(' ');
 
                 string email = email_input_elfelejtett.Text;
 
