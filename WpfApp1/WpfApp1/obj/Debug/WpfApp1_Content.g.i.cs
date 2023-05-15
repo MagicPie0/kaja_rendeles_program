@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("arrow.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("shopping.png")]
 
 

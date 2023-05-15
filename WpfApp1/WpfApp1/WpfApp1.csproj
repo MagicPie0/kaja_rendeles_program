@@ -96,271 +96,290 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="pexels-jaime-reimer-2662116.jpg" />
+    <Resource Include="Images\pexels-jaime-reimer-2662116.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="pexels-jane-doan-1099680.jpg" />
+    <Resource Include="Images\pexels-jane-doan-1099680.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="eatopia-high-resolution-logo-black-on-transparent-background.png" />
+    <Resource Include="Images\eatopia-high-resolution-logo-black-on-transparent-background.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="shopping-cart-empty-side-view.png" />
+    <Resource Include="Images\shopping-cart-empty-side-view.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="629237.png" />
+    <Resource Include="Images\629237.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="512873.jpg" />
+    <Resource Include="Images\512873.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="user.png" />
+    <Resource Include="Images\user.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="promo-code.png" />
+    <Resource Include="Images\promo-code.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="DALL·E 2023-05-10 20.09.20 - cartoon style BRUSCHETTA.png" />
+    <Resource Include="Images\DALL·E 2023-05-10 20.09.20 - cartoon style BRUSCHETTA.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="DALL_E_2023-05-10_20.09.20_-_cartoon_style_BRUSCHETTA-removebg-preview.png" />
+    <Resource Include="Images\DALL_E_2023-05-10_20.09.20_-_cartoon_style_BRUSCHETTA-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="DALL_E_2023-05-10_20.44.36_-_cartoon_style_cheese_scone-removebg-preview.png" />
+    <Resource Include="Images\DALL_E_2023-05-10_20.44.36_-_cartoon_style_cheese_scone-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="DALL_E_2023-05-10_20.51.17_-_cartoon_style_sandwitch-removebg-preview.png" />
+    <Resource Include="Images\DALL_E_2023-05-10_20.51.17_-_cartoon_style_sandwitch-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="DALL_E_2023-05-10_21.07.18_-_cartoon_style_Caponata-removebg-preview.png" />
+    <Resource Include="Images\DALL_E_2023-05-10_21.07.18_-_cartoon_style_Caponata-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="DALL_E_2023-05-10_21.18.28_-_cartoon_style_muffin-removebg-preview.png" />
+    <Resource Include="Images\DALL_E_2023-05-10_21.18.28_-_cartoon_style_muffin-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image-removebg-preview.png" />
+    <Resource Include="Images\image-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image__1_-removebg-preview.png" />
+    <Resource Include="Images\image__1_-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image__2_-removebg-preview.png" />
+    <Resource Include="Images\image__2_-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image__3_-removebg-preview.png" />
+    <Resource Include="Images\image__3_-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image__4_-removebg-preview.png" />
+    <Resource Include="Images\image__4_-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image__5_-removebg-preview.png" />
+    <Resource Include="Images\image__5_-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image__6_-removebg-preview.png" />
+    <Resource Include="Images\image__6_-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image__7_-removebg-preview.png" />
+    <Resource Include="Images\image__7_-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image__8_-removebg-preview.png" />
+    <Resource Include="Images\image__8_-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="salad.png" />
+    <Resource Include="Images\salad.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="hamburger.png" />
+    <Resource Include="Images\hamburger.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="bibimbap.png" />
+    <Resource Include="Images\bibimbap.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="hot-pot.png" />
+    <Resource Include="Images\hot-pot.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="roasted-chicken.png" />
+    <Resource Include="Images\roasted-chicken.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="pizza.png" />
+    <Resource Include="Images\pizza.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="salad %281%29.png" />
+    <Resource Include="Images\salad %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="tteok.png" />
+    <Resource Include="Images\tteok.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="drink.png" />
+    <Resource Include="Images\drink.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="diet.png" />
+    <Resource Include="Images\diet.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="coupon.png" />
+    <Resource Include="Images\coupon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="man.png" />
+    <Resource Include="Images\man.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="trolley.png" />
+    <Resource Include="Images\trolley.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="eatopia-high-resolution-logo-color-on-transparent-background.png" />
+    <Resource Include="Images\eatopia-high-resolution-logo-color-on-transparent-background.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image__9_-removebg-preview.png" />
+    <Resource Include="Images\image__9_-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image__10_-removebg-preview.png" />
+    <Resource Include="Images\image__10_-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image__11_-removebg-preview.png" />
+    <Resource Include="Images\image__11_-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image__12_-removebg-preview.png" />
+    <Resource Include="Images\image__12_-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image__13_-removebg-preview.png" />
+    <Resource Include="Images\image__13_-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image__14_-removebg-preview.png" />
+    <Resource Include="Images\image__14_-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image__15_-removebg-preview.png" />
+    <Resource Include="Images\image__15_-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img-pSTgMwEeNVH88I0xJE8Ol-removebg-preview.png" />
+    <Resource Include="Images\img-pSTgMwEeNVH88I0xJE8Ol-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img-kYUjchRZUy0RamM0yHBiq-removebg-preview.png" />
+    <Resource Include="Images\img-kYUjchRZUy0RamM0yHBiq-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="cake.png" />
+    <Resource Include="Images\cake.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ice-cream.png" />
+    <Resource Include="Images\ice-cream.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="meat-pie.png" />
+    <Resource Include="Images\meat-pie.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="omelette.png" />
+    <Resource Include="Images\omelette.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="macaroni.png" />
+    <Resource Include="Images\macaroni.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="kofte.png" />
+    <Resource Include="Images\kofte.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="fish-and-chips.png" />
+    <Resource Include="Images\fish-and-chips.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="steak.png" />
+    <Resource Include="Images\steak.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="stinky-tofu.png" />
+    <Resource Include="Images\stinky-tofu.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="meatball.png" />
+    <Resource Include="Images\meatball.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="soup.png" />
+    <Resource Include="Images\soup.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="red-bean-soup.png" />
+    <Resource Include="Images\red-bean-soup.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="garlic-soup.png" />
+    <Resource Include="Images\garlic-soup.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="fish.png" />
+    <Resource Include="Images\fish.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ramen.png" />
+    <Resource Include="Images\ramen.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="bruschetta.png" />
+    <Resource Include="Images\bruschetta.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="cake %281%29.png" />
+    <Resource Include="Images\cake %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="sandwich.png" />
+    <Resource Include="Images\sandwich.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="salad %282%29.png" />
+    <Resource Include="Images\salad %282%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="fried-rice.png" />
+    <Resource Include="Images\fried-rice.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="meatballs.png" />
+    <Resource Include="Images\meatballs.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="macaron.png" />
+    <Resource Include="Images\macaron.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="choco-chip.png" />
+    <Resource Include="Images\choco-chip.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="donut.png" />
+    <Resource Include="Images\donut.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="cola.png" />
+    <Resource Include="Images\cola.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="orange-juice.png" />
+    <Resource Include="Images\orange-juice.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="apple-juice.png" />
+    <Resource Include="Images\apple-juice.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="coffee-cup.png" />
+    <Resource Include="Images\coffee-cup.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="break-time.png" />
+    <Resource Include="Images\break-time.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="herbal-tea.png" />
+    <Resource Include="Images\herbal-tea.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ice-tea.png" />
+    <Resource Include="Images\ice-tea.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="server.png" />
+    <Resource Include="Images\server.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="dizzy-robot.png" />
+    <Resource Include="Images\dizzy-robot.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="pizza %281%29.png" />
+    <Resource Include="Images\pizza %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="taco.png" />
+    <Resource Include="Images\taco.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="sandwich %281%29.png" />
+    <Resource Include="Images\sandwich %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="fast-food.png" />
+    <Resource Include="Images\fast-food.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="hot.png" />
+    <Resource Include="Images\hot.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="donut %281%29.png" />
+    <Resource Include="Images\donut %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="buns.png" />
+    <Resource Include="Images\buns.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="dimsum.png" />
+    <Resource Include="Images\dimsum.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="noodles.png" />
+    <Resource Include="Images\noodles.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="arrow.png" />
+    <Resource Include="Images\arrow.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\coupon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\coupon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\discount.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\discount-voucher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\shopping.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

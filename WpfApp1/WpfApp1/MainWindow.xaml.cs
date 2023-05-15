@@ -326,101 +326,41 @@ namespace WpfApp1
             fooldal.Visibility = Visibility.Visible;
             eloetelek.Visibility = Visibility.Visible;
 
-            int nev = nevek[index2];
-            switch (nev)
-            {
-                case 1:
-                    akcio_etel1.Visibility = Visibility.Visible;
-                    break;
-                case 2:
-                    akcio_etel2.Visibility = Visibility.Visible;
-                    break;
-                case 3:
-                    akcio_etel3.Visibility = Visibility.Visible;
-                    break;
-                case 4:
-                    akcio_etel4.Visibility = Visibility.Visible;
-                    break;
-                case 5:
-                    akcio_etel5.Visibility = Visibility.Visible;
-                    break;
-                case 6:
-                    akcio_etel6.Visibility = Visibility.Visible;
-                    break;
-                case 7:
-                    akcio_etel7.Visibility = Visibility.Visible;
-                    break;
-                case 8:
-                    akcio_etel8.Visibility = Visibility.Visible;
-                    break;
-                case 9:
-                    akcio_etel9.Visibility = Visibility.Visible;
-                    break;
-                case 10:
-                    akcio_etel10.Visibility = Visibility.Visible;
-                    break;
-                case 11:
-                    akcio_etel11.Visibility = Visibility.Visible;
-                    break;
-                case 12:
-                    akcio_etel12.Visibility = Visibility.Visible;
-                    break;
-                case 13:
-                    akcio_etel13.Visibility = Visibility.Visible;
-                    break;
-                case 14:
-                    akcio_etel14.Visibility = Visibility.Visible;
-                    break;
-                case 15:
-                    akcio_etel15.Visibility = Visibility.Visible;
-                    break;
-                case 16:
-                    akcio_etel16.Visibility = Visibility.Visible;
-                    break;
-                case 17:
-                    akcio_etel17.Visibility = Visibility.Visible;
-                    break;
-                case 18:
-                    akcio_etel18.Visibility = Visibility.Visible;
-                    break;
-                case 19:
-                    akcio_etel19.Visibility = Visibility.Visible;
-                    break;
-                case 20:
-                    akcio_etel20.Visibility = Visibility.Visible;
-                    break;
-                case 21:
-                    akcio_etel21.Visibility = Visibility.Visible;
-                    break;
-                case 22:
-                    akcio_etel22.Visibility = Visibility.Visible;
-                    break;
-                case 23:
-                    akcio_etel23.Visibility = Visibility.Visible;
-                    break;
-                case 24:
-                    akcio_etel24.Visibility = Visibility.Visible;
-                    break;
-                case 25:
-                    akcio_etel25.Visibility = Visibility.Visible;
-                    break;
-                case 26:
-                    akcio_etel26.Visibility = Visibility.Visible;
-                    break;
-                case 27:
-                    akcio_etel27.Visibility = Visibility.Visible;
-                    break;
-                case 28:
-                    akcio_etel28.Visibility = Visibility.Visible;
-                    break;
-                case 29:
-                    akcio_etel29.Visibility = Visibility.Visible;
-                    break;
-                case 30:
-                    akcio_etel30.Visibility = Visibility.Visible;
-                    break;
-            }
+            akcio_etel1.Visibility = nevek[index2] == 1 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel2.Visibility = nevek[index2] == 2 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel3.Visibility = nevek[index2] == 3 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel4.Visibility = nevek[index2] == 4 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel5.Visibility = nevek[index2] == 5 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel6.Visibility = nevek[index2] == 6 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel7.Visibility = nevek[index2] == 7 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel8.Visibility = nevek[index2] == 8 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel9.Visibility = nevek[index2] == 9 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel10.Visibility = nevek[index2] == 10 ? Visibility.Visible : Visibility.Hidden;
+
+            akcio_etel11.Visibility = nevek[index2] == 11 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel12.Visibility = nevek[index2] == 12 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel13.Visibility = nevek[index2] == 13 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel14.Visibility = nevek[index2] == 14 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel15.Visibility = nevek[index2] == 15 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel16.Visibility = nevek[index2] == 16 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel17.Visibility = nevek[index2] == 17 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel18.Visibility = nevek[index2] == 18 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel19.Visibility = nevek[index2] == 19 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel20.Visibility = nevek[index2] == 20 ? Visibility.Visible : Visibility.Hidden;
+
+            akcio_etel21.Visibility = nevek[index2] == 21 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel22.Visibility = nevek[index2] == 22 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel23.Visibility = nevek[index2] == 23 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel24.Visibility = nevek[index2] == 24 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel25.Visibility = nevek[index2] == 25 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel26.Visibility = nevek[index2] == 26 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel27.Visibility = nevek[index2] == 27 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel28.Visibility = nevek[index2] == 28 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel29.Visibility = nevek[index2] == 29 ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel30.Visibility = nevek[index2] == 30 ? Visibility.Visible : Visibility.Hidden;
+
         }
+        
 
         private void tovabb_Click(object sender, RoutedEventArgs e)
         {
@@ -571,7 +511,7 @@ namespace WpfApp1
             }
             string titkos_jelszo = new string(visszaforditando_jelszo);
             return titkos_jelszo;
-        }
+        } 
 
         public int Akciozas(int ar, int szazalek)
         {
@@ -857,12 +797,11 @@ namespace WpfApp1
 
                 string email = email_input_elfelejtett.Text;
 
-                ; string titkos_jelszo = Jelszo_visszaallitas(nev);
+                string titkos_jelszo = Jelszo_visszaallitas(nev);
 
                 if (email == adatok[2])
                 {
                     //tovább enged
-
                     jelszo.Visibility = Visibility.Visible;
                     jelszo_ki.Text = "A jelszó: " + titkos_jelszo;
                 }
@@ -927,157 +866,157 @@ namespace WpfApp1
             //eloetelek
             BitmapImage bruschetta = new BitmapImage();
             bruschetta.BeginInit();
-            bruschetta.UriSource = new Uri("/bruschetta.png", UriKind.Relative);
+            bruschetta.UriSource = new Uri("/images/bruschetta.png", UriKind.Relative);
             bruschetta.EndInit();
 
             BitmapImage pogi = new BitmapImage();
             pogi.BeginInit();
-            pogi.UriSource = new Uri("/cake (1).png", UriKind.Relative);
+            pogi.UriSource = new Uri("/images/cake (1).png", UriKind.Relative);
             pogi.EndInit();
 
             BitmapImage szendvics = new BitmapImage();
             szendvics.BeginInit();
-            szendvics.UriSource = new Uri("/sandwich.png", UriKind.Relative);
+            szendvics.UriSource = new Uri("/images/sandwich.png", UriKind.Relative);
             szendvics.EndInit();
 
 
             BitmapImage salata = new BitmapImage();
             salata.BeginInit();
-            salata.UriSource = new Uri("/salad (2).png", UriKind.Relative);
+            salata.UriSource = new Uri("/images/salad (2).png", UriKind.Relative);
             salata.EndInit();
 
             BitmapImage rantotta = new BitmapImage();
             rantotta.BeginInit();
-            rantotta.UriSource = new Uri("/fried-rice.png", UriKind.Relative);
+            rantotta.UriSource = new Uri("/images/fried-rice.png", UriKind.Relative);
             rantotta.EndInit();
 
             BitmapImage fasirt = new BitmapImage();
             fasirt.BeginInit();
-            fasirt.UriSource = new Uri("/meatballs.png", UriKind.Relative);
+            fasirt.UriSource = new Uri("/images/meatballs.png", UriKind.Relative);
             fasirt.EndInit();
             //eloetelek
             //levesek
             BitmapImage paradicsom_leves = new BitmapImage();
             paradicsom_leves.BeginInit();
-            paradicsom_leves.UriSource = new Uri("/meatball.png", UriKind.Relative);
+            paradicsom_leves.UriSource = new Uri("/images/meatball.png", UriKind.Relative);
             paradicsom_leves.EndInit();
 
             BitmapImage sajtleves = new BitmapImage();
             sajtleves.BeginInit();
-            sajtleves.UriSource = new Uri("/soup.png", UriKind.Relative);
+            sajtleves.UriSource = new Uri("/images/soup.png", UriKind.Relative);
             sajtleves.EndInit();
 
             BitmapImage bableves = new BitmapImage();
             bableves.BeginInit();
-            bableves.UriSource = new Uri("/red-bean-soup.png", UriKind.Relative);
+            bableves.UriSource = new Uri("/images/red-bean-soup.png", UriKind.Relative);
             bableves.EndInit();
 
             BitmapImage fokhagymaleves = new BitmapImage();
             fokhagymaleves.BeginInit();
-            fokhagymaleves.UriSource = new Uri("/garlic-soup.png", UriKind.Relative);
+            fokhagymaleves.UriSource = new Uri("/images/garlic-soup.png", UriKind.Relative);
             fokhagymaleves.EndInit();
 
             BitmapImage halaszle = new BitmapImage();
             halaszle.BeginInit();
-            halaszle.UriSource = new Uri("/fish.png", UriKind.Relative);
+            halaszle.UriSource = new Uri("/images/fish.png", UriKind.Relative);
             halaszle.EndInit();
 
             BitmapImage ramen = new BitmapImage();
             ramen.BeginInit();
-            ramen.UriSource = new Uri("/ramen.png", UriKind.Relative);
+            ramen.UriSource = new Uri("/images/ramen.png", UriKind.Relative);
             ramen.EndInit();
             //levesek
             //foetelek
             BitmapImage omelette = new BitmapImage();
             omelette.BeginInit();
-            omelette.UriSource = new Uri("/omelette.png", UriKind.Relative);
+            omelette.UriSource = new Uri("/images/omelette.png", UriKind.Relative);
             omelette.EndInit();
 
             BitmapImage mac_n_cheese = new BitmapImage();
             mac_n_cheese.BeginInit();
-            mac_n_cheese.UriSource = new Uri("/macaroni.png", UriKind.Relative);
+            mac_n_cheese.UriSource = new Uri("/images/macaroni.png", UriKind.Relative);
             mac_n_cheese.EndInit();
 
             BitmapImage kofte = new BitmapImage();
             kofte.BeginInit();
-            kofte.UriSource = new Uri("/kofte.png", UriKind.Relative);
+            kofte.UriSource = new Uri("/images/kofte.png", UriKind.Relative);
             kofte.EndInit();
 
             BitmapImage fish_and_chips = new BitmapImage();
             fish_and_chips.BeginInit();
-            fish_and_chips.UriSource = new Uri("/fish-and-chips.png", UriKind.Relative);
+            fish_and_chips.UriSource = new Uri("/images/fish-and-chips.png", UriKind.Relative);
             fish_and_chips.EndInit();
 
             BitmapImage steak = new BitmapImage();
             steak.BeginInit();
-            steak.UriSource = new Uri("/steak.png", UriKind.Relative);
+            steak.UriSource = new Uri("/images/steak.png", UriKind.Relative);
             steak.EndInit();
 
             BitmapImage tofu = new BitmapImage();
             tofu.BeginInit();
-            tofu.UriSource = new Uri("/stinky-tofu.png", UriKind.Relative);
+            tofu.UriSource = new Uri("/images/stinky-tofu.png", UriKind.Relative);
             tofu.EndInit();
             //foetelek
             //desszertek
             BitmapImage fagylalt = new BitmapImage();
             fagylalt.BeginInit();
-            fagylalt.UriSource = new Uri("/ice-cream.png", UriKind.Relative);
+            fagylalt.UriSource = new Uri("/images/ice-cream.png", UriKind.Relative);
             fagylalt.EndInit();
 
             BitmapImage torta = new BitmapImage();
             torta.BeginInit();
-            torta.UriSource = new Uri("/cake.png", UriKind.Relative);
+            torta.UriSource = new Uri("/images/cake.png", UriKind.Relative);
             torta.EndInit();
 
             BitmapImage pite = new BitmapImage();
             pite.BeginInit();
-            pite.UriSource = new Uri("/meat-pie.png", UriKind.Relative);
+            pite.UriSource = new Uri("/images/meat-pie.png", UriKind.Relative);
             pite.EndInit();
 
             BitmapImage macaron = new BitmapImage();
             macaron.BeginInit();
-            macaron.UriSource = new Uri("/macaron.png", UriKind.Relative);
+            macaron.UriSource = new Uri("/images/macaron.png", UriKind.Relative);
             macaron.EndInit();
 
             BitmapImage suti = new BitmapImage();
             suti.BeginInit();
-            suti.UriSource = new Uri("/choco-chip.png", UriKind.Relative);
+            suti.UriSource = new Uri("/images/choco-chip.png", UriKind.Relative);
             suti.EndInit();
 
             BitmapImage fank = new BitmapImage();
             fank.BeginInit();
-            fank.UriSource = new Uri("/donut.png", UriKind.Relative);
+            fank.UriSource = new Uri("/images/donut.png", UriKind.Relative);
             fank.EndInit();
             //desszertek
             //uditok
             BitmapImage cola = new BitmapImage();
             cola.BeginInit();
-            cola.UriSource = new Uri("/cola.png", UriKind.Relative);
+            cola.UriSource = new Uri("/images/cola.png", UriKind.Relative);
             cola.EndInit();
 
             BitmapImage narancsle = new BitmapImage();
             narancsle.BeginInit();
-            narancsle.UriSource = new Uri("/orange-juice.png", UriKind.Relative);
+            narancsle.UriSource = new Uri("/images/orange-juice.png", UriKind.Relative);
             narancsle.EndInit();
 
             BitmapImage almale = new BitmapImage();
             almale.BeginInit();
-            almale.UriSource = new Uri("/apple-juice.png", UriKind.Relative);
+            almale.UriSource = new Uri("/images/apple-juice.png", UriKind.Relative);
             almale.EndInit();
 
             BitmapImage kave = new BitmapImage();
             kave.BeginInit();
-            kave.UriSource = new Uri("/coffee-cup.png", UriKind.Relative);
+            kave.UriSource = new Uri("/images/coffee-cup.png", UriKind.Relative);
             kave.EndInit();
 
             BitmapImage tea = new BitmapImage();
             tea.BeginInit();
-            tea.UriSource = new Uri("/herbal-tea.png", UriKind.Relative);
+            tea.UriSource = new Uri("/images/herbal-tea.png", UriKind.Relative);
             tea.EndInit();
 
             BitmapImage jeges_tea = new BitmapImage();
             jeges_tea.BeginInit();
-            jeges_tea.UriSource = new Uri("/ice-tea.png", UriKind.Relative);
+            jeges_tea.UriSource = new Uri("/images/ice-tea.png", UriKind.Relative);
             jeges_tea.EndInit();
             //uditok
             switch ( nev )
@@ -1301,6 +1240,9 @@ namespace WpfApp1
         {
             coupon.Visibility = Visibility.Hidden;
             int nev = nevek[index2];
+            var etelek_jelzok = new[] { eloetel_jelzo, leves_jelzo, foetel_jelzo,
+                                        desszert_jelzo, udito_jelzo};
+            foreach(var item in etelek_jelzok) { item.Visibility = Visibility.Visible; }
             switch (nev) 
             {
                 case 1:
@@ -1424,6 +1366,37 @@ namespace WpfApp1
                     uditok.Visibility = Visibility.Visible;
                     break;
 
+            }
+
+            if (eloetelek.Visibility == Visibility.Visible)
+            {
+                tovabb.Visibility = Visibility.Visible;
+                vissza.Visibility = Visibility.Hidden;
+                eloetel_jelzo.IsChecked = true;
+            }
+            else if (levesek.Visibility == Visibility.Visible )
+            {
+                tovabb.Visibility = Visibility.Visible;
+                vissza.Visibility = Visibility.Visible;
+                leves_jelzo.IsChecked = true;
+            }
+            else if (foetelek.Visibility == Visibility.Visible)
+            {
+                tovabb.Visibility = Visibility.Visible;
+                vissza.Visibility = Visibility.Visible;
+                foetel_jelzo.IsChecked = true;
+            }
+            else if (desszertek.Visibility == Visibility.Visible)
+            {
+                tovabb.Visibility = Visibility.Visible;
+                vissza.Visibility = Visibility.Visible;
+                desszert_jelzo.IsChecked = true;
+            }
+            else if (uditok.Visibility == Visibility.Visible)
+            {
+                tovabb.Visibility = Visibility.Visible;
+                vissza.Visibility = Visibility.Visible;
+                udito_jelzo.IsChecked = true;
             }
         }
     }   //coupon
