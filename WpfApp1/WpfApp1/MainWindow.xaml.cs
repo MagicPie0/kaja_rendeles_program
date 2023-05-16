@@ -860,7 +860,8 @@ namespace WpfApp1
             //logic
 
             int szazalek = szazalekok[index];
-            coupon_szazalek.Text = szazalek + "%";
+            coupon_szazalek.Value = szazalek;
+            szazalek_kiiras.Text = szazalek + "%";
 
             int nev = nevek[index2];
             //eloetelek

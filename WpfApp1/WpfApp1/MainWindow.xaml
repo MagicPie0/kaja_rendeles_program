@@ -793,19 +793,19 @@
             <Image Margin="10,70,638,142" Source="/images/server.png" Stretch="Fill"/>
             <Image Margin="645,70,3,142" Source="/images/dizzy-robot.png" Stretch="Fill" RenderTransformOrigin="1.038,1.012"/>
         </Grid>
-        <Grid Name="coupon" Visibility="Hidden">
+        <Grid Name="coupon" Visibility="Visible">
             <Rectangle HorizontalAlignment="Center" Height="769" Margin="0,160,0,0" VerticalAlignment="Top" Width="1160" Fill="White" Opacity="0.65" Grid.RowSpan="2"/>
-            <TextBlock x:Name="coupon_nev" HorizontalAlignment="Center" Margin="0,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="582" FontSize="22" TextAlignment="Center" Text="Halo"/>
+            <TextBlock x:Name="coupon_nev" HorizontalAlignment="Center" Margin="559,205,559,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="51" Width="582" FontSize="36" TextAlignment="Center" Text="Halo"/>
             <Image x:Name="coupon_kep" HorizontalAlignment="Left" Height="400" Margin="650,272,0,0" VerticalAlignment="Top" Width="426" Source="/images/bibimbap.png"/>
-            <TextBlock x:Name="coupon_szazalek" HorizontalAlignment="Center" Margin="0,714,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="582" FontSize="22" TextAlignment="Center" Background="#FF30E000"><Run Language="hu-hu" Text="20%"/></TextBlock>
             <Button Style="{DynamicResource ButtonStyle7}" x:Name="elfogad" Content="A termékhez" HorizontalAlignment="Center" Margin="0,793,0,0" VerticalAlignment="Top" Height="86" Width="576" BorderBrush="{x:Null}" Background="White" FontSize="36" Click="elfogad_Click" FontFamily="Cascadia Mono SemiBold"/>
             <Image Margin="413,190,1102,643" Source="/images/coupon (1).png" Stretch="Fill"/>
             <Image Margin="320,482,1194,351" Source="/images/shopping.png" Stretch="Fill"/>
             <Image Margin="1214,205,301,628" Source="/images/discount.png" Stretch="Fill"/>
             <Image Margin="1122,506,394,328" Source="/images/discount-voucher.png" Stretch="Fill"/>
-
+            <ProgressBar x:Name="coupon_szazalek" Margin="554,704,566,240" BorderBrush="{x:Null}" Background="White" Maximum="50"></ProgressBar>
+            <TextBlock x:Name="szazalek_kiiras" HorizontalAlignment="Left" Margin="555,708,0,0" TextWrapping="Wrap" Text="20%" VerticalAlignment="Top" Height="60" Width="575" TextAlignment="Center" FontSize="36"/>
         </Grid>
-        
+
         <Button x:Name="tovabb" Style="{DynamicResource ButtonStyle3}" Content="&gt;" HorizontalAlignment="Left" Margin="1579,459,0,0" VerticalAlignment="Top" Height="179" Width="121" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="tovabb_Click"/>
         <Button x:Name="vissza" Style="{DynamicResource ButtonStyle3}" Content=" &lt;" HorizontalAlignment="Left" Margin="-38,459,0,0" VerticalAlignment="Top" Height="179" Width="122" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="vissza_Click"/>
 
