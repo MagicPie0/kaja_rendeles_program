@@ -491,17 +491,31 @@
                 <ImageBrush ImageSource="/images/man.png" Stretch="Fill"/>
             </Button.Background>
         </Button>
-        <Grid x:Name="kosar" Margin="0,134,0,5"/>
-        <Rectangle Height="293" Margin="1159,196,0,0" VerticalAlignment="Top" Fill="White" Opacity="0.65" HorizontalAlignment="Left" Width="440"/>
-        <Rectangle HorizontalAlignment="Left" Height="161" Margin="73,293,0,0" VerticalAlignment="Top" Width="1067" Fill="White" Opacity="0.65"/>
-        <Rectangle HorizontalAlignment="Left" Height="161" Margin="73,471,0,0" VerticalAlignment="Top" Width="1067" Fill="White" Opacity="0.65"/>
-        <Rectangle HorizontalAlignment="Left" Height="270" Margin="1207,643,0,0" VerticalAlignment="Top" Width="356" Fill="White" Opacity="0.65"/>
-        <Rectangle HorizontalAlignment="Left" Height="57" Margin="1207,575,0,0" VerticalAlignment="Top" Width="356" Fill="#FF51FF00" Opacity="0.65"/>
-        <TextBox HorizontalAlignment="Left" Height="56" Margin="1277,575,0,0" TextWrapping="Wrap" Text="Termék Ajánló" VerticalAlignment="Top" Width="227" FontSize="36" Background="{x:Null}" Foreground="White" FontFamily="Dubai Light" FontWeight="Bold" BorderBrush="{x:Null}"/>
-        <Rectangle HorizontalAlignment="Left" Height="57" Margin="73,222,0,0" VerticalAlignment="Top" Width="1067" Fill="#FF005DFF" Opacity="0.65"/>
-        <TextBox HorizontalAlignment="Left" Height="56" Margin="517,222,0,0" TextWrapping="Wrap" Text="Kosár Tartalma" VerticalAlignment="Top" Width="233" FontSize="36" Background="{x:Null}" Foreground="White" FontFamily="Dubai Light" FontWeight="Bold" BorderBrush="{x:Null}" TextChanged="TextBox_TextChanged"/>
-        <Rectangle HorizontalAlignment="Left" Height="57" Margin="1159,196,0,0" VerticalAlignment="Top" Width="440" Fill="Red" Opacity="0.65"/>
-        <TextBox HorizontalAlignment="Left" Height="56" Margin="1231,196,0,0" TextWrapping="Wrap" Text="Rendelés Összegzése" VerticalAlignment="Top" Width="317" FontSize="36" Background="{x:Null}" Foreground="White" FontFamily="Dubai Light" FontWeight="Bold" BorderBrush="{x:Null}" TextChanged="TextBox_TextChanged"/>
+        <Grid x:Name="kosar" Margin="0,134,0,5" Visibility="Hidden">
+            <ListBox HorizontalAlignment="Left" Height="232" Margin="73,131,0,0" VerticalAlignment="Top" Width="943" Background="{x:Null}" BorderBrush="#FF000209"/>
+            <Rectangle Height="293" Margin="1050,70,0,0" VerticalAlignment="Top" Fill="White" Opacity="0.65" HorizontalAlignment="Left" Width="549"/>
+            <Rectangle HorizontalAlignment="Left" Height="234" Margin="73,129,0,0" VerticalAlignment="Top" Width="943" Fill="White" Opacity="0.65"/>
+            <Rectangle HorizontalAlignment="Left" Height="369" Margin="852,401,0,0" VerticalAlignment="Top" Width="747" Fill="White" Opacity="0.65"/>
+            <Rectangle HorizontalAlignment="Left" Height="57" Margin="852,401,0,0" VerticalAlignment="Top" Width="747" Fill="#FF44D700" Opacity="0.65"/>
+            <TextBox HorizontalAlignment="Left" Height="56" Margin="1103,401,0,0" TextWrapping="Wrap" Text="Termék Ajánló" VerticalAlignment="Top" Width="227" FontSize="36" Background="{x:Null}" Foreground="White" FontFamily="Dubai Light" FontWeight="Bold" BorderBrush="{x:Null}"/>
+            <Rectangle HorizontalAlignment="Left" Height="57" Margin="73,69,0,0" VerticalAlignment="Top" Width="943" Fill="#FF005DFF" Opacity="0.65"/>
+            <TextBox HorizontalAlignment="Left" Height="56" Margin="448,70,0,0" TextWrapping="Wrap" Text="Kosár Tartalma" VerticalAlignment="Top" Width="233" FontSize="36" Background="{x:Null}" Foreground="White" FontFamily="Dubai Light" FontWeight="Bold" BorderBrush="{x:Null}" TextChanged="TextBox_TextChanged"/>
+            <Rectangle HorizontalAlignment="Left" Height="57" Margin="1050,70,0,0" VerticalAlignment="Top" Width="549" Fill="Red" Opacity="0.65"/>
+            <TextBox HorizontalAlignment="Left" Height="56" Margin="1177,71,0,0" TextWrapping="Wrap" Text="Rendelés Összegzése" VerticalAlignment="Top" Width="317" FontSize="36" Background="{x:Null}" Foreground="White" FontFamily="Dubai Light" FontWeight="Bold" BorderBrush="{x:Null}" TextChanged="TextBox_TextChanged"/>
+            <Button Content="" HorizontalAlignment="Left" Margin="872,490,0,0" VerticalAlignment="Top" Width="160" Height="160"/>
+            <Button Content="" HorizontalAlignment="Left" Margin="1054,490,0,0" VerticalAlignment="Top" Width="160" Height="160"/>
+            <Button Content="" HorizontalAlignment="Left" Margin="1236,490,0,0" VerticalAlignment="Top" Width="160" Height="160"/>
+            <Button Content="" HorizontalAlignment="Left" Margin="1418,490,0,0" VerticalAlignment="Top" Width="160" Height="160"/>
+            <TextBlock HorizontalAlignment="Left" Margin="872,655,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="40" Width="160"/>
+            <TextBlock HorizontalAlignment="Left" Margin="872,700,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="40" Width="160"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1054,655,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="40" Width="160"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1054,700,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="40" Width="160"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1236,700,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="40" Width="160"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1236,655,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="40" Width="160"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1418,700,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="40" Width="160"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1418,655,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="40" Width="160"/>
+        </Grid>
+
 
 
 
@@ -807,7 +821,7 @@
             <Image Margin="10,70,638,142" Source="/images/server.png" Stretch="Fill"/>
             <Image Margin="645,70,3,142" Source="/images/dizzy-robot.png" Stretch="Fill" RenderTransformOrigin="1.038,1.012"/>
         </Grid>
-        <Grid Name="coupon" Visibility="Visible">
+        <Grid Name="coupon" Visibility="Hidden">
             <Rectangle HorizontalAlignment="Center" Height="769" Margin="0,160,0,0" VerticalAlignment="Top" Width="1160" Fill="White" Opacity="0.65" Grid.RowSpan="2"/>
             <TextBlock x:Name="coupon_nev" HorizontalAlignment="Center" Margin="559,205,559,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="51" Width="582" FontSize="36" TextAlignment="Center" Text="Halo"/>
             <Image x:Name="coupon_kep" HorizontalAlignment="Left" Height="400" Margin="650,272,0,0" VerticalAlignment="Top" Width="426" Source="/images/bibimbap.png"/>
@@ -819,12 +833,38 @@
             <ProgressBar x:Name="coupon_szazalek" Margin="554,704,566,240" BorderBrush="{x:Null}" Background="White" Maximum="50"></ProgressBar>
             <TextBlock x:Name="szazalek_kiiras" HorizontalAlignment="Left" Margin="555,708,0,0" TextWrapping="Wrap" Text="20%" VerticalAlignment="Top" Height="60" Width="575" TextAlignment="Center" FontSize="36"/>
         </Grid>
+
+        <Grid x:Name="profil">
+            <Rectangle Height="750" Margin="385,172,385,0" VerticalAlignment="Top" Fill="White" Opacity="0.65"/>
+            <Image Height="350" Margin="675,199,675,0" VerticalAlignment="Top" Source="apple-juice.png"/>
+            <TextBlock Margin="630,580,630,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="55" Background="White"/>
+            <TextBlock Margin="630,647,630,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="55" Background="White"/>
+            <TextBlock Margin="630,716,630,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="55" Background="White"/>
+            <TextBlock Margin="630,779,630,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="68" Background="White" TextAlignment="Center"><Run Text="Jelszó változtatása"/><Run Text=":"/></TextBlock>
+            <PasswordBox HorizontalAlignment="Left" Margin="637,801,0,0" VerticalAlignment="Top" Width="360" Height="34"/>
+            <TextBlock Margin="630,852,630,0" TextWrapping="Wrap" Text="Nem:" VerticalAlignment="Top" Height="46" Background="White" TextAlignment="Center"/>
+            <Label Content="" HorizontalAlignment="Left" Margin="630,867,0,0" VerticalAlignment="Top" Width="440" Height="18" Background="#FF00B1FF"/>
+            <CheckBox Content="Férfi" Margin="735,869,900,0" VerticalAlignment="Top" Height="18"/>
+            <CheckBox Content="Nő" Margin="900,869,735,0" VerticalAlignment="Top" Height="18"/>
+            <Button Content="Új jelszó" HorizontalAlignment="Left" Margin="997,801,0,0" VerticalAlignment="Top" Width="65" Height="34"/>
+
+
+
+
+
+
+
+
+
+
+        </Grid>
+
         <!-- head -->
-        
-        
+
         <!-- ideiglenes -->
         <Button x:Name="tovabb" Style="{DynamicResource ButtonStyle3}" Content="&gt;" HorizontalAlignment="Left" Margin="1579,459,0,0" VerticalAlignment="Top" Height="179" Width="121" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="tovabb_Click"/>
         <Button x:Name="vissza" Style="{DynamicResource ButtonStyle3}" Content=" &lt;" HorizontalAlignment="Left" Margin="-38,459,0,0" VerticalAlignment="Top" Height="179" Width="122" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="vissza_Click"/>
+
 
     </Grid>
 </Window>
