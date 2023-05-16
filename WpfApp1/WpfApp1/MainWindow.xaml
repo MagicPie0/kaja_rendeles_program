@@ -793,7 +793,7 @@
             <Image Margin="10,70,638,142" Source="/images/server.png" Stretch="Fill"/>
             <Image Margin="645,70,3,142" Source="/images/dizzy-robot.png" Stretch="Fill" RenderTransformOrigin="1.038,1.012"/>
         </Grid>
-        <Grid Name="coupon">
+        <Grid Name="coupon" Visibility="Hidden">
             <Rectangle HorizontalAlignment="Center" Height="769" Margin="0,160,0,0" VerticalAlignment="Top" Width="1160" Fill="White" Opacity="0.65" Grid.RowSpan="2"/>
             <TextBlock x:Name="coupon_nev" HorizontalAlignment="Center" Margin="0,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="582" FontSize="22" TextAlignment="Center" Text="Halo"/>
             <Image x:Name="coupon_kep" HorizontalAlignment="Left" Height="400" Margin="650,272,0,0" VerticalAlignment="Top" Width="426" Source="/images/bibimbap.png"/>
@@ -805,6 +805,7 @@
             <Image Margin="1122,506,394,328" Source="/images/discount-voucher.png" Stretch="Fill"/>
 
         </Grid>
+        
         <Button x:Name="tovabb" Style="{DynamicResource ButtonStyle3}" Content="&gt;" HorizontalAlignment="Left" Margin="1579,459,0,0" VerticalAlignment="Top" Height="179" Width="121" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="tovabb_Click"/>
         <Button x:Name="vissza" Style="{DynamicResource ButtonStyle3}" Content=" &lt;" HorizontalAlignment="Left" Margin="-38,459,0,0" VerticalAlignment="Top" Height="179" Width="122" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="vissza_Click"/>
 
