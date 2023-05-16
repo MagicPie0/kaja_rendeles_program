@@ -1,10 +1,6 @@
 ﻿using System;
-using System.CodeDom;
 using System.IO;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Input;
-using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 
 namespace WpfApp1
@@ -311,8 +307,15 @@ namespace WpfApp1
         private void kosar_button_Click(object sender, RoutedEventArgs e)
         {
             kosar.Visibility = Visibility.Visible;
-            fooldal.Visibility = Visibility.Hidden;
+            eloetelek.Visibility = Visibility.Hidden;
+            levesek.Visibility = Visibility.Hidden;
+            foetelek.Visibility = Visibility.Hidden;
+            desszertek.Visibility = Visibility.Hidden;
+            uditok.Visibility = Visibility.Hidden;
             coupon.Visibility = Visibility.Hidden;
+            profil.Visibility = Visibility.Hidden;
+            kijelzo.Content = "Kosár";
+
         }
 
         private void fo_button_Click(object sender, RoutedEventArgs e)
@@ -360,7 +363,7 @@ namespace WpfApp1
             akcio_etel30.Visibility = nevek[index2] == 30 ? Visibility.Visible : Visibility.Hidden;
 
         }
-        
+
 
         private void tovabb_Click(object sender, RoutedEventArgs e)
         {
@@ -498,12 +501,9 @@ namespace WpfApp1
             return titkos_jelszo;
         }
 
-        static string Jelszo_visszaallitas(string nev)
+        static string Jelszo_visszaallitas(string jelszo)
         {
-            string x = File.ReadAllText(nev + ".txt");
-            string[] adatok = x.Split(' ');
-
-            char[] visszaforditando_jelszo = adatok[3].ToCharArray();
+            char[] visszaforditando_jelszo = jelszo.ToCharArray();
 
             for (int i = 0; i < visszaforditando_jelszo.Length; i++)
             {
@@ -511,7 +511,7 @@ namespace WpfApp1
             }
             string titkos_jelszo = new string(visszaforditando_jelszo);
             return titkos_jelszo;
-        } 
+        }
 
         public int Akciozas(int ar, int szazalek)
         {
@@ -554,6 +554,7 @@ namespace WpfApp1
             string be_kor = eletkor_input.Text;
             int kor;
             string email = email_input.Text;
+            string nem = nem_input.Text;
             string jelszo1 = jelszo1_input.Password;
             string jelszo2 = jelszo2_input.Password;
 
@@ -599,8 +600,21 @@ namespace WpfApp1
 
                     if (email.Contains("@") == true)
                     {
-                        //tovább enged
-                        engedély++; //2
+
+                        if (nem == "férfi" | nem == "nő")
+                        {
+                            //tovább enged
+                            engedély++; //2
+
+                        }
+                        else
+                        {
+                            //hiba
+                            hiba.Visibility = Visibility.Visible;
+                            hiba_out.Text = "A neme férfi vagy nő lehet csak!";
+                            return;
+                        }
+                        
                     }
                     else
                     {
@@ -684,7 +698,7 @@ namespace WpfApp1
 
                     //fájlba mentés
                     string file_name = nev + ".txt";
-                    File.WriteAllText(file_name, nev + " " + kor + " " + email + " " + Jelszo_titkositas(jelszo1));
+                    File.WriteAllText(file_name, nev + " " + kor + " " + email + " " + nem + " " + Jelszo_titkositas(jelszo1));
                     //fájlba mentés
                 }
                 else
@@ -733,7 +747,7 @@ namespace WpfApp1
             {
                 string x = File.ReadAllText(nev + ".txt");
                 string[] adatok = x.Split(' ');
-                if (adatok[3] == titkos_jelszo)
+                if (adatok[4] == titkos_jelszo)
                 {
                     //tovább enged
                     var jelzok = new[] { eloetel_jelzo, leves_jelzo, foetel_jelzo, desszert_jelzo, udito_jelzo };
@@ -797,7 +811,7 @@ namespace WpfApp1
 
                 string email = email_input_elfelejtett.Text;
 
-                string titkos_jelszo = Jelszo_visszaallitas(nev);
+                string titkos_jelszo = Jelszo_visszaallitas(adatok[4]);
 
                 if (email == adatok[2])
                 {
@@ -849,8 +863,8 @@ namespace WpfApp1
             var etelek_jelzok = new[] { eloetel_jelzo, leves_jelzo, foetel_jelzo,
                                         desszert_jelzo, udito_jelzo};
 
-            foreach( var item in oldalak ) { item.Visibility = Visibility.Hidden; }
-            foreach( var item in etelek_jelzok ) { item.Visibility = Visibility.Hidden;}
+            foreach (var item in oldalak) { item.Visibility = Visibility.Hidden; }
+            foreach (var item in etelek_jelzok) { item.Visibility = Visibility.Hidden; }
 
             vissza.Visibility = Visibility.Hidden;
             tovabb.Visibility = Visibility.Hidden;
@@ -1020,7 +1034,7 @@ namespace WpfApp1
             jeges_tea.UriSource = new Uri("/images/ice-tea.png", UriKind.Relative);
             jeges_tea.EndInit();
             //uditok
-            switch ( nev )
+            switch (nev)
             {
                 case 1:
                     coupon_nev.Text = "Bruschetta";
@@ -1233,7 +1247,7 @@ namespace WpfApp1
                     etel30_ar.Content = "Ár: " + Akciozas(Etel30_ar, szazalek) + "Ft";
                     break;
             }
-            
+
             //logic
         }
 
@@ -1243,8 +1257,8 @@ namespace WpfApp1
             int nev = nevek[index2];
             var etelek_jelzok = new[] { eloetel_jelzo, leves_jelzo, foetel_jelzo,
                                         desszert_jelzo, udito_jelzo};
-            foreach(var item in etelek_jelzok) { item.Visibility = Visibility.Visible; }
-            switch (nev) 
+            foreach (var item in etelek_jelzok) { item.Visibility = Visibility.Visible; }
+            switch (nev)
             {
                 case 1:
                     akcio_etel1.Visibility = Visibility.Visible;
@@ -1375,7 +1389,7 @@ namespace WpfApp1
                 vissza.Visibility = Visibility.Hidden;
                 eloetel_jelzo.IsChecked = true;
             }
-            else if (levesek.Visibility == Visibility.Visible )
+            else if (levesek.Visibility == Visibility.Visible)
             {
                 tovabb.Visibility = Visibility.Visible;
                 vissza.Visibility = Visibility.Visible;
@@ -1400,6 +1414,136 @@ namespace WpfApp1
                 udito_jelzo.IsChecked = true;
             }
         }
+        //coupon
+        //profil
+        private void account_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            kosar.Visibility = Visibility.Hidden;
+            eloetelek.Visibility = Visibility.Hidden;
+            levesek.Visibility = Visibility.Hidden;
+            foetelek.Visibility = Visibility.Hidden;
+            desszertek.Visibility = Visibility.Hidden;
+            uditok.Visibility = Visibility.Hidden;
+            coupon.Visibility = Visibility.Hidden;
+            profil.Visibility = Visibility.Visible;
+            kijelzo.Content = "Felhasználó";
+            profil_ferfi.IsEnabled = false;
+            profil_no.IsEnabled = false;
 
-    }   //coupon
+            var etelek_jelzok = new[] { eloetel_jelzo, leves_jelzo, foetel_jelzo,
+                                        desszert_jelzo, udito_jelzo};
+            foreach (var item in etelek_jelzok) { item.Visibility = Visibility.Hidden; }
+
+            BitmapImage tini_f = new BitmapImage();
+            tini_f.BeginInit();
+            tini_f.UriSource = new Uri("/teenage.png", UriKind.Relative);
+            tini_f.EndInit();
+
+            BitmapImage tini_l = new BitmapImage();
+            tini_l.BeginInit();
+            tini_l.UriSource = new Uri("/teen.png", UriKind.Relative);
+            tini_l.EndInit();
+
+            BitmapImage middle_l = new BitmapImage();
+            middle_l.BeginInit();
+            middle_l.UriSource = new Uri("/mom.png", UriKind.Relative);
+            middle_l.EndInit();
+
+            BitmapImage middle_f = new BitmapImage();
+            middle_f.BeginInit();
+            middle_f.UriSource = new Uri("/father.png", UriKind.Relative);
+            middle_f.EndInit();
+
+            BitmapImage oreg_l = new BitmapImage();
+            oreg_l.BeginInit();
+            oreg_l.UriSource = new Uri("/grandmother.png", UriKind.Relative);
+            oreg_l.EndInit();
+            
+            BitmapImage oreg_f = new BitmapImage();
+            oreg_f.BeginInit();
+            oreg_f.UriSource = new Uri("// man(1).png", UriKind.Relative);
+            oreg_f.EndInit();
+
+            if (File.Exists(nev + ".txt"))
+            {
+                string adat = File.ReadAllText(nev + ".txt");
+                string[] adatok = adat.Split(' ');
+
+                profil_nev.Text = "Név: " + adatok[0];
+                profil_kor.Text = "Kor: " + adatok[1];
+                profil_email.Text = "Email: " + adatok[2];
+
+                if (adatok[3] == "férfi")
+                {
+                    profil_no.IsChecked = false;
+                    profil_ferfi.IsChecked = true;
+
+                    if (Convert.ToInt32(adatok[1]) > 0 & Convert.ToInt32(adatok[1]) < 18)
+                    {
+                        profil_kep.Source = tini_f;
+                    }
+
+                    if (Convert.ToInt32(adatok[1]) > 18 & Convert.ToInt32(adatok[1]) < 50)
+                    {
+                        profil_kep.Source = middle_f;
+                    }
+
+                    if (Convert.ToInt32(adatok[1]) > 50 & Convert.ToInt32(adatok[1]) < 120)
+                    {
+                        profil_kep.Source = oreg_f;
+                    }
+
+                }
+                else
+                {
+                    profil_ferfi.IsChecked = false;
+                    profil_no.IsChecked = true;
+
+                    if (Convert.ToInt32(adatok[1]) > 0 & Convert.ToInt32(adatok[1]) < 18)
+                    {
+                        profil_kep.Source = tini_f;
+                    }
+
+                    if (Convert.ToInt32(adatok[1]) > 18 & Convert.ToInt32(adatok[1]) < 50)
+                    {
+                        profil_kep.Source = middle_l;
+                    }
+
+                    if (Convert.ToInt32(adatok[1]) > 50 & Convert.ToInt32(adatok[1]) < 120)
+                    {
+                        profil_kep.Source = oreg_l;
+                    }
+                }
+
+                profil_jelszo.Password = Jelszo_visszaallitas(adatok[4]);
+
+            }
+            else
+            {
+                return;
+            }
+
+        }
+        private void profil_uj_jelszo_Click(object sender, RoutedEventArgs e)
+        {
+            string adat = File.ReadAllText(nev + ".txt");
+            string[] adatok = adat.Split(' ');
+            string fajl = nev + ".txt";
+
+            if (profil_jelszo.Password.Length > 8)
+            {
+                File.WriteAllText(fajl, adatok[0] + " " + adatok[1] + " " + adatok[2] + " " + adatok[3] + " " + adatok[4]);
+            }
+            else
+            {
+                hiba.Visibility = Visibility.Visible;
+                hiba_out.Text = "A jelszónak legalább 8 karakternek kell lennie!";
+                return;
+            }
+        }
+        //profil
+
+    }   
+
+
 }

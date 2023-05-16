@@ -415,19 +415,19 @@
     </Window.Resources>
     <Grid x:Name="fooldal" Height="1000" Width="1700">
         <Grid.Background>
-            <ImageBrush ImageSource="/images/512873.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="/Images/512873.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
         <Rectangle HorizontalAlignment="Center" Height="134" VerticalAlignment="Top" Width="1700" Fill="White" Opacity="0.7"/>
         <Label Content="Your one-stop Eatopia for delicious food." HorizontalAlignment="Center" VerticalAlignment="Top" Height="57" Width="660" FontSize="36" Margin="0,17,0,0" FontStyle="Italic" FontFamily="Modern No. 20"/>
 
         <Button Style="{DynamicResource ButtonStyle1}" x:Name="kosar_button" Content="" HorizontalAlignment="Left" Margin="1534,4,0,0" VerticalAlignment="Top" Height="128" Width="141" BorderBrush="{x:Null}" Click="kosar_button_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/images/trolley.png" Stretch="Fill"/>
+                <ImageBrush ImageSource="/Images/trolley.png" Stretch="Fill"/>
             </Button.Background>
         </Button>
         <Button Style="{DynamicResource ButtonStyle2}" x:Name="fo_button" Content="" HorizontalAlignment="Left" Margin="9,6,0,0" VerticalAlignment="Top" Height="126" Width="197" BorderBrush="{x:Null}" Click="fo_button_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/images/home.png" Stretch="Uniform"/>
+                <ImageBrush ImageSource="/Images/home.png" Stretch="Uniform"/>
             </Button.Background>
         </Button>
 
@@ -486,7 +486,7 @@
             <RadioButton Content="RadioButton"/>
         </RadioButton>
         <Label x:Name="kijelzo" Content="Előétel" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="660" FontSize="36" Margin="0,74,0,0" HorizontalContentAlignment="Center" Foreground="#FF194886"/>
-        <Button Style="{DynamicResource ButtonStyle2}" x:Name="account_gomb" Content="" HorizontalAlignment="Left" Margin="1291,6,0,0" VerticalAlignment="Top" Height="127" Width="127" BorderBrush="{x:Null}">
+        <Button Style="{DynamicResource ButtonStyle2}" x:Name="account_gomb" Content="" HorizontalAlignment="Left" Margin="1291,6,0,0" VerticalAlignment="Top" Height="127" Width="127" BorderBrush="{x:Null}" Click="account_gomb_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/images/man.png" Stretch="Fill"/>
             </Button.Background>
@@ -515,9 +515,6 @@
             <TextBlock HorizontalAlignment="Left" Margin="1418,700,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="40" Width="160"/>
             <TextBlock HorizontalAlignment="Left" Margin="1418,655,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="40" Width="160"/>
         </Grid>
-
-
-
 
         <Button Style="{DynamicResource ButtonStyle2}" x:Name="coupon_button" Content="" HorizontalAlignment="Left" Margin="283,6,0,0" VerticalAlignment="Top" Height="126" Width="137" BorderBrush="{x:Null}" RenderTransformOrigin="0.5,0.5" Click="coupon_button_Click">
             <Button.RenderTransform>
@@ -743,7 +740,7 @@
             <Label Content="Jelszó:" HorizontalAlignment="Left" Margin="671,442,0,0" VerticalAlignment="Top" Height="40" Width="106" FontSize="24" FontFamily="Cascadia Mono SemiBold"/>
             <Label Content="Jelszó mégegyszer:" HorizontalAlignment="Left" Margin="671,512,0,0" VerticalAlignment="Top" Height="46" Width="262" FontSize="24" FontFamily="Cascadia Mono SemiBold"/>
             <PasswordBox x:Name="jelszo2_input" HorizontalAlignment="Left" Style="{StaticResource RoundedPasswordBox}" Margin="762,555,0,0" VerticalAlignment="Top" Width="257" Height="30" FontSize="22" Padding="1" BorderBrush="{x:Null}"/>
-            <Button Style="{DynamicResource ButtonStyle7}" x:Name="regisztralas_gomb" Content="Regisztrálás" HorizontalAlignment="Center" Margin="0,632,0,0" VerticalAlignment="Top" Height="86" Width="576" BorderBrush="{x:Null}" Background="White" FontSize="36" Click="regisztralas_gomb_Click" FontFamily="Cascadia Mono SemiBold"/>
+            <Button Style="{DynamicResource ButtonStyle7}" x:Name="regisztralas_gomb" Content="Regisztrálás" HorizontalAlignment="Center" Margin="0,708,0,0" VerticalAlignment="Top" Height="86" Width="576" BorderBrush="{x:Null}" Background="White" FontSize="36" Click="regisztralas_gomb_Click" FontFamily="Cascadia Mono SemiBold"/>
             <Image x:Name="regisztralas_kep_fo" Margin="0,0,1492,868" Source="/images/eatopia-high-resolution-logo-color-on-transparent-background.png" Stretch="UniformToFill" Visibility="Visible"/>
             <Image Margin="285,298,1283,575" Source="/images/hamburger.png" Stretch="Fill"/>
             <Image Margin="1210,332,358,541" Source="/images/bibimbap.png" Stretch="Fill" Width="132" Height="127"/>
@@ -753,7 +750,9 @@
             <Image Margin="1186,734,382,138" Source="/images/tteok.png" Stretch="Fill" Width="132" Height="127"/>
             <Image Margin="464,180,1104,693" Source="/images/drink.png" Stretch="Fill" Width="132" Height="127"/>
             <Image Margin="337,700,1231,174" Source="/images/diet.png" Stretch="Fill" Width="132" Height="127"/>
-            <Button Style="{DynamicResource ButtonStyle1}" x:Name="bejelentkezes_gomb" Content="Van már fiókod? Lépj be!" HorizontalAlignment="Left" Margin="565,769,0,0" VerticalAlignment="Top" Height="40" Width="573" BorderBrush="{x:Null}" Click="bejelentkezes_gomb_Click" Background="{x:Null}" FontSize="24" FontFamily="Cascadia Mono SemiBold"/>
+            <Button Style="{DynamicResource ButtonStyle1}" x:Name="bejelentkezes_gomb" Content="Van már fiókod? Lépj be!" HorizontalAlignment="Center" Margin="0,833,0,0" VerticalAlignment="Top" Height="40" Width="572" BorderBrush="{x:Null}" Click="bejelentkezes_gomb_Click" Background="{x:Null}" FontSize="24" FontFamily="Cascadia Mono SemiBold"/>
+            <Label Content="Nemed:" HorizontalAlignment="Left" Margin="671,590,0,0" VerticalAlignment="Top" Height="46" Width="262" FontSize="24" FontFamily="Cascadia Mono SemiBold"/>
+            <TextBox x:Name="nem_input" Style="{StaticResource Roundedtextbox}" HorizontalAlignment="Left" Margin="762,631,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="257" FontSize="22" BorderBrush="{x:Null}" Padding="1"/>
         </Grid>
 
 
@@ -815,12 +814,7 @@
             </Grid>
         </Grid>
 
-        <Grid x:Name="hiba" Background="#FFAA0000" Margin="487,336,486,362" Visibility="Hidden">
-            <Button x:Name="rendben_gomb" Content="Rendben" HorizontalAlignment="Left" Margin="0,203,0,0" VerticalAlignment="Top" Width="727" Height="99" Background="#FF79DE4A" Style="{DynamicResource ButtonStyle8}" Click="rendben_gomb_Click"/>
-            <TextBlock x:Name="hiba_out" HorizontalAlignment="Left" Margin="94,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" Width="546" Height="49" FontSize="20" Foreground="White"/>
-            <Image Margin="10,70,638,142" Source="/images/server.png" Stretch="Fill"/>
-            <Image Margin="645,70,3,142" Source="/images/dizzy-robot.png" Stretch="Fill" RenderTransformOrigin="1.038,1.012"/>
-        </Grid>
+       
         <Grid Name="coupon" Visibility="Hidden">
             <Rectangle HorizontalAlignment="Center" Height="769" Margin="0,160,0,0" VerticalAlignment="Top" Width="1160" Fill="White" Opacity="0.65" Grid.RowSpan="2"/>
             <TextBlock x:Name="coupon_nev" HorizontalAlignment="Center" Margin="559,205,559,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="51" Width="582" FontSize="36" TextAlignment="Center" Text="Halo"/>
@@ -836,22 +830,28 @@
 
         <Grid x:Name="profil">
             <Rectangle Height="750" Margin="385,172,385,0" VerticalAlignment="Top" Fill="White" Opacity="0.65"/>
-            <Image Height="350" Margin="675,199,675,0" VerticalAlignment="Top" Source="apple-juice.png"/>
-            <TextBlock Margin="630,580,630,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="55" Background="White"/>
-            <TextBlock Margin="630,647,630,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="55" Background="White"/>
-            <TextBlock Margin="630,716,630,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="55" Background="White"/>
-            <TextBlock Margin="630,779,630,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="68" Background="White" TextAlignment="Center"><Run Text="Jelszó változtatása"/><Run Text=":"/></TextBlock>
-            <PasswordBox HorizontalAlignment="Left" Margin="637,801,0,0" VerticalAlignment="Top" Width="360" Height="34"/>
-            <TextBlock Margin="630,852,630,0" TextWrapping="Wrap" Text="Nem:" VerticalAlignment="Top" Height="46" Background="White" TextAlignment="Center"/>
-            <Label Content="" HorizontalAlignment="Left" Margin="630,867,0,0" VerticalAlignment="Top" Width="440" Height="18" Background="#FF00B1FF"/>
-            <CheckBox Content="Férfi" Margin="735,869,900,0" VerticalAlignment="Top" Height="18"/>
-            <CheckBox Content="Nő" Margin="900,869,735,0" VerticalAlignment="Top" Height="18"/>
-            <Button Content="Új jelszó" HorizontalAlignment="Left" Margin="997,801,0,0" VerticalAlignment="Top" Width="65" Height="34"/>
+            <Image x:Name="profil_kep" Height="249" Margin="710,187,710,0" VerticalAlignment="Top"/>
+            <TextBlock Margin="518,441,518,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Background="White" TextAlignment="Center" FontSize="48"/>
+            <TextBlock Margin="518,648,518,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Background="White" TextAlignment="Center" FontSize="18"><Run Text="Jelszó változtatása"/><Run Text=":"/></TextBlock>
+            <PasswordBox x:Name="profil_jelszo" HorizontalAlignment="Center" Margin="0,671,0,0" VerticalAlignment="Top" Width="452" Height="41" FontSize="24"/>
+            <TextBlock Margin="518,717,518,0" TextWrapping="Wrap" Text="Nem:" VerticalAlignment="Top" Height="64" Background="White" TextAlignment="Center" FontSize="18"/>
+            <Label Content="" HorizontalAlignment="Center" Margin="0,749,0,0" VerticalAlignment="Top" Width="590" Height="32" Background="#FF00B1FF"/>
+            <CheckBox x:Name="profil_ferfi" Content="Férfi" Margin="726,756,910,0" VerticalAlignment="Top" Height="18"/>
+            <CheckBox x:Name="profil_no" Content="Nő" Margin="910,756,726,0" VerticalAlignment="Top" Height="18"/>
+            <Button Style="{DynamicResource ButtonStyle1}" x:Name="profil_uj_jelszo" Content="Új jelszó" HorizontalAlignment="Left" Margin="1093,671,0,0" VerticalAlignment="Top" Width="89" Height="41" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="22" Click="profil_uj_jelszo_Click"/>
+            <TextBlock x:Name="profil_email" Margin="518,510,518,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Background="White" TextAlignment="Center" FontSize="48"/>
+            <TextBlock x:Name="profil_kor" Margin="518,579,518,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Background="White" TextAlignment="Center" FontSize="48"/>
+            <TextBlock x:Name="profil_nev" Margin="518,441,518,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" TextAlignment="Center" FontSize="48"/>
 
         </Grid>
         <Button x:Name="tovabb" Style="{DynamicResource ButtonStyle3}" Content="&gt;" HorizontalAlignment="Left" Margin="1579,459,0,0" VerticalAlignment="Top" Height="179" Width="121" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="tovabb_Click"/>
         <Button x:Name="vissza" Style="{DynamicResource ButtonStyle3}" Content=" &lt;" HorizontalAlignment="Left" Margin="-38,459,0,0" VerticalAlignment="Top" Height="179" Width="122" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="vissza_Click"/>
-
+        <Grid x:Name="hiba" Background="#FFAA0000" Margin="487,336,486,362" Visibility="Hidden">
+            <Button x:Name="rendben_gomb" Content="Rendben" HorizontalAlignment="Left" Margin="0,203,0,0" VerticalAlignment="Top" Width="727" Height="99" Background="#FF79DE4A" Style="{DynamicResource ButtonStyle8}" Click="rendben_gomb_Click"/>
+            <TextBlock x:Name="hiba_out" HorizontalAlignment="Left" Margin="94,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" Width="546" Height="49" FontSize="20" Foreground="White"/>
+            <Image Margin="10,70,638,142" Source="/images/server.png" Stretch="Fill"/>
+            <Image Margin="645,70,3,142" Source="/images/dizzy-robot.png" Stretch="Fill" RenderTransformOrigin="1.038,1.012"/>
+        </Grid>
 
     </Grid>
 </Window>

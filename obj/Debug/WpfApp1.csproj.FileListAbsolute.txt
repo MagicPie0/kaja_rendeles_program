@@ -1,0 +1,79 @@
+G:\Új mappa (2)\kaja_rendeles_program\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+G:\Új mappa (2)\kaja_rendeles_program\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+G:\Új mappa (2)\kaja_rendeles_program\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+G:\Új mappa (2)\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.AssemblyReference.cache
+G:\Új mappa (2)\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.SuggestedBindingRedirects.cache
+G:\Új mappa (2)\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+G:\Új mappa (2)\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+G:\Új mappa (2)\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+G:\Új mappa (2)\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+G:\Új mappa (2)\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+G:\Új mappa (2)\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+G:\Új mappa (2)\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+G:\Új mappa (2)\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+G:\Új mappa (2)\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+G:\Új mappa (2)\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+G:\Új mappa (2)\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\fulkri20\Documents\kaja_rendeles_program\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\fulkri20\Documents\kaja_rendeles_program\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\fulkri20\Documents\kaja_rendeles_program\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\fulkri20\Documents\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.AssemblyReference.cache
+C:\Users\fulkri20\Documents\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\fulkri20\Documents\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+C:\Users\fulkri20\Documents\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\fulkri20\Documents\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\fulkri20\Documents\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\fulkri20\Documents\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\fulkri20\Documents\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\fulkri20\Documents\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\fulkri20\Documents\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\fulkri20\Documents\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\fulkri20\Documents\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+<<<<<<< HEAD
+C:\Users\Informatika\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\Informatika\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\Informatika\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\Informatika\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.AssemblyReference.cache
+C:\Users\Informatika\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\Informatika\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+C:\Users\Informatika\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\Informatika\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\Informatika\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\Informatika\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\Informatika\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\Informatika\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\Informatika\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\Informatika\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\Informatika\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+=======
+C:\Users\Informatika\Source\Repos\MagicPie0\kaja_rendeles_program\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\Informatika\Source\Repos\MagicPie0\kaja_rendeles_program\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\Informatika\Source\Repos\MagicPie0\kaja_rendeles_program\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\Informatika\Source\Repos\MagicPie0\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.AssemblyReference.cache
+C:\Users\Informatika\Source\Repos\MagicPie0\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\Informatika\Source\Repos\MagicPie0\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+C:\Users\Informatika\Source\Repos\MagicPie0\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\Informatika\Source\Repos\MagicPie0\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\Informatika\Source\Repos\MagicPie0\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\Informatika\Source\Repos\MagicPie0\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\Informatika\Source\Repos\MagicPie0\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\Informatika\Source\Repos\MagicPie0\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\Informatika\Source\Repos\MagicPie0\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\Informatika\Source\Repos\MagicPie0\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\Informatika\Source\Repos\MagicPie0\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+>>>>>>> ideiglenes
+C:\Users\HP\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\HP\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\HP\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\HP\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\HP\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+C:\Users\HP\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\HP\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\HP\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\HP\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\HP\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\HP\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\HP\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\HP\Documents\GitHub\kaja_rendeles_program\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
