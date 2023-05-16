@@ -819,12 +819,10 @@
             <ProgressBar x:Name="coupon_szazalek" Margin="554,704,566,240" BorderBrush="{x:Null}" Background="White" Maximum="50"></ProgressBar>
             <TextBlock x:Name="szazalek_kiiras" HorizontalAlignment="Left" Margin="555,708,0,0" TextWrapping="Wrap" Text="20%" VerticalAlignment="Top" Height="60" Width="575" TextAlignment="Center" FontSize="36"/>
         </Grid>
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> ideiglenes
+        <!-- head -->
+        
+        
+        <!-- ideiglenes -->
         <Button x:Name="tovabb" Style="{DynamicResource ButtonStyle3}" Content="&gt;" HorizontalAlignment="Left" Margin="1579,459,0,0" VerticalAlignment="Top" Height="179" Width="121" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="tovabb_Click"/>
         <Button x:Name="vissza" Style="{DynamicResource ButtonStyle3}" Content=" &lt;" HorizontalAlignment="Left" Margin="-38,459,0,0" VerticalAlignment="Top" Height="179" Width="122" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="vissza_Click"/>
 
