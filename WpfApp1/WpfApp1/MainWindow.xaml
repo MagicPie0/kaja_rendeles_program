@@ -492,13 +492,16 @@
             </Button.Background>
         </Button>
         <Grid x:Name="kosar" Margin="0,134,0,5"/>
-        <Rectangle Height="277" Margin="1159,196,0,0" VerticalAlignment="Top" Fill="White" Opacity="0.65" HorizontalAlignment="Left" Width="420"/>
-        <Rectangle HorizontalAlignment="Left" Height="232" Margin="73,222,0,0" VerticalAlignment="Top" Width="1067" Fill="White" Opacity="0.65"/>
-        <Rectangle HorizontalAlignment="Left" Height="270" Margin="1243,638,0,0" VerticalAlignment="Top" Width="330" Fill="White" Opacity="0.65"/>
-        <Rectangle HorizontalAlignment="Left" Height="57" Margin="1243,554,0,0" VerticalAlignment="Top" Width="330" Fill="#FF51FF00" Opacity="0.65"/>
-        <TextBox HorizontalAlignment="Left" Height="56" Margin="1302,554,0,0" TextWrapping="Wrap" Text="Termék Ajánló" VerticalAlignment="Top" Width="227" FontSize="36" Background="{x:Null}" Foreground="White" FontFamily="Dubai Light" FontWeight="Bold" BorderBrush="{x:Null}"/>
+        <Rectangle Height="293" Margin="1159,196,0,0" VerticalAlignment="Top" Fill="White" Opacity="0.65" HorizontalAlignment="Left" Width="440"/>
+        <Rectangle HorizontalAlignment="Left" Height="161" Margin="73,293,0,0" VerticalAlignment="Top" Width="1067" Fill="White" Opacity="0.65"/>
+        <Rectangle HorizontalAlignment="Left" Height="161" Margin="73,471,0,0" VerticalAlignment="Top" Width="1067" Fill="White" Opacity="0.65"/>
+        <Rectangle HorizontalAlignment="Left" Height="270" Margin="1207,643,0,0" VerticalAlignment="Top" Width="356" Fill="White" Opacity="0.65"/>
+        <Rectangle HorizontalAlignment="Left" Height="57" Margin="1207,575,0,0" VerticalAlignment="Top" Width="356" Fill="#FF51FF00" Opacity="0.65"/>
+        <TextBox HorizontalAlignment="Left" Height="56" Margin="1277,575,0,0" TextWrapping="Wrap" Text="Termék Ajánló" VerticalAlignment="Top" Width="227" FontSize="36" Background="{x:Null}" Foreground="White" FontFamily="Dubai Light" FontWeight="Bold" BorderBrush="{x:Null}"/>
         <Rectangle HorizontalAlignment="Left" Height="57" Margin="73,222,0,0" VerticalAlignment="Top" Width="1067" Fill="#FF005DFF" Opacity="0.65"/>
         <TextBox HorizontalAlignment="Left" Height="56" Margin="517,222,0,0" TextWrapping="Wrap" Text="Kosár Tartalma" VerticalAlignment="Top" Width="233" FontSize="36" Background="{x:Null}" Foreground="White" FontFamily="Dubai Light" FontWeight="Bold" BorderBrush="{x:Null}" TextChanged="TextBox_TextChanged"/>
+        <Rectangle HorizontalAlignment="Left" Height="57" Margin="1159,196,0,0" VerticalAlignment="Top" Width="440" Fill="Red" Opacity="0.65"/>
+        <TextBox HorizontalAlignment="Left" Height="56" Margin="1231,196,0,0" TextWrapping="Wrap" Text="Rendelés Összegzése" VerticalAlignment="Top" Width="317" FontSize="36" Background="{x:Null}" Foreground="White" FontFamily="Dubai Light" FontWeight="Bold" BorderBrush="{x:Null}" TextChanged="TextBox_TextChanged"/>
 
 
 
