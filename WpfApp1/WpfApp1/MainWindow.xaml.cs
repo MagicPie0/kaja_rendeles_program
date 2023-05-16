@@ -1400,5 +1400,10 @@ namespace WpfApp1
                 udito_jelzo.IsChecked = true;
             }
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }   //coupon
 }
