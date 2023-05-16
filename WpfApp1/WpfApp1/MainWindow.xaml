@@ -491,7 +491,17 @@
                 <ImageBrush ImageSource="/images/man.png" Stretch="Fill"/>
             </Button.Background>
         </Button>
-        <Grid x:Name="kosar" Margin="0,134,0,5" Background="Black" Visibility="Hidden"/>
+        <Grid x:Name="kosar" Margin="0,134,0,5"/>
+        <Rectangle Height="277" Margin="1159,196,0,0" VerticalAlignment="Top" Fill="White" Opacity="0.65" HorizontalAlignment="Left" Width="420"/>
+        <Rectangle HorizontalAlignment="Left" Height="232" Margin="73,222,0,0" VerticalAlignment="Top" Width="1067" Fill="White" Opacity="0.65"/>
+        <Rectangle HorizontalAlignment="Left" Height="270" Margin="1243,638,0,0" VerticalAlignment="Top" Width="330" Fill="White" Opacity="0.65"/>
+        <Rectangle HorizontalAlignment="Left" Height="57" Margin="1243,554,0,0" VerticalAlignment="Top" Width="330" Fill="#FF51FF00" Opacity="0.65"/>
+        <TextBox HorizontalAlignment="Left" Height="56" Margin="1302,554,0,0" TextWrapping="Wrap" Text="Termék Ajánló" VerticalAlignment="Top" Width="227" FontSize="36" Background="{x:Null}" Foreground="White" FontFamily="Dubai Light" FontWeight="Bold" BorderBrush="{x:Null}"/>
+        <Rectangle HorizontalAlignment="Left" Height="57" Margin="73,222,0,0" VerticalAlignment="Top" Width="1067" Fill="#FF005DFF" Opacity="0.65"/>
+        <TextBox HorizontalAlignment="Left" Height="56" Margin="517,222,0,0" TextWrapping="Wrap" Text="Kosár Tartalma" VerticalAlignment="Top" Width="233" FontSize="36" Background="{x:Null}" Foreground="White" FontFamily="Dubai Light" FontWeight="Bold" BorderBrush="{x:Null}" TextChanged="TextBox_TextChanged"/>
+
+
+
         <Button Style="{DynamicResource ButtonStyle2}" x:Name="coupon_button" Content="" HorizontalAlignment="Left" Margin="283,6,0,0" VerticalAlignment="Top" Height="126" Width="137" BorderBrush="{x:Null}" RenderTransformOrigin="0.5,0.5" Click="coupon_button_Click">
             <Button.RenderTransform>
                 <TransformGroup>
@@ -755,6 +765,7 @@
             </Button>
 
         </Grid>
+
         <Grid x:Name="elfelejtett_jelszo_oldal" Visibility="Hidden">
             <Rectangle x:Name="elfelejtett_jelszo_hatter" HorizontalAlignment="Center" Height="769" Margin="0,160,0,0" VerticalAlignment="Top" Width="1160" Fill="White" Opacity="0.65" Grid.RowSpan="2"/>
 
@@ -805,7 +816,9 @@
             <Image Margin="1122,506,394,328" Source="/images/discount-voucher.png" Stretch="Fill"/>
 
         </Grid>
-        
+
+
+
         <Button x:Name="tovabb" Style="{DynamicResource ButtonStyle3}" Content="&gt;" HorizontalAlignment="Left" Margin="1579,459,0,0" VerticalAlignment="Top" Height="179" Width="121" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="tovabb_Click"/>
         <Button x:Name="vissza" Style="{DynamicResource ButtonStyle3}" Content=" &lt;" HorizontalAlignment="Left" Margin="-38,459,0,0" VerticalAlignment="Top" Height="179" Width="122" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="vissza_Click"/>
 
