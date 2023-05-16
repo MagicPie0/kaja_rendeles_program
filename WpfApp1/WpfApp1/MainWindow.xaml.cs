@@ -122,7 +122,7 @@ namespace WpfApp1
             //design főoldal
 
             var oldalak = new[] { eloetelek, levesek, foetelek, desszertek, uditok, hiba, bejelentkezes,
-                                  elfelejtett_jelszo_oldal, jelszo, coupon};
+                                  elfelejtett_jelszo_oldal, jelszo, coupon, kosar, profil};
 
             var etelek_jelzok = new[] { eloetel_jelzo, leves_jelzo, foetel_jelzo,
                                         desszert_jelzo, udito_jelzo};
@@ -1401,9 +1401,5 @@ namespace WpfApp1
             }
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
     }   //coupon
 }

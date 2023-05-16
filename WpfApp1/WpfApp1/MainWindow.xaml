@@ -499,9 +499,9 @@
             <Rectangle HorizontalAlignment="Left" Height="57" Margin="852,401,0,0" VerticalAlignment="Top" Width="747" Fill="#FF44D700" Opacity="0.65"/>
             <TextBox HorizontalAlignment="Left" Height="56" Margin="1103,401,0,0" TextWrapping="Wrap" Text="Termék Ajánló" VerticalAlignment="Top" Width="227" FontSize="36" Background="{x:Null}" Foreground="White" FontFamily="Dubai Light" FontWeight="Bold" BorderBrush="{x:Null}"/>
             <Rectangle HorizontalAlignment="Left" Height="57" Margin="73,69,0,0" VerticalAlignment="Top" Width="943" Fill="#FF005DFF" Opacity="0.65"/>
-            <TextBox HorizontalAlignment="Left" Height="56" Margin="448,70,0,0" TextWrapping="Wrap" Text="Kosár Tartalma" VerticalAlignment="Top" Width="233" FontSize="36" Background="{x:Null}" Foreground="White" FontFamily="Dubai Light" FontWeight="Bold" BorderBrush="{x:Null}" TextChanged="TextBox_TextChanged"/>
+            <TextBox HorizontalAlignment="Left" Height="56" Margin="448,70,0,0" TextWrapping="Wrap" Text="Kosár Tartalma" VerticalAlignment="Top" Width="233" FontSize="36" Background="{x:Null}" Foreground="White" FontFamily="Dubai Light" FontWeight="Bold" BorderBrush="{x:Null}"/>
             <Rectangle HorizontalAlignment="Left" Height="57" Margin="1050,70,0,0" VerticalAlignment="Top" Width="549" Fill="Red" Opacity="0.65"/>
-            <TextBox HorizontalAlignment="Left" Height="56" Margin="1177,71,0,0" TextWrapping="Wrap" Text="Rendelés Összegzése" VerticalAlignment="Top" Width="317" FontSize="36" Background="{x:Null}" Foreground="White" FontFamily="Dubai Light" FontWeight="Bold" BorderBrush="{x:Null}" TextChanged="TextBox_TextChanged"/>
+            <TextBox HorizontalAlignment="Left" Height="56" Margin="1177,71,0,0" TextWrapping="Wrap" Text="Rendelés Összegzése" VerticalAlignment="Top" Width="317" FontSize="36" Background="{x:Null}" Foreground="White" FontFamily="Dubai Light" FontWeight="Bold" BorderBrush="{x:Null}" />
             <Button Content="" HorizontalAlignment="Left" Margin="872,490,0,0" VerticalAlignment="Top" Width="160" Height="160"/>
             <Button Content="" HorizontalAlignment="Left" Margin="1054,490,0,0" VerticalAlignment="Top" Width="160" Height="160"/>
             <Button Content="" HorizontalAlignment="Left" Margin="1236,490,0,0" VerticalAlignment="Top" Width="160" Height="160"/>
@@ -848,20 +848,7 @@
             <CheckBox Content="Nő" Margin="900,869,735,0" VerticalAlignment="Top" Height="18"/>
             <Button Content="Új jelszó" HorizontalAlignment="Left" Margin="997,801,0,0" VerticalAlignment="Top" Width="65" Height="34"/>
 
-
-
-
-
-
-
-
-
-
         </Grid>
-
-        <!-- head -->
-
-        <!-- ideiglenes -->
         <Button x:Name="tovabb" Style="{DynamicResource ButtonStyle3}" Content="&gt;" HorizontalAlignment="Left" Margin="1579,459,0,0" VerticalAlignment="Top" Height="179" Width="121" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="tovabb_Click"/>
         <Button x:Name="vissza" Style="{DynamicResource ButtonStyle3}" Content=" &lt;" HorizontalAlignment="Left" Margin="-38,459,0,0" VerticalAlignment="Top" Height="179" Width="122" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="vissza_Click"/>
 
