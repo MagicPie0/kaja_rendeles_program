@@ -1204,9 +1204,10 @@ namespace WpfApp1
                 string adat = File.ReadAllText(nev + ".txt");
                 string[] adatok = adat.Split(' ');
 
-                profil_nev.Text = "Név: " + adatok[0];
-                profil_kor.Text = "Kor: " + adatok[1];
-                profil_email.Text = "Email: " + adatok[2];
+                szemely sz = new szemely(adatok[0], Convert.ToInt32(adatok[1]), adatok[2], "", "");
+                profil_nev.Text = "Név: " + sz.Nev;
+                profil_kor.Text = "Kor: " + sz.Eletkor;
+                profil_email.Text = "Email: " + sz.Email;
 
                 if (adatok[3] == "férfi")
                 {
