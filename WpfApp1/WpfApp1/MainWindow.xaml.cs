@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 
 namespace WpfApp1
@@ -363,8 +364,6 @@ namespace WpfApp1
             akcio_etel30.Visibility = nevek[index2] == 30 ? Visibility.Visible : Visibility.Hidden;
 
         }
-
-
         private void tovabb_Click(object sender, RoutedEventArgs e)
         {
             if (eloetelek.IsVisible == true)
@@ -511,6 +510,15 @@ namespace WpfApp1
             }
             string titkos_jelszo = new string(visszaforditando_jelszo);
             return titkos_jelszo;
+        }
+
+        static BitmapImage Kep(string kep)
+        {
+            BitmapImage kepek = new BitmapImage();
+            kepek.BeginInit();
+            kepek.UriSource = new Uri(kep, UriKind.Relative);
+            kepek.EndInit();
+            return kepek;
         }
 
         public int Akciozas(int ar, int szazalek)
@@ -878,370 +886,214 @@ namespace WpfApp1
             szazalek_kiiras.Text = szazalek + "%";
 
             int nev = nevek[index2];
-            //eloetelek
-            BitmapImage bruschetta = new BitmapImage();
-            bruschetta.BeginInit();
-            bruschetta.UriSource = new Uri("/images/bruschetta.png", UriKind.Relative);
-            bruschetta.EndInit();
-
-            BitmapImage pogi = new BitmapImage();
-            pogi.BeginInit();
-            pogi.UriSource = new Uri("/images/cake (1).png", UriKind.Relative);
-            pogi.EndInit();
-
-            BitmapImage szendvics = new BitmapImage();
-            szendvics.BeginInit();
-            szendvics.UriSource = new Uri("/images/sandwich.png", UriKind.Relative);
-            szendvics.EndInit();
-
-
-            BitmapImage salata = new BitmapImage();
-            salata.BeginInit();
-            salata.UriSource = new Uri("/images/salad (2).png", UriKind.Relative);
-            salata.EndInit();
-
-            BitmapImage rantotta = new BitmapImage();
-            rantotta.BeginInit();
-            rantotta.UriSource = new Uri("/images/fried-rice.png", UriKind.Relative);
-            rantotta.EndInit();
-
-            BitmapImage fasirt = new BitmapImage();
-            fasirt.BeginInit();
-            fasirt.UriSource = new Uri("/images/meatballs.png", UriKind.Relative);
-            fasirt.EndInit();
-            //eloetelek
-            //levesek
-            BitmapImage paradicsom_leves = new BitmapImage();
-            paradicsom_leves.BeginInit();
-            paradicsom_leves.UriSource = new Uri("/images/meatball.png", UriKind.Relative);
-            paradicsom_leves.EndInit();
-
-            BitmapImage sajtleves = new BitmapImage();
-            sajtleves.BeginInit();
-            sajtleves.UriSource = new Uri("/images/soup.png", UriKind.Relative);
-            sajtleves.EndInit();
-
-            BitmapImage bableves = new BitmapImage();
-            bableves.BeginInit();
-            bableves.UriSource = new Uri("/images/red-bean-soup.png", UriKind.Relative);
-            bableves.EndInit();
-
-            BitmapImage fokhagymaleves = new BitmapImage();
-            fokhagymaleves.BeginInit();
-            fokhagymaleves.UriSource = new Uri("/images/garlic-soup.png", UriKind.Relative);
-            fokhagymaleves.EndInit();
-
-            BitmapImage halaszle = new BitmapImage();
-            halaszle.BeginInit();
-            halaszle.UriSource = new Uri("/images/fish.png", UriKind.Relative);
-            halaszle.EndInit();
-
-            BitmapImage ramen = new BitmapImage();
-            ramen.BeginInit();
-            ramen.UriSource = new Uri("/images/ramen.png", UriKind.Relative);
-            ramen.EndInit();
-            //levesek
-            //foetelek
-            BitmapImage omelette = new BitmapImage();
-            omelette.BeginInit();
-            omelette.UriSource = new Uri("/images/omelette.png", UriKind.Relative);
-            omelette.EndInit();
-
-            BitmapImage mac_n_cheese = new BitmapImage();
-            mac_n_cheese.BeginInit();
-            mac_n_cheese.UriSource = new Uri("/images/macaroni.png", UriKind.Relative);
-            mac_n_cheese.EndInit();
-
-            BitmapImage kofte = new BitmapImage();
-            kofte.BeginInit();
-            kofte.UriSource = new Uri("/images/kofte.png", UriKind.Relative);
-            kofte.EndInit();
-
-            BitmapImage fish_and_chips = new BitmapImage();
-            fish_and_chips.BeginInit();
-            fish_and_chips.UriSource = new Uri("/images/fish-and-chips.png", UriKind.Relative);
-            fish_and_chips.EndInit();
-
-            BitmapImage steak = new BitmapImage();
-            steak.BeginInit();
-            steak.UriSource = new Uri("/images/steak.png", UriKind.Relative);
-            steak.EndInit();
-
-            BitmapImage tofu = new BitmapImage();
-            tofu.BeginInit();
-            tofu.UriSource = new Uri("/images/stinky-tofu.png", UriKind.Relative);
-            tofu.EndInit();
-            //foetelek
-            //desszertek
-            BitmapImage fagylalt = new BitmapImage();
-            fagylalt.BeginInit();
-            fagylalt.UriSource = new Uri("/images/ice-cream.png", UriKind.Relative);
-            fagylalt.EndInit();
-
-            BitmapImage torta = new BitmapImage();
-            torta.BeginInit();
-            torta.UriSource = new Uri("/images/cake.png", UriKind.Relative);
-            torta.EndInit();
-
-            BitmapImage pite = new BitmapImage();
-            pite.BeginInit();
-            pite.UriSource = new Uri("/images/meat-pie.png", UriKind.Relative);
-            pite.EndInit();
-
-            BitmapImage macaron = new BitmapImage();
-            macaron.BeginInit();
-            macaron.UriSource = new Uri("/images/macaron.png", UriKind.Relative);
-            macaron.EndInit();
-
-            BitmapImage suti = new BitmapImage();
-            suti.BeginInit();
-            suti.UriSource = new Uri("/images/choco-chip.png", UriKind.Relative);
-            suti.EndInit();
-
-            BitmapImage fank = new BitmapImage();
-            fank.BeginInit();
-            fank.UriSource = new Uri("/images/donut.png", UriKind.Relative);
-            fank.EndInit();
-            //desszertek
-            //uditok
-            BitmapImage cola = new BitmapImage();
-            cola.BeginInit();
-            cola.UriSource = new Uri("/images/cola.png", UriKind.Relative);
-            cola.EndInit();
-
-            BitmapImage narancsle = new BitmapImage();
-            narancsle.BeginInit();
-            narancsle.UriSource = new Uri("/images/orange-juice.png", UriKind.Relative);
-            narancsle.EndInit();
-
-            BitmapImage almale = new BitmapImage();
-            almale.BeginInit();
-            almale.UriSource = new Uri("/images/apple-juice.png", UriKind.Relative);
-            almale.EndInit();
-
-            BitmapImage kave = new BitmapImage();
-            kave.BeginInit();
-            kave.UriSource = new Uri("/images/coffee-cup.png", UriKind.Relative);
-            kave.EndInit();
-
-            BitmapImage tea = new BitmapImage();
-            tea.BeginInit();
-            tea.UriSource = new Uri("/images/herbal-tea.png", UriKind.Relative);
-            tea.EndInit();
-
-            BitmapImage jeges_tea = new BitmapImage();
-            jeges_tea.BeginInit();
-            jeges_tea.UriSource = new Uri("/images/ice-tea.png", UriKind.Relative);
-            jeges_tea.EndInit();
-            //uditok
             switch (nev)
             {
                 case 1:
                     coupon_nev.Text = "Bruschetta";
-                    coupon_kep.Source = bruschetta;
+                    coupon_kep.Source = Kep("/images/bruschetta.png");
                     Etel1_akcio = szazalek;
                     akcio_etel1.Content = "-" + szazalek + "%";
                     etel1_ar.Content = "Ár: " + Akciozas(Etel1_ar, szazalek) + "Ft";
                     break;
                 case 2:
                     coupon_nev.Text = "Pogácsa";
-                    coupon_kep.Source = pogi;
+                    coupon_kep.Source = Kep("/images/cake (1).png");
                     Etel2_akcio = szazalek;
                     akcio_etel2.Content = "-" + szazalek + "%";
                     etel2_ar.Content = "Ár: " + Akciozas(Etel2_ar, szazalek) + "Ft";
                     break;
                 case 3:
                     coupon_nev.Text = "Szendvics";
-                    coupon_kep.Source = szendvics;
+                    coupon_kep.Source = Kep("/images/sandwich.png");
                     Etel3_akcio = szazalek;
                     akcio_etel3.Content = "-" + szazalek + "%";
                     etel3_ar.Content = "Ár: " + Akciozas(Etel3_ar, szazalek) + "Ft";
                     break;
                 case 4:
                     coupon_nev.Text = "Saláta";
-                    coupon_kep.Source = salata;
+                    coupon_kep.Source = Kep("/images/salad (2).png");
                     Etel4_akcio = szazalek;
                     akcio_etel4.Content = "-" + szazalek + "%";
                     etel4_ar.Content = "Ár: " + Akciozas(Etel4_ar, szazalek) + "Ft";
                     break;
                 case 5:
                     coupon_nev.Text = "Rántotta";
-                    coupon_kep.Source = rantotta;
+                    coupon_kep.Source = Kep("/images/fried-rice.png");
                     Etel5_akcio = szazalek;
                     akcio_etel5.Content = "-" + szazalek + "%";
                     etel5_ar.Content = "Ár: " + Akciozas(Etel5_ar, szazalek) + "Ft";
                     break;
                 case 6:
                     coupon_nev.Text = "Fasírt";
-                    coupon_kep.Source = fasirt;
+                    coupon_kep.Source = Kep("/images/meatballs.png");
                     Etel6_akcio = szazalek;
                     etel6_ar.Content = "Ár: " + Akciozas(Etel6_ar, szazalek) + "Ft";
                     akcio_etel6.Content = "-" + szazalek + "%";
                     break;
                 case 7:
                     coupon_nev.Text = "Paradicsom leves";
-                    coupon_kep.Source = paradicsom_leves;
+                    coupon_kep.Source = Kep("/images/meatball.png");
                     Etel7_akcio = szazalek;
                     akcio_etel7.Content = "-" + szazalek + "%";
                     etel7_ar.Content = "Ár: " + Akciozas(Etel7_ar, szazalek) + "Ft";
                     break;
                 case 8:
                     coupon_nev.Text = "Sajtleves";
-                    coupon_kep.Source = sajtleves;
+                    coupon_kep.Source = Kep("/images/soup.png");
                     Etel8_akcio = szazalek;
                     akcio_etel8.Content = "-" + szazalek + "%";
                     etel8_ar.Content = "Ár: " + Akciozas(Etel8_ar, szazalek) + "Ft";
                     break;
                 case 9:
                     coupon_nev.Text = "Bableves";
-                    coupon_kep.Source = bableves;
+                    coupon_kep.Source = Kep("/images/red-bean-soup.png");
                     Etel9_akcio = szazalek;
                     akcio_etel9.Content = "-" + szazalek + "%";
                     etel9_ar.Content = "Ár: " + Akciozas(Etel9_ar, szazalek) + "Ft";
                     break;
                 case 10:
                     coupon_nev.Text = "Fokhagymaleves";
-                    coupon_kep.Source = fokhagymaleves;
+                    coupon_kep.Source = Kep("/images/garlic-soup.png");
                     Etel10_akcio = szazalek;
                     akcio_etel10.Content = "-" + szazalek + "%";
                     etel10_ar.Content = "Ár: " + Akciozas(Etel10_ar, szazalek) + "Ft";
                     break;
                 case 11:
                     coupon_nev.Text = "Halászlé";
-                    coupon_kep.Source = halaszle;
+                    coupon_kep.Source = Kep("/images/fish.png");
                     Etel11_akcio = szazalek;
                     akcio_etel11.Content = "-" + szazalek + "%";
                     etel11_ar.Content = "Ár: " + Akciozas(Etel11_ar, szazalek) + "Ft";
                     break;
                 case 12:
                     coupon_nev.Text = "Ramen";
-                    coupon_kep.Source = ramen;
+                    coupon_kep.Source = Kep("/images/ramen.png");
                     Etel12_akcio = szazalek;
                     akcio_etel12.Content = "-" + szazalek + "%";
                     etel12_ar.Content = "Ár: " + Akciozas(Etel12_ar, szazalek) + "Ft";
                     break;
                 case 13:
                     coupon_nev.Text = "Omelette";
-                    coupon_kep.Source = omelette;
+                    coupon_kep.Source = Kep("/images/omelette.png");
                     Etel13_akcio = szazalek;
                     akcio_etel13.Content = "-" + szazalek + "%";
                     etel3_ar.Content = "Ár: " + Akciozas(Etel13_ar, szazalek) + "Ft";
                     break;
                 case 14:
                     coupon_nev.Text = "Mac 'N' Cheese";
-                    coupon_kep.Source = mac_n_cheese;
+                    coupon_kep.Source = Kep("/images/macaroni.png");
                     Etel14_akcio = szazalek;
                     akcio_etel14.Content = "-" + szazalek + "%";
                     etel14_ar.Content = "Ár: " + Akciozas(Etel14_ar, szazalek) + "Ft";
                     break;
                 case 15:
                     coupon_nev.Text = "Köfte";
-                    coupon_kep.Source = kofte;
+                    coupon_kep.Source = Kep("/images/kofte.png");
                     Etel15_akcio = szazalek;
                     akcio_etel15.Content = "-" + szazalek + "%";
                     etel15_ar.Content = "Ár: " + Akciozas(Etel15_ar, szazalek) + "Ft";
                     break;
                 case 16:
                     coupon_nev.Text = "Fisch And Chips";
-                    coupon_kep.Source = fish_and_chips;
+                    coupon_kep.Source = Kep("/images/fish-and-chips.png");
                     Etel16_akcio = szazalek;
                     akcio_etel16.Content = "-" + szazalek + "%";
                     etel16_ar.Content = "Ár: " + Akciozas(Etel16_ar, szazalek) + "Ft";
                     break;
                 case 17:
                     coupon_nev.Text = "Steak";
-                    coupon_kep.Source = steak;
+                    coupon_kep.Source = Kep("/images/steak.png");
                     Etel17_akcio = szazalek;
                     akcio_etel17.Content = "-" + szazalek + "%";
                     etel17_ar.Content = "Ár: " + Akciozas(Etel17_ar, szazalek) + "Ft";
                     break;
                 case 18:
                     coupon_nev.Text = "Teriyaki Tofu";
-                    coupon_kep.Source = tofu;
+                    coupon_kep.Source = Kep("/images/stinky-tofu.png");
                     Etel18_akcio = szazalek;
                     akcio_etel18.Content = "-" + szazalek + "%";
                     etel18_ar.Content = "Ár: " + Akciozas(Etel18_ar, szazalek) + "Ft";
                     break;
                 case 19:
                     coupon_nev.Text = "Fagylalt";
-                    coupon_kep.Source = fagylalt;
+                    coupon_kep.Source = Kep("/images/ice-cream.png");
                     Etel19_akcio = szazalek;
                     akcio_etel19.Content = "-" + szazalek + "%";
                     etel19_ar.Content = "Ár: " + Akciozas(Etel19_ar, szazalek) + "Ft";
                     break;
                 case 20:
                     coupon_nev.Text = "Torta";
-                    coupon_kep.Source = torta;
+                    coupon_kep.Source = Kep("/images/cake.png");
                     Etel20_akcio = szazalek;
                     akcio_etel20.Content = "-" + szazalek + "%";
                     etel20_ar.Content = "Ár: " + Akciozas(Etel20_ar, szazalek) + "Ft";
                     break;
                 case 21:
                     coupon_nev.Text = "Pite";
-                    coupon_kep.Source = pite;
+                    coupon_kep.Source = Kep("/images/meat-pie.png");
                     Etel21_akcio = szazalek;
                     akcio_etel21.Content = "-" + szazalek + "%";
                     etel21_ar.Content = "Ár: " + Akciozas(Etel21_ar, szazalek) + "Ft";
                     break;
                 case 22:
                     coupon_nev.Text = "Macaron";
-                    coupon_kep.Source = macaron;
+                    coupon_kep.Source = Kep("/images/macaron.png");
                     Etel22_akcio = szazalek;
                     akcio_etel22.Content = "-" + szazalek + "%";
                     etel22_ar.Content = "Ár: " + Akciozas(Etel22_ar, szazalek) + "Ft";
                     break;
                 case 23:
                     coupon_nev.Text = "Süti";
-                    coupon_kep.Source = suti;
+                    coupon_kep.Source = Kep("/images/choco-chip.png");
                     Etel23_akcio = szazalek;
                     akcio_etel23.Content = "-" + szazalek + "%";
                     etel23_ar.Content = "Ár: " + Akciozas(Etel23_ar, szazalek) + "Ft";
                     break;
                 case 24:
                     coupon_nev.Text = "Fánk";
-                    coupon_kep.Source = fank;
+                    coupon_kep.Source = Kep("/images/donut.png");
                     Etel24_akcio = szazalek;
                     akcio_etel24.Content = "-" + szazalek + "%";
                     etel24_ar.Content = "Ár: " + Akciozas(Etel24_ar, szazalek) + "Ft";
                     break;
                 case 25:
                     coupon_nev.Text = "Coca-Cola";
-                    coupon_kep.Source = cola;
+                    coupon_kep.Source = Kep("/images/cola.png");
                     Etel25_akcio = szazalek;
                     akcio_etel25.Content = "-" + szazalek + "%";
                     etel25_ar.Content = "Ár: " + Akciozas(Etel25_ar, szazalek) + "Ft";
                     break;
                 case 26:
                     coupon_nev.Text = "Narancslé";
-                    coupon_kep.Source = narancsle;
+                    coupon_kep.Source = Kep("/images/orange-juice.png");
                     Etel26_akcio = szazalek;
                     akcio_etel26.Content = "-" + szazalek + "%";
                     etel26_ar.Content = "Ár: " + Akciozas(Etel26_ar, szazalek) + "Ft";
                     break;
                 case 27:
                     coupon_nev.Text = "Almalé";
-                    coupon_kep.Source = almale;
+                    coupon_kep.Source = Kep("/images/apple-juice.png");
                     Etel27_akcio = szazalek;
                     akcio_etel27.Content = "-" + szazalek + "%";
                     etel27_ar.Content = "Ár: " + Akciozas(Etel27_ar, szazalek) + "Ft";
                     break;
                 case 28:
                     coupon_nev.Text = "Kávé";
-                    coupon_kep.Source = kave;
+                    coupon_kep.Source = Kep("/images/coffee-cup.png");
                     Etel28_akcio = szazalek;
                     akcio_etel28.Content = "-" + szazalek + "%";
                     etel28_ar.Content = "Ár: " + Akciozas(Etel28_ar, szazalek) + "Ft";
                     break;
                 case 29:
                     coupon_nev.Text = "Tea";
-                    coupon_kep.Source = tea;
+                    coupon_kep.Source = Kep("/images/herbal-tea.png");
                     Etel29_akcio = szazalek;
                     akcio_etel29.Content = "-" + szazalek + "%";
                     etel29_ar.Content = "Ár: " + Akciozas(Etel29_ar, szazalek) + "Ft";
                     break;
                 case 30:
                     coupon_nev.Text = "Jeges tea";
-                    coupon_kep.Source = jeges_tea;
+                    coupon_kep.Source = Kep("/images/ice-tea.png");
                     Etel30_akcio = szazalek;
                     akcio_etel30.Content = "-" + szazalek + "%";
                     etel30_ar.Content = "Ár: " + Akciozas(Etel30_ar, szazalek) + "Ft";
@@ -1258,130 +1110,43 @@ namespace WpfApp1
             var etelek_jelzok = new[] { eloetel_jelzo, leves_jelzo, foetel_jelzo,
                                         desszert_jelzo, udito_jelzo};
             foreach (var item in etelek_jelzok) { item.Visibility = Visibility.Visible; }
-            switch (nev)
-            {
-                case 1:
-                    akcio_etel1.Visibility = Visibility.Visible;
-                    eloetelek.Visibility = Visibility.Visible;
-                    break;
-                case 2:
-                    akcio_etel2.Visibility = Visibility.Visible;
-                    eloetelek.Visibility = Visibility.Visible;
-                    break;
-                case 3:
-                    akcio_etel3.Visibility = Visibility.Visible;
-                    eloetelek.Visibility = Visibility.Visible;
-                    break;
-                case 4:
-                    akcio_etel4.Visibility = Visibility.Visible;
-                    eloetelek.Visibility = Visibility.Visible;
-                    break;
-                case 5:
-                    akcio_etel5.Visibility = Visibility.Visible;
-                    eloetelek.Visibility = Visibility.Visible;
-                    break;
-                case 6:
-                    akcio_etel6.Visibility = Visibility.Visible;
-                    eloetelek.Visibility = Visibility.Visible;
-                    break;
-                case 7:
-                    akcio_etel7.Visibility = Visibility.Visible;
-                    levesek.Visibility = Visibility.Visible;
-                    break;
-                case 8:
-                    akcio_etel8.Visibility = Visibility.Visible;
-                    levesek.Visibility = Visibility.Visible;
-                    break;
-                case 9:
-                    akcio_etel9.Visibility = Visibility.Visible;
-                    levesek.Visibility = Visibility.Visible;
-                    break;
-                case 10:
-                    akcio_etel10.Visibility = Visibility.Visible;
-                    levesek.Visibility = Visibility.Visible;
-                    break;
-                case 11:
-                    akcio_etel11.Visibility = Visibility.Visible;
-                    levesek.Visibility = Visibility.Visible;
-                    break;
-                case 12:
-                    akcio_etel12.Visibility = Visibility.Visible;
-                    levesek.Visibility = Visibility.Visible;
-                    break;
-                case 13:
-                    akcio_etel13.Visibility = Visibility.Visible;
-                    foetelek.Visibility = Visibility.Visible;
-                    break;
-                case 14:
-                    akcio_etel14.Visibility = Visibility.Visible;
-                    foetelek.Visibility = Visibility.Visible;
-                    break;
-                case 15:
-                    akcio_etel15.Visibility = Visibility.Visible;
-                    foetelek.Visibility = Visibility.Visible;
-                    break;
-                case 16:
-                    akcio_etel16.Visibility = Visibility.Visible;
-                    foetelek.Visibility = Visibility.Visible;
-                    break;
-                case 17:
-                    akcio_etel17.Visibility = Visibility.Visible;
-                    foetelek.Visibility = Visibility.Visible;
-                    break;
-                case 18:
-                    akcio_etel18.Visibility = Visibility.Visible;
-                    foetelek.Visibility = Visibility.Visible;
-                    break;
-                case 19:
-                    akcio_etel19.Visibility = Visibility.Visible;
-                    desszertek.Visibility = Visibility.Visible;
-                    break;
-                case 20:
-                    akcio_etel20.Visibility = Visibility.Visible;
-                    desszertek.Visibility = Visibility.Visible;
-                    break;
-                case 21:
-                    akcio_etel21.Visibility = Visibility.Visible;
-                    desszertek.Visibility = Visibility.Visible;
-                    break;
-                case 22:
-                    akcio_etel22.Visibility = Visibility.Visible;
-                    desszertek.Visibility = Visibility.Visible;
-                    break;
-                case 23:
-                    akcio_etel23.Visibility = Visibility.Visible;
-                    desszertek.Visibility = Visibility.Visible;
-                    break;
-                case 24:
-                    akcio_etel24.Visibility = Visibility.Visible;
-                    desszertek.Visibility = Visibility.Visible;
-                    break;
-                case 25:
-                    akcio_etel25.Visibility = Visibility.Visible;
-                    uditok.Visibility = Visibility.Visible;
-                    break;
-                case 26:
-                    akcio_etel26.Visibility = Visibility.Visible;
-                    uditok.Visibility = Visibility.Visible;
-                    break;
-                case 27:
-                    akcio_etel27.Visibility = Visibility.Visible;
-                    uditok.Visibility = Visibility.Visible;
-                    break;
-                case 28:
-                    akcio_etel28.Visibility = Visibility.Visible;
-                    uditok.Visibility = Visibility.Visible;
-                    break;
-                case 29:
-                    akcio_etel29.Visibility = Visibility.Visible;
-                    uditok.Visibility = Visibility.Visible;
-                    break;
-                case 30:
-                    akcio_etel30.Visibility = Visibility.Visible;
-                    uditok.Visibility = Visibility.Visible;
-                    break;
 
-            }
+            akcio_etel1.Visibility = (nev == 1) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel2.Visibility = (nev == 2) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel3.Visibility = (nev == 3) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel4.Visibility = (nev == 4) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel5.Visibility = (nev == 5) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel6.Visibility = (nev == 6) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel7.Visibility = (nev == 7) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel8.Visibility = (nev == 8) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel9.Visibility = (nev == 9) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel10.Visibility = (nev == 10) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel11.Visibility = (nev == 11) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel12.Visibility = (nev == 12) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel13.Visibility = (nev == 13) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel14.Visibility = (nev == 14) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel15.Visibility = (nev == 15) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel16.Visibility = (nev == 16) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel17.Visibility = (nev == 17) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel18.Visibility = (nev == 18) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel19.Visibility = (nev == 19) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel20.Visibility = (nev == 20) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel21.Visibility = (nev == 21) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel22.Visibility = (nev == 22) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel23.Visibility = (nev == 23) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel24.Visibility = (nev == 24) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel25.Visibility = (nev == 25) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel26.Visibility = (nev == 26) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel27.Visibility = (nev == 27) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel28.Visibility = (nev == 28) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel29.Visibility = (nev == 29) ? Visibility.Visible : Visibility.Hidden;
+            akcio_etel30.Visibility = (nev == 30) ? Visibility.Visible : Visibility.Hidden;
+
+            eloetelek.Visibility = (nev >= 1 && nev <= 6) ? Visibility.Visible : Visibility.Hidden;
+            levesek.Visibility = (nev >= 7 && nev <= 12) ? Visibility.Visible : Visibility.Hidden;
+            foetelek.Visibility = (nev >= 13 && nev <= 18) ? Visibility.Visible : Visibility.Hidden;
+            desszertek.Visibility = (nev >= 19 && nev <= 24) ? Visibility.Visible : Visibility.Hidden;
+            uditok.Visibility = (nev >= 25 && nev <= 30) ? Visibility.Visible : Visibility.Hidden;
 
             if (eloetelek.Visibility == Visibility.Visible)
             {
@@ -1434,36 +1199,6 @@ namespace WpfApp1
                                         desszert_jelzo, udito_jelzo};
             foreach (var item in etelek_jelzok) { item.Visibility = Visibility.Hidden; }
 
-            BitmapImage tini_f = new BitmapImage();
-            tini_f.BeginInit();
-            tini_f.UriSource = new Uri("/teenage.png", UriKind.Relative);
-            tini_f.EndInit();
-
-            BitmapImage tini_l = new BitmapImage();
-            tini_l.BeginInit();
-            tini_l.UriSource = new Uri("/teen.png", UriKind.Relative);
-            tini_l.EndInit();
-
-            BitmapImage middle_l = new BitmapImage();
-            middle_l.BeginInit();
-            middle_l.UriSource = new Uri("/mom.png", UriKind.Relative);
-            middle_l.EndInit();
-
-            BitmapImage middle_f = new BitmapImage();
-            middle_f.BeginInit();
-            middle_f.UriSource = new Uri("/father.png", UriKind.Relative);
-            middle_f.EndInit();
-
-            BitmapImage oreg_l = new BitmapImage();
-            oreg_l.BeginInit();
-            oreg_l.UriSource = new Uri("/grandmother.png", UriKind.Relative);
-            oreg_l.EndInit();
-            
-            BitmapImage oreg_f = new BitmapImage();
-            oreg_f.BeginInit();
-            oreg_f.UriSource = new Uri("// man(1).png", UriKind.Relative);
-            oreg_f.EndInit();
-
             if (File.Exists(nev + ".txt"))
             {
                 string adat = File.ReadAllText(nev + ".txt");
@@ -1480,17 +1215,17 @@ namespace WpfApp1
 
                     if (Convert.ToInt32(adatok[1]) > 0 & Convert.ToInt32(adatok[1]) < 18)
                     {
-                        profil_kep.Source = tini_f;
+                        profil_kep.Source = Kep("/teenage.png");
                     }
 
                     if (Convert.ToInt32(adatok[1]) > 18 & Convert.ToInt32(adatok[1]) < 50)
                     {
-                        profil_kep.Source = middle_f;
+                        profil_kep.Source = Kep("/father.png");
                     }
 
                     if (Convert.ToInt32(adatok[1]) > 50 & Convert.ToInt32(adatok[1]) < 120)
                     {
-                        profil_kep.Source = oreg_f;
+                        profil_kep.Source = Kep("/ man(1).png");
                     }
 
                 }
@@ -1501,38 +1236,35 @@ namespace WpfApp1
 
                     if (Convert.ToInt32(adatok[1]) > 0 & Convert.ToInt32(adatok[1]) < 18)
                     {
-                        profil_kep.Source = tini_f;
+                        profil_kep.Source = Kep("/teen.png");
                     }
 
                     if (Convert.ToInt32(adatok[1]) > 18 & Convert.ToInt32(adatok[1]) < 50)
                     {
-                        profil_kep.Source = middle_l;
+                        profil_kep.Source = Kep("/mom.png");
                     }
 
                     if (Convert.ToInt32(adatok[1]) > 50 & Convert.ToInt32(adatok[1]) < 120)
                     {
-                        profil_kep.Source = oreg_l;
+                        profil_kep.Source = Kep("/grandmother.png");
                     }
                 }
-
                 profil_jelszo.Password = Jelszo_visszaallitas(adatok[4]);
-
             }
             else
             {
                 return;
             }
-
         }
         private void profil_uj_jelszo_Click(object sender, RoutedEventArgs e)
         {
             string adat = File.ReadAllText(nev + ".txt");
             string[] adatok = adat.Split(' ');
             string fajl = nev + ".txt";
-
             if (profil_jelszo.Password.Length > 8)
             {
-                File.WriteAllText(fajl, adatok[0] + " " + adatok[1] + " " + adatok[2] + " " + adatok[3] + " " + adatok[4]);
+                File.Delete(fajl);
+                File.WriteAllText(fajl, adatok[0] + " " + adatok[1] + " " + adatok[2] + " " + adatok[3] + " " + Jelszo_titkositas(adatok[4]));
             }
             else
             {
@@ -1542,8 +1274,5 @@ namespace WpfApp1
             }
         }
         //profil
-
     }   
-
-
 }
