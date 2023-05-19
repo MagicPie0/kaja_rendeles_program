@@ -382,22 +382,12 @@
     <Resource Include="Images\shopping.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="apple-juice.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="teenage.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="teen.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="mom.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="father.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="man %281%29.png" />
+    <Resource Include="profil_images\father.png" />
+    <Resource Include="profil_images\grandmother.png" />
+    <Resource Include="profil_images\man %281%29.png" />
+    <Resource Include="profil_images\mom.png" />
+    <Resource Include="profil_images\teen.png" />
+    <Resource Include="profil_images\teenage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

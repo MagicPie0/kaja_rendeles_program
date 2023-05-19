@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 
 namespace WpfApp1
@@ -17,6 +16,7 @@ namespace WpfApp1
                                16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30};
         public int index;
         public int index2;
+        public string felhasznalo = "";
         //előételek
         public int Etel1_ar = 2000;
         public int Etel1_akcio = 0;
@@ -119,7 +119,7 @@ namespace WpfApp1
             //design főoldal
 
             var oldalak = new[] { eloetelek, levesek, foetelek, desszertek, uditok, hiba, bejelentkezes,
-                                  elfelejtett_jelszo_oldal, jelszo, coupon, kosar, profil};
+                                  elfelejtett_jelszo_oldal, jelszo, coupon, kosar, profil, profil_ok};
 
             var etelek_jelzok = new[] { eloetel_jelzo, leves_jelzo, foetel_jelzo,
                                         desszert_jelzo, udito_jelzo};
@@ -321,47 +321,32 @@ namespace WpfApp1
 
         private void fo_button_Click(object sender, RoutedEventArgs e)
         {
-            var etelek_jelzok = new[] { eloetel_jelzo, leves_jelzo, foetel_jelzo,
+            var etelek_jelzok = new[] {leves_jelzo, foetel_jelzo,
                                         desszert_jelzo, udito_jelzo};
-            foreach (var item in etelek_jelzok) { item.Visibility = Visibility.Visible; }
+            var oldalak = new[] { hiba, bejelentkezes,elfelejtett_jelszo_oldal,
+                                  jelszo, coupon, kosar, profil, levesek, desszertek, foetelek, uditok, profil_ok};
+            foreach (var item in etelek_jelzok) { item.Visibility = Visibility.Visible; item.IsChecked = false; }
+            foreach (var item in oldalak) { item.Visibility = Visibility.Hidden; }
+
             tovabb.Visibility = Visibility.Visible;
             coupon.Visibility = Visibility.Hidden;
             kosar.Visibility = Visibility.Hidden;
             fooldal.Visibility = Visibility.Visible;
             eloetelek.Visibility = Visibility.Visible;
+            kijelzo.Content = "Előételek";
+            vissza.Visibility = Visibility.Hidden;
+            eloetel_jelzo.Visibility = Visibility.Visible;
+            eloetel_jelzo.IsChecked = true;
 
-            akcio_etel1.Visibility = nevek[index2] == 1 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel2.Visibility = nevek[index2] == 2 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel3.Visibility = nevek[index2] == 3 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel4.Visibility = nevek[index2] == 4 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel5.Visibility = nevek[index2] == 5 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel6.Visibility = nevek[index2] == 6 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel7.Visibility = nevek[index2] == 7 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel8.Visibility = nevek[index2] == 8 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel9.Visibility = nevek[index2] == 9 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel10.Visibility = nevek[index2] == 10 ? Visibility.Visible : Visibility.Hidden;
+            for (int i = 0; i <= 30; i++)
+            {
+                if (i == nevek[index2])
+                {
+                    var gomb = (UIElement)this.FindName("akcio_etel" + i);
+                    gomb.Visibility = Visibility.Visible;
+                }
 
-            akcio_etel11.Visibility = nevek[index2] == 11 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel12.Visibility = nevek[index2] == 12 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel13.Visibility = nevek[index2] == 13 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel14.Visibility = nevek[index2] == 14 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel15.Visibility = nevek[index2] == 15 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel16.Visibility = nevek[index2] == 16 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel17.Visibility = nevek[index2] == 17 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel18.Visibility = nevek[index2] == 18 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel19.Visibility = nevek[index2] == 19 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel20.Visibility = nevek[index2] == 20 ? Visibility.Visible : Visibility.Hidden;
-
-            akcio_etel21.Visibility = nevek[index2] == 21 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel22.Visibility = nevek[index2] == 22 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel23.Visibility = nevek[index2] == 23 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel24.Visibility = nevek[index2] == 24 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel25.Visibility = nevek[index2] == 25 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel26.Visibility = nevek[index2] == 26 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel27.Visibility = nevek[index2] == 27 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel28.Visibility = nevek[index2] == 28 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel29.Visibility = nevek[index2] == 29 ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel30.Visibility = nevek[index2] == 30 ? Visibility.Visible : Visibility.Hidden;
+            }
 
         }
         private void tovabb_Click(object sender, RoutedEventArgs e)
@@ -553,12 +538,13 @@ namespace WpfApp1
 
             return ar - vegeredmeny;
         }
-
         private void regisztralas_gomb_Click(object sender, RoutedEventArgs e)
         {
             //ellenőrzés
+
             int engedély = 0;
-            string nev = felhasznalonev_input.Text;
+            string nev2 = felhasznalonev_input.Text;
+            felhasznalo = nev2;
             string be_kor = eletkor_input.Text;
             int kor;
             string email = email_input.Text;
@@ -566,7 +552,7 @@ namespace WpfApp1
             string jelszo1 = jelszo1_input.Password;
             string jelszo2 = jelszo2_input.Password;
 
-            if (nev == "" & be_kor == "" & email == "" & jelszo1 == "" & jelszo2 == "")
+            if (nev2 == "" & be_kor == "" & email == "" & jelszo1 == "" & jelszo2 == "")
             {
                 hiba.Visibility = Visibility.Visible;
                 hiba_out.Text = "Nem lehet üresen hagyott mező!";
@@ -574,7 +560,7 @@ namespace WpfApp1
             }
             else
             {
-                if (File.Exists(nev + ".txt"))
+                if (File.Exists(nev2 + ".txt"))
                 {
                     hiba.Visibility = Visibility.Visible;
                     hiba_out.Text = "Ez a felhasználónév már foglalt!";
@@ -622,7 +608,7 @@ namespace WpfApp1
                             hiba_out.Text = "A neme férfi vagy nő lehet csak!";
                             return;
                         }
-                        
+
                     }
                     else
                     {
@@ -705,8 +691,8 @@ namespace WpfApp1
                     bejelentkezes_gomb.Visibility = Visibility.Hidden;
 
                     //fájlba mentés
-                    string file_name = nev + ".txt";
-                    File.WriteAllText(file_name, nev + " " + kor + " " + email + " " + nem + " " + Jelszo_titkositas(jelszo1));
+                    string file_name = nev2 + ".txt";
+                    File.WriteAllText(file_name, nev2 + " " + kor + " " + email + " " + nem + " " + Jelszo_titkositas(jelszo1));
                     //fájlba mentés
                 }
                 else
@@ -744,9 +730,11 @@ namespace WpfApp1
             felhasznalonev_input_bejelenktezes.Focus();
         }
         static string nev = "";
+
         private void bejelentekezes_fo_gomb_Click(object sender, RoutedEventArgs e)
         {
             nev = felhasznalonev_input_bejelenktezes.Text;
+            felhasznalo = nev;
             string jelszo = jelszo_input_bejelentkezes.Password;
 
             string titkos_jelszo = Jelszo_titkositas(jelszo);
@@ -812,9 +800,9 @@ namespace WpfApp1
 
         private void elfelejtett_fo_gomb_Click(object sender, RoutedEventArgs e)
         {
-            if (File.Exists(nev + ".txt"))
+            if (File.Exists(felhasznalonev_input_elfelejtett.Text + ".txt"))
             {
-                string x = File.ReadAllText(nev + ".txt");
+                string x = File.ReadAllText(felhasznalonev_input_elfelejtett.Text + ".txt");
                 string[] adatok = x.Split(' ');
 
                 string email = email_input_elfelejtett.Text;
@@ -866,7 +854,7 @@ namespace WpfApp1
         {
             //design
             var oldalak = new[] { eloetelek, levesek, foetelek, desszertek, uditok, hiba, bejelentkezes,
-                                  elfelejtett_jelszo_oldal, jelszo, coupon};
+                                  elfelejtett_jelszo_oldal, jelszo, kosar, profil };
 
             var etelek_jelzok = new[] { eloetel_jelzo, leves_jelzo, foetel_jelzo,
                                         desszert_jelzo, udito_jelzo};
@@ -1111,36 +1099,14 @@ namespace WpfApp1
                                         desszert_jelzo, udito_jelzo};
             foreach (var item in etelek_jelzok) { item.Visibility = Visibility.Visible; }
 
-            akcio_etel1.Visibility = (nev == 1) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel2.Visibility = (nev == 2) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel3.Visibility = (nev == 3) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel4.Visibility = (nev == 4) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel5.Visibility = (nev == 5) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel6.Visibility = (nev == 6) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel7.Visibility = (nev == 7) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel8.Visibility = (nev == 8) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel9.Visibility = (nev == 9) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel10.Visibility = (nev == 10) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel11.Visibility = (nev == 11) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel12.Visibility = (nev == 12) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel13.Visibility = (nev == 13) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel14.Visibility = (nev == 14) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel15.Visibility = (nev == 15) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel16.Visibility = (nev == 16) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel17.Visibility = (nev == 17) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel18.Visibility = (nev == 18) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel19.Visibility = (nev == 19) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel20.Visibility = (nev == 20) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel21.Visibility = (nev == 21) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel22.Visibility = (nev == 22) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel23.Visibility = (nev == 23) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel24.Visibility = (nev == 24) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel25.Visibility = (nev == 25) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel26.Visibility = (nev == 26) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel27.Visibility = (nev == 27) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel28.Visibility = (nev == 28) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel29.Visibility = (nev == 29) ? Visibility.Visible : Visibility.Hidden;
-            akcio_etel30.Visibility = (nev == 30) ? Visibility.Visible : Visibility.Hidden;
+            for (int i = 1; i <= 30; i++)
+            {
+                if (i == nev)
+                {
+                    var akcio_etel = FindName($"akcio_etel{i}") as UIElement;
+                    akcio_etel.Visibility = Visibility.Visible;
+                }
+            }
 
             eloetelek.Visibility = (nev >= 1 && nev <= 6) ? Visibility.Visible : Visibility.Hidden;
             levesek.Visibility = (nev >= 7 && nev <= 12) ? Visibility.Visible : Visibility.Hidden;
@@ -1199,9 +1165,9 @@ namespace WpfApp1
                                         desszert_jelzo, udito_jelzo};
             foreach (var item in etelek_jelzok) { item.Visibility = Visibility.Hidden; }
 
-            if (File.Exists(nev + ".txt"))
+            if (File.Exists(felhasznalo + ".txt"))
             {
-                string adat = File.ReadAllText(nev + ".txt");
+                string adat = File.ReadAllText(felhasznalo + ".txt");
                 string[] adatok = adat.Split(' ');
 
                 szemely sz = new szemely(adatok[0], Convert.ToInt32(adatok[1]), adatok[2], "", "");
@@ -1214,40 +1180,35 @@ namespace WpfApp1
                     profil_no.IsChecked = false;
                     profil_ferfi.IsChecked = true;
 
-                    if (Convert.ToInt32(adatok[1]) > 0 & Convert.ToInt32(adatok[1]) < 18)
+                    if (sz.Eletkor > 0 & sz.Eletkor < 18)
                     {
-                        profil_kep.Source = Kep("/teenage.png");
+                        profil_kep.Source = Kep("/profil_images/teenage.png");
                     }
-
-                    if (Convert.ToInt32(adatok[1]) > 18 & Convert.ToInt32(adatok[1]) < 50)
+                    else if (sz.Eletkor > 18 & sz.Eletkor < 50)
                     {
-                        profil_kep.Source = Kep("/father.png");
+                        profil_kep.Source = Kep("/profil_images/father.png");
                     }
-
-                    if (Convert.ToInt32(adatok[1]) > 50 & Convert.ToInt32(adatok[1]) < 120)
+                    else if (sz.Eletkor > 50 & sz.Eletkor < 120)
                     {
-                        profil_kep.Source = Kep("/ man(1).png");
+                        profil_kep.Source = Kep("/profil_images/man(1).png");
                     }
-
                 }
                 else
                 {
                     profil_ferfi.IsChecked = false;
                     profil_no.IsChecked = true;
 
-                    if (Convert.ToInt32(adatok[1]) > 0 & Convert.ToInt32(adatok[1]) < 18)
+                    if (sz.Eletkor > 0 & sz.Eletkor < 18)
                     {
-                        profil_kep.Source = Kep("/teen.png");
+                        profil_kep.Source = Kep("/profil_images/teen.png");
                     }
-
-                    if (Convert.ToInt32(adatok[1]) > 18 & Convert.ToInt32(adatok[1]) < 50)
+                    else if (sz.Eletkor > 18 & sz.Eletkor < 50)
                     {
-                        profil_kep.Source = Kep("/mom.png");
+                        profil_kep.Source = Kep("/profil_images/mom.png");
                     }
-
-                    if (Convert.ToInt32(adatok[1]) > 50 & Convert.ToInt32(adatok[1]) < 120)
+                    else if (sz.Eletkor > 50 & sz.Eletkor < 120)
                     {
-                        profil_kep.Source = Kep("/grandmother.png");
+                        profil_kep.Source = Kep("/profil_images/grandmother.png");
                     }
                 }
                 profil_jelszo.Password = Jelszo_visszaallitas(adatok[4]);
@@ -1262,10 +1223,11 @@ namespace WpfApp1
             string adat = File.ReadAllText(nev + ".txt");
             string[] adatok = adat.Split(' ');
             string fajl = nev + ".txt";
-            if (profil_jelszo.Password.Length > 8)
+            if (profil_jelszo.Password.Length >= 8)
             {
                 File.Delete(fajl);
-                File.WriteAllText(fajl, adatok[0] + " " + adatok[1] + " " + adatok[2] + " " + adatok[3] + " " + Jelszo_titkositas(adatok[4]));
+                File.WriteAllText(fajl, adatok[0] + " " + adatok[1] + " " + adatok[2] + " " + adatok[3] + " " + Jelszo_titkositas(profil_jelszo.Password));
+                profil_ok.Visibility = Visibility.Visible;
             }
             else
             {
@@ -1274,6 +1236,27 @@ namespace WpfApp1
                 return;
             }
         }
+
+        private void ok_Click(object sender, RoutedEventArgs e)
+        {
+            var oldalak = new[] { eloetelek, levesek, foetelek, desszertek, uditok, hiba, regisztralas,
+                                  elfelejtett_jelszo_oldal, jelszo, coupon, kosar, profil, profil_ok};
+            var etelek_jelzok = new[] { eloetel_jelzo, leves_jelzo, foetel_jelzo,
+                                        desszert_jelzo, udito_jelzo};
+            var gombok = new[] { vissza, tovabb, fo_button, coupon_button, account_gomb, kosar_button };
+            var szazalekok_gomb = new[] { akcio_etel1, akcio_etel2, akcio_etel3, akcio_etel4, akcio_etel5,
+                                     akcio_etel6, akcio_etel7, akcio_etel8, akcio_etel9, akcio_etel10,
+                                     akcio_etel11, akcio_etel12, akcio_etel13, akcio_etel14, akcio_etel15,
+                                     akcio_etel16, akcio_etel17, akcio_etel18, akcio_etel19, akcio_etel20,
+                                     akcio_etel21, akcio_etel22, akcio_etel23, akcio_etel24, akcio_etel25,
+                                     akcio_etel26, akcio_etel27, akcio_etel28, akcio_etel29, akcio_etel30};
+            foreach(var item in oldalak) { item.Visibility = Visibility.Hidden; }
+            foreach (var item in etelek_jelzok) { item.Visibility = Visibility.Hidden; }
+            foreach (var item in gombok) { item.Visibility = Visibility.Hidden; }
+            foreach (var item in szazalekok_gomb) { item.Visibility = Visibility.Hidden; }
+            bejelentkezes.Visibility = Visibility.Visible;
+            jelszo_input_bejelentkezes.Password = null;
+        }
         //profil
-    }   
+    }
 }

@@ -814,7 +814,7 @@
             </Grid>
         </Grid>
 
-       
+
         <Grid Name="coupon" Visibility="Hidden">
             <Rectangle HorizontalAlignment="Center" Height="769" Margin="0,160,0,0" VerticalAlignment="Top" Width="1160" Fill="White" Opacity="0.65" Grid.RowSpan="2"/>
             <TextBlock x:Name="coupon_nev" HorizontalAlignment="Center" Margin="559,205,559,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="51" Width="582" FontSize="36" TextAlignment="Center" Text="Halo"/>
@@ -844,6 +844,12 @@
             <TextBlock x:Name="profil_nev" Margin="518,441,518,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" TextAlignment="Center" FontSize="48"/>
 
         </Grid>
+
+        <Grid x:Name="profil_ok" Margin="374,394,374,298" Background="#FF2AEC36" Visibility="Hidden">
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Height="49" Width="444" TextAlignment="Center" FontSize="36"><Run Language="hu-hu" Text="A jelszó megváltozott!"/></TextBlock>
+            <Button x:Name="ok" Style="{DynamicResource ButtonStyle7}" Content="Vissza a bejelentkezéshez!" HorizontalAlignment="Center" Margin="0,213,0,0" VerticalAlignment="Top" Height="68" Width="561" FontSize="24" Click="ok_Click"/>
+        </Grid>
+
         <Button x:Name="tovabb" Style="{DynamicResource ButtonStyle3}" Content="&gt;" HorizontalAlignment="Left" Margin="1579,459,0,0" VerticalAlignment="Top" Height="179" Width="121" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="tovabb_Click"/>
         <Button x:Name="vissza" Style="{DynamicResource ButtonStyle3}" Content=" &lt;" HorizontalAlignment="Left" Margin="-38,459,0,0" VerticalAlignment="Top" Height="179" Width="122" FontSize="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="vissza_Click"/>
         <Grid x:Name="hiba" Background="#FFAA0000" Margin="487,336,486,362" Visibility="Hidden">
