@@ -10,108 +10,108 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        public Random random = new Random();
-        public int[] szazalekok = { 10, 20, 30, 40, 50 };
-        public int[] nevek = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+        static Random random = new Random();
+        static int[] szazalekok = { 10, 20, 30, 40, 50 };
+        static int[] nevek = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
                                16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30};
-        public int index;
-        public int index2;
-        public string felhasznalo = "";
+        static int index;
+        static int index2;
+        static string felhasznalo = "";
         //előételek
-        public int Etel1_ar = 2000;
-        public int Etel1_akcio = 0;
+        static int Etel1_ar = 2000;
+        static int Etel1_akcio = 0;
 
-        public int Etel2_ar = 300;
-        public int Etel2_akcio = 0;
+        static int Etel2_ar = 300;
+        static int Etel2_akcio = 0;
 
-        public int Etel3_ar = 3500;
-        public int Etel3_akcio = 0;
+        static int Etel3_ar = 3500;
+        static int Etel3_akcio = 0;
 
-        public int Etel4_ar = 4000;
-        public int Etel4_akcio = 0;
+        static int Etel4_ar = 4000;
+        static int Etel4_akcio = 0;
 
-        public int Etel5_ar = 6000;
-        public int Etel5_akcio = 0;
+        static int Etel5_ar = 6000;
+        static int Etel5_akcio = 0;
 
-        public int Etel6_ar = 6500;
-        public int Etel6_akcio = 0;
+        static int Etel6_ar = 6500;
+        static int Etel6_akcio = 0;
         //előételek
         //levesek
-        public int Etel7_ar = 8000;
-        public int Etel7_akcio = 0;
+        static int Etel7_ar = 8000;
+        static int Etel7_akcio = 0;
 
-        public int Etel8_ar = 8200;
-        public int Etel8_akcio = 0;
+        static int Etel8_ar = 8200;
+        static int Etel8_akcio = 0;
 
-        public int Etel9_ar = 8150;
-        public int Etel9_akcio = 0;
+        static int Etel9_ar = 8150;
+        static int Etel9_akcio = 0;
 
-        public int Etel10_ar = 8250;
-        public int Etel10_akcio = 0;
+        static int Etel10_ar = 8250;
+        static int Etel10_akcio = 0;
 
-        public int Etel11_ar = 8300;
-        public int Etel11_akcio = 0;
+        static int Etel11_ar = 8300;
+        static int Etel11_akcio = 0;
 
-        public int Etel12_ar = 7600;
-        public int Etel12_akcio = 0;
+        static int Etel12_ar = 7600;
+        static int Etel12_akcio = 0;
         //levesek
         //főételek
-        public int Etel13_ar = 4000;
-        public int Etel13_akcio = 0;
+        static int Etel13_ar = 4000;
+        static int Etel13_akcio = 0;
 
-        public int Etel14_ar = 5000;
-        public int Etel14_akcio = 0;
+        static int Etel14_ar = 5000;
+        static int Etel14_akcio = 0;
 
-        public int Etel15_ar = 5500;
-        public int Etel15_akcio = 0;
+        static int Etel15_ar = 5500;
+        static int Etel15_akcio = 0;
 
-        public int Etel16_ar = 6300;
-        public int Etel16_akcio = 0;
+        static int Etel16_ar = 6300;
+        static int Etel16_akcio = 0;
 
-        public int Etel17_ar = 3900;
-        public int Etel17_akcio = 0;
+        static int Etel17_ar = 3900;
+        static int Etel17_akcio = 0;
 
-        public int Etel18_ar = 4200;
-        public int Etel18_akcio = 0;
+        static int Etel18_ar = 4200;
+        static int Etel18_akcio = 0;
 
         //főételek
         //desszertek
-        public int Etel19_ar = 600;
-        public int Etel19_akcio = 0;
+        static int Etel19_ar = 600;
+        static int Etel19_akcio = 0;
 
-        public int Etel20_ar = 1200;
-        public int Etel20_akcio = 0;
+        static int Etel20_ar = 1200;
+        static int Etel20_akcio = 0;
 
-        public int Etel21_ar = 2000;
-        public int Etel21_akcio = 0;
+        static int Etel21_ar = 2000;
+        static int Etel21_akcio = 0;
 
-        public int Etel22_ar = 300;
-        public int Etel22_akcio = 0;
+        static int Etel22_ar = 300;
+        static int Etel22_akcio = 0;
 
-        public int Etel23_ar = 350;
-        public int Etel23_akcio = 0;
+        static int Etel23_ar = 350;
+        static int Etel23_akcio = 0;
 
-        public int Etel24_ar = 700;
-        public int Etel24_akcio = 0;
+        static int Etel24_ar = 700;
+        static int Etel24_akcio = 0;
         //desszertek
         //üdítők
-        public int Etel25_ar = 500;
-        public int Etel25_akcio = 0;
+        static int Etel25_ar = 500;
+        static int Etel25_akcio = 0;
 
-        public int Etel26_ar = 450;
-        public int Etel26_akcio = 0;
+        static int Etel26_ar = 450;
+        static int Etel26_akcio = 0;
 
-        public int Etel27_ar = 400;
-        public int Etel27_akcio = 0;
+        static int Etel27_ar = 400;
+        static int Etel27_akcio = 0;
 
-        public int Etel28_ar = 700;
-        public int Etel28_akcio = 0;
+        static int Etel28_ar = 700;
+        static int Etel28_akcio = 0;
 
-        public int Etel29_ar = 700;
-        public int Etel29_akcio = 0;
+        static int Etel29_ar = 700;
+        static int Etel29_akcio = 0;
 
-        public int Etel30_ar = 800;
-        public int Etel30_akcio = 0;
+        static int Etel30_ar = 800;
+        static int Etel30_akcio = 0;
         //üdítők
         public MainWindow()
         {
