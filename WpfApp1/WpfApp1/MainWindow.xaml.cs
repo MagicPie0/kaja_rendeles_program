@@ -146,156 +146,127 @@ namespace WpfApp1
             //előételek
             termek ter1 = new termek(Etel1_ar, Etel1_akcio, "Bruschetta");
             etel1_ar.Content = "Ár: " + ter1.Ar + "Ft";
-            akcio_etel1.Content = ter1.Akcio + "%";
             etel1_nev.Content = ter1.Nev;
 
             termek ter2 = new termek(Etel2_ar, Etel2_akcio, "Pogácsa");
             etel2_ar.Content = "Ár: " + ter2.Ar + "Ft";
-            akcio_etel2.Content = ter2.Akcio + "%";
             etel2_nev.Content = ter2.Nev;
 
             termek ter3 = new termek(Etel3_ar, Etel3_akcio, "Szendvics");
             etel3_ar.Content = "Ár: " + ter3.Ar + "Ft";
-            akcio_etel3.Content = ter3.Akcio + "%";
             etel3_nev.Content = ter3.Nev;
 
             termek ter4 = new termek(Etel4_ar, Etel4_akcio, "Saláta");
             etel4_ar.Content = "Ár: " + ter4.Ar + "Ft";
-            akcio_etel4.Content = ter4.Akcio + "%";
             etel4_nev.Content = ter4.Nev;
 
             termek ter5 = new termek(Etel5_ar, Etel5_akcio, "Rántotta");
             etel5_ar.Content = "Ár: " + ter5.Ar + "Ft";
-            akcio_etel5.Content = ter5.Akcio + "%";
             etel5_nev.Content = ter5.Nev;
 
             termek ter6 = new termek(Etel6_ar, Etel6_akcio, "Fasírt");
             etel6_ar.Content = "Ár: " + ter6.Ar + "Ft";
-            akcio_etel6.Content = ter6.Akcio + "%";
             etel6_nev.Content = ter6.Nev;
             //előételek
             //levesek
             termek ter7 = new termek(Etel7_ar, Etel7_akcio, "Paradicsom leves");
             etel7_ar.Content = "Ár: " + ter7.Ar + "Ft";
-            akcio_etel7.Content = ter7.Akcio + "%";
             etel7_nev.Content = ter7.Nev;
 
             termek ter8 = new termek(Etel8_ar, Etel8_akcio, "Sajtleves");
             etel8_ar.Content = "Ár: " + ter8.Ar + "Ft";
-            akcio_etel8.Content = ter8.Akcio + "%";
             etel8_nev.Content = ter8.Nev;
 
             termek ter9 = new termek(Etel9_ar, Etel9_akcio, "Bableves");
             etel9_ar.Content = "Ár: " + ter9.Ar + "Ft";
-            akcio_etel9.Content = ter9.Akcio + "%";
             etel9_nev.Content = ter9.Nev;
 
             termek ter10 = new termek(Etel10_ar, Etel10_akcio, "Fokhagymaleves");
             etel10_ar.Content = "Ár: " + ter10.Ar + "Ft";
-            akcio_etel10.Content = ter10.Akcio + "%";
             etel10_nev.Content = ter10.Nev;
 
             termek ter11 = new termek(Etel11_ar, Etel11_akcio, "Halászlé");
             etel11_ar.Content = "Ár: " + ter11.Ar + "Ft";
-            akcio_etel11.Content = ter11.Akcio + "%";
             etel11_nev.Content = ter11.Nev;
 
             termek ter12 = new termek(Etel12_ar, Etel12_akcio, "Ramen");
             etel12_ar.Content = "Ár: " + ter12.Ar + "Ft";
-            akcio_etel12.Content = ter12.Akcio + "%";
             etel12_nev.Content = ter12.Nev;
             //levesek
             //főételek
             termek ter13 = new termek(Etel13_ar, Etel13_akcio, "Omelette");
             etel13_ar.Content = "Ár: " + ter13.Ar + "Ft";
-            akcio_etel13.Content = ter13.Akcio + "%";
             etel13_nev.Content = ter13.Nev;
 
             termek ter14 = new termek(Etel14_ar, Etel14_akcio, "Mac 'N' Cheese");
             etel14_ar.Content = "Ár: " + ter14.Ar + "Ft";
-            akcio_etel14.Content = ter14.Akcio + "%";
             etel14_nev.Content = ter14.Nev;
 
             termek ter15 = new termek(Etel15_ar, Etel15_akcio, "Köfte");
             etel15_ar.Content = "Ár: " + ter15.Ar + "Ft";
-            akcio_etel15.Content = ter15.Akcio + "%";
             etel15_nev.Content = ter15.Nev;
 
             termek ter16 = new termek(Etel16_ar, Etel16_akcio, "Fisch And Chips");
             etel16_ar.Content = "Ár: " + ter16.Ar + "Ft";
-            akcio_etel16.Content = ter16.Akcio + "%";
             etel16_nev.Content = ter16.Nev;
 
             termek ter17 = new termek(Etel17_ar, Etel17_akcio, "Steak");
             etel17_ar.Content = "Ár: " + ter17.Ar + "Ft";
-            akcio_etel17.Content = ter17.Akcio + "%";
             etel17_nev.Content = ter17.Nev;
 
             termek ter18 = new termek(Etel18_ar, Etel18_akcio, "Teriyaki Tofu");
             etel18_ar.Content = "Ár: " + ter18.Ar + "Ft";
-            akcio_etel18.Content = ter18.Akcio + "%";
             etel18_nev.Content = ter18.Nev;
             //főételek
             //desszertek
             termek ter19 = new termek(Etel19_ar, Etel19_akcio, "Fagylalt");
             etel19_ar.Content = "Ár: " + ter19.Ar + "Ft";
-            akcio_etel19.Content = ter19.Akcio + "%";
             etel19_nev.Content = ter19.Nev;
 
             termek ter20 = new termek(Etel20_ar, Etel20_akcio, "Torta");
             etel20_ar.Content = "Ár: " + ter20.Ar + "Ft";
-            akcio_etel20.Content = ter20.Akcio + "%";
             etel20_nev.Content = ter20.Nev;
 
             termek ter21 = new termek(Etel21_ar, Etel21_akcio, "Pite");
             etel21_ar.Content = "Ár: " + ter21.Ar + "Ft";
-            akcio_etel21.Content = ter21.Akcio + "%";
             etel21_nev.Content = ter21.Nev;
 
             termek ter22 = new termek(Etel22_ar, Etel22_akcio, "Macaron");
             etel22_ar.Content = "Ár: " + ter22.Ar + "Ft";
-            akcio_etel22.Content = ter22.Akcio + "%";
             etel22_nev.Content = ter22.Nev;
 
             termek ter23 = new termek(Etel23_ar, Etel23_akcio, "Süti");
             etel23_ar.Content = "Ár: " + ter23.Ar + "Ft";
-            akcio_etel23.Content = ter23.Akcio + "%";
             etel23_nev.Content = ter23.Nev;
 
             termek ter24 = new termek(Etel24_ar, Etel24_akcio, "Fánk");
             etel24_ar.Content = "Ár: " + ter24.Ar + "Ft";
-            akcio_etel24.Content = ter24.Akcio + "%";
             etel24_nev.Content = ter24.Nev;
             //desszertek
             //üdítő
             termek ter25 = new termek(Etel25_ar, Etel25_akcio, "Coca-Cola");
             etel25_ar.Content = "Ár: " + ter25.Ar + "Ft";
-            akcio_etel25.Content = ter25.Akcio + "%";
             etel25_nev.Content = ter25.Nev;
 
             termek ter26 = new termek(Etel26_ar, Etel26_akcio, "Narancslé");
             etel26_ar.Content = "Ár: " + ter26.Ar + "Ft";
-            akcio_etel26.Content = ter26.Akcio + "%";
+            //akcio_etel26.Content = ter26.Akcio + "%";
             etel26_nev.Content = ter26.Nev;
 
             termek ter27 = new termek(Etel27_ar, Etel27_akcio, "Almalé");
             etel27_ar.Content = "Ár: " + ter27.Ar + "Ft";
-            akcio_etel27.Content = ter27.Akcio + "%";
             etel27_nev.Content = ter27.Nev;
 
             termek ter28 = new termek(Etel28_ar, Etel28_akcio, "Kávé");
             etel28_ar.Content = "Ár: " + ter28.Ar + "Ft";
-            akcio_etel28.Content = ter28.Akcio + "%";
             etel28_nev.Content = ter28.Nev;
 
             termek ter29 = new termek(Etel29_ar, Etel29_akcio, "Tea");
             etel29_ar.Content = "Ár: " + ter29.Ar + "Ft";
-            akcio_etel29.Content = ter29.Akcio + "%";
             etel29_nev.Content = ter29.Nev;
 
             termek ter30 = new termek(Etel30_ar, Etel30_akcio, "Jeges tea");
             etel30_ar.Content = "Ár: " + ter30.Ar + "Ft";
-            akcio_etel30.Content = ter30.Akcio + "%";
             etel30_nev.Content = ter30.Nev;
             //üdítő
 
@@ -316,7 +287,6 @@ namespace WpfApp1
             coupon.Visibility = Visibility.Hidden;
             profil.Visibility = Visibility.Hidden;
             kijelzo.Content = "Kosár";
-
         }
 
         private void fo_button_Click(object sender, RoutedEventArgs e)
@@ -1257,6 +1227,8 @@ namespace WpfApp1
             bejelentkezes.Visibility = Visibility.Visible;
             jelszo_input_bejelentkezes.Password = null;
         }
+
+
         //profil
     }
 }
