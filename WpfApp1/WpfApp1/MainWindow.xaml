@@ -492,7 +492,6 @@
             </Button.Background>
         </Button>
         <Grid x:Name="kosar" Margin="0,134,0,5" Visibility="Hidden">
-            <ListBox HorizontalAlignment="Left" Height="232" Margin="73,131,0,0" VerticalAlignment="Top" Width="943" Background="{x:Null}" BorderBrush="#FF000209"/>
             <Rectangle Height="293" Margin="1050,70,0,0" VerticalAlignment="Top" Fill="White" Opacity="0.65" HorizontalAlignment="Left" Width="549"/>
             <Rectangle HorizontalAlignment="Left" Height="234" Margin="73,129,0,0" VerticalAlignment="Top" Width="943" Fill="White" Opacity="0.65"/>
             <Rectangle HorizontalAlignment="Left" Height="369" Margin="852,401,0,0" VerticalAlignment="Top" Width="747" Fill="White" Opacity="0.65"/>
@@ -502,6 +501,7 @@
             <TextBox HorizontalAlignment="Left" Height="56" Margin="448,70,0,0" TextWrapping="Wrap" Text="Kosár Tartalma" VerticalAlignment="Top" Width="233" FontSize="36" Background="{x:Null}" Foreground="White" FontFamily="Dubai Light" FontWeight="Bold" BorderBrush="{x:Null}"/>
             <Rectangle HorizontalAlignment="Left" Height="57" Margin="1050,70,0,0" VerticalAlignment="Top" Width="549" Fill="Red" Opacity="0.65"/>
             <TextBox HorizontalAlignment="Left" Height="56" Margin="1177,71,0,0" TextWrapping="Wrap" Text="Rendelés Összegzése" VerticalAlignment="Top" Width="317" FontSize="36" Background="{x:Null}" Foreground="White" FontFamily="Dubai Light" FontWeight="Bold" BorderBrush="{x:Null}" />
+            <ListBox x:Name="kosar_tartalma" HorizontalAlignment="Left" Height="232" Margin="73,131,0,0" VerticalAlignment="Top" Width="943" Background="{x:Null}" BorderBrush="#FF000209"/>
             <Button Content="" HorizontalAlignment="Left" Margin="872,490,0,0" VerticalAlignment="Top" Width="160" Height="160"/>
             <Button Content="" HorizontalAlignment="Left" Margin="1054,490,0,0" VerticalAlignment="Top" Width="160" Height="160"/>
             <Button Content="" HorizontalAlignment="Left" Margin="1236,490,0,0" VerticalAlignment="Top" Width="160" Height="160"/>
@@ -540,27 +540,27 @@
             <Image x:Name="etel1_kep" Margin="136,261,1332,525" Source="/images/bruschetta.png" Stretch="Fill"/>
 
             <Label x:Name="etel1_nev" Content="Bruschetta" HorizontalAlignment="Left" Margin="188,214,0,0" VerticalAlignment="Top" Height="42" Width="128" FontSize="24"/>
-            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel1_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="156,0,0,0" VerticalAlignment="Center" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel1_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="156,0,0,0" VerticalAlignment="Center" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}" Click="etel1_gomb_Click"/>
             <Label x:Name="etel1_ar" Content="Ár: 4500Ft" HorizontalAlignment="Left" Margin="191,521,0,0" VerticalAlignment="Top" Height="44" Width="122" FontSize="24" FontStyle="Italic"/>
             <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel1" Content="10%" HorizontalAlignment="Left" Margin="328,527,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
             <Label x:Name="etel2_nev" Content="Pogácsa" HorizontalAlignment="Left" Margin="740,214,0,0" VerticalAlignment="Top" Height="42" Width="96" FontSize="24"/>
-            <Button Style="{DynamicResource ButtonStyle5}" x:Name="etel2_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="696,0,0,0" VerticalAlignment="Center" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Button Style="{DynamicResource ButtonStyle5}" x:Name="etel2_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="696,0,0,0" VerticalAlignment="Center" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}" Click="etel2_gomb_Click"/>
             <Label x:Name="etel2_ar" Content="Ár: 500Ft" HorizontalAlignment="Left" Margin="734,521,0,0" VerticalAlignment="Top" Height="44" Width="108" FontSize="24" FontStyle="Italic"/>
             <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel2" Content="10%" HorizontalAlignment="Left" Margin="856,526,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
             <Label x:Name="etel3_nev" Content="Szendvics" HorizontalAlignment="Left" Margin="1255,214,0,0" VerticalAlignment="Top" Height="42" Width="116" FontSize="24"/>
-            <Button Style="{DynamicResource ButtonStyle6}" x:Name="etel3_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="1216,478,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Button Style="{DynamicResource ButtonStyle6}" x:Name="etel3_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="1216,478,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}" Click="etel3_gomb_Click"/>
             <Label x:Name="etel3_ar" Content="Ár: 6000Ft" HorizontalAlignment="Left" Margin="1252,525,0,0" VerticalAlignment="Top" Height="44" Width="122" FontSize="24" FontStyle="Italic"/>
             <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel3" Content="10%" HorizontalAlignment="Left" Margin="1388,526,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
-            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel4_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="156,821,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel4_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="156,821,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}" Click="etel4_gomb_Click"/>
             <Label x:Name="etel4_nev" Content="Saláta" HorizontalAlignment="Left" Margin="214,559,0,0" VerticalAlignment="Top" Height="42" Width="76" FontSize="24"/>
             <Label x:Name="etel4_ar" Content="Ár: 8000Ft" HorizontalAlignment="Left" Margin="181,877,0,0" VerticalAlignment="Top" Height="44" Width="122" FontSize="24" FontStyle="Italic"/>
             <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel4" Content="10%" HorizontalAlignment="Left" Margin="328,883,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
             <Label x:Name="etel5_nev" Content="Rántotta" HorizontalAlignment="Left" Margin="738,559,0,0" VerticalAlignment="Top" Height="42" Width="102" FontSize="24"/>
-            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel5_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="711,823,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel5_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="711,823,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}" Click="etel5_gomb_Click"/>
             <Label x:Name="etel5_ar" Content="Ár: 10000Ft" HorizontalAlignment="Left" Margin="722,877,0,0" VerticalAlignment="Top" Height="44" Width="134" FontSize="24" FontStyle="Italic"/>
             <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel5" Content="10%" HorizontalAlignment="Left" Margin="856,883,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
             <Label x:Name="etel6_nev" Content="Fasírt" HorizontalAlignment="Left" Margin="1280,559,0,0" VerticalAlignment="Top" Height="42" Width="66" FontSize="24"/>
-            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel6_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="1227,821,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel6_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="1227,821,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}" Click="etel6_gomb_Click"/>
             <Label x:Name="etel6_ar" Content="Ár: 10000Ft" HorizontalAlignment="Left" Margin="1246,877,0,0" VerticalAlignment="Top" Height="44" Width="134" FontSize="24" FontStyle="Italic"/>
             <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel6" Content="10%" HorizontalAlignment="Left" Margin="1388,883,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
             <Image x:Name="etel1_kep_Copy" Margin="672,261,796,525" Source="/images/cake (1).png" Stretch="Fill"/>
@@ -569,7 +569,7 @@
             <Image x:Name="etel1_kep_Copy3" Margin="673,606,795,180" Source="/images/fried-rice.png" Stretch="Fill"/>
             <Image x:Name="etel1_kep_Copy4" Margin="1197,606,271,180" Source="/images/meatballs.png" Stretch="Fill"/>
         </Grid>
-        <Grid Name="levesek" Margin="89,-5,-89,5" Visibility="Hidden">
+        <Grid Name="levesek" Margin="89,-5,-89,5">
             <Rectangle x:Name="etel7_hatter" HorizontalAlignment="Left" Height="351" Margin="1106,214,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
             <Rectangle x:Name="etel8_hatter" HorizontalAlignment="Left" Height="350" Margin="574,214,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
             <Rectangle x:Name="etel9_hatter" HorizontalAlignment="Left" Height="351" Margin="46,214,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
@@ -579,27 +579,27 @@
             <Image x:Name="etel7_kep" Margin="134,261,1334,525" Source="/images/meatball.png" Stretch="Fill"/>
 
             <Label x:Name="etel7_nev" Content="Paradicsom leves" HorizontalAlignment="Left" Margin="146,214,0,0" VerticalAlignment="Top" Height="42" Width="192" FontSize="24"/>
-            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel7_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="156,0,0,0" VerticalAlignment="Center" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel7_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="156,0,0,0" VerticalAlignment="Center" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}" Click="etel7_gomb_Click"/>
             <Label x:Name="etel7_ar" Content="Ár: 4500Ft" HorizontalAlignment="Left" Margin="189,523,0,0" VerticalAlignment="Top" Height="44" Width="122" FontSize="24" FontStyle="Italic"/>
             <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel7" Content="10%" HorizontalAlignment="Left" Margin="328,527,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
             <Label x:Name="etel8_nev" Content="Sajtleves" HorizontalAlignment="Left" Margin="717,214,0,0" VerticalAlignment="Top" Height="42" Width="106" FontSize="24"/>
-            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel8_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="684,473,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel8_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="684,473,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}" Click="etel8_gomb_Click"/>
             <Label x:Name="etel8_ar" Content="Ár: 4500Ft" HorizontalAlignment="Left" Margin="709,524,0,0" VerticalAlignment="Top" Height="44" Width="122" FontSize="24" FontStyle="Italic"/>
             <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel8" Content="10%" HorizontalAlignment="Left" Margin="856,526,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
             <Label x:Name="etel9_nev" Content="Bableves" HorizontalAlignment="Left" Margin="1249,214,0,0" VerticalAlignment="Top" Height="42" Width="106" FontSize="24"/>
-            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel9_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="1216,478,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel9_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="1216,478,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}" Click="etel9_gomb_Click"/>
             <Label x:Name="etel9_ar" Content="Ár: 4500Ft" HorizontalAlignment="Left" Margin="1241,524,0,0" VerticalAlignment="Top" Height="44" Width="122" FontSize="24" FontStyle="Italic"/>
             <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel9" Content="10%" HorizontalAlignment="Left" Margin="1388,527,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
             <Label x:Name="etel10_nev" Content="Fokhagymaleves" HorizontalAlignment="Left" Margin="146,573,0,0" VerticalAlignment="Top" Height="42" Width="192" FontSize="24"/>
-            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel10_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="156,829,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel10_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="156,829,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}" Click="etel10_gomb_Click"/>
             <Label x:Name="etel10_ar" Content="Ár: 4500Ft" HorizontalAlignment="Left" Margin="189,877,0,0" VerticalAlignment="Top" Height="44" Width="122" FontSize="24" FontStyle="Italic"/>
             <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel10" Content="10%" HorizontalAlignment="Left" Margin="328,883,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
             <Label x:Name="etel11_nev" Content="Halászlé" HorizontalAlignment="Left" Margin="722,573,0,0" VerticalAlignment="Top" Height="42" Width="96" FontSize="24"/>
-            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel11_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="684,823,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel11_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="684,823,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}" Click="etel11_gomb_Click"/>
             <Label x:Name="etel11_ar" Content="Ár: 4500Ft" HorizontalAlignment="Left" Margin="709,877,0,0" VerticalAlignment="Top" Height="44" Width="122" FontSize="24" FontStyle="Italic"/>
             <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel11" Content="10%" HorizontalAlignment="Left" Margin="856,883,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
             <Label x:Name="etel12_nev" Content="Ramen" HorizontalAlignment="Left" Margin="1260,570,0,0" VerticalAlignment="Top" Height="42" Width="84" FontSize="24"/>
-            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel12_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="1216,829,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}"/>
+            <Button Style="{DynamicResource ButtonStyle4}" x:Name="etel12_gomb" Content="Kosárba" HorizontalAlignment="Left" Margin="1216,829,0,0" VerticalAlignment="Top" Height="64" Width="172" Background="{x:Null}" FontSize="48" Foreground="Black" BorderBrush="{x:Null}" Click="etel12_gomb_Click"/>
             <Label x:Name="etel12_ar" Content="Ár: 4500Ft" HorizontalAlignment="Left" Margin="1241,877,0,0" VerticalAlignment="Top" Height="44" Width="122" FontSize="24" FontStyle="Italic"/>
             <Button Style="{DynamicResource ButtonStyle1}" x:Name="akcio_etel12" Content="10%" HorizontalAlignment="Left" Margin="1388,883,0,0" VerticalAlignment="Top" Height="38" Width="110" BorderBrush="{x:Null}" Background="#FF209E27" FontSize="24"/>
             <Image x:Name="etel8_kep" Margin="654,261,814,525" Source="/images/soup.png" Stretch="Fill"/>
@@ -828,7 +828,7 @@
             <TextBlock x:Name="szazalek_kiiras" HorizontalAlignment="Left" Margin="555,708,0,0" TextWrapping="Wrap" Text="20%" VerticalAlignment="Top" Height="60" Width="575" TextAlignment="Center" FontSize="36"/>
         </Grid>
 
-        <Grid x:Name="profil">
+        <Grid x:Name="profil" Visibility="Hidden">
             <Rectangle Height="750" Margin="385,172,385,0" VerticalAlignment="Top" Fill="White" Opacity="0.65"/>
             <Image x:Name="profil_kep" Height="249" Margin="710,187,710,0" VerticalAlignment="Top"/>
             <TextBlock Margin="518,441,518,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Background="White" TextAlignment="Center" FontSize="48"/>
