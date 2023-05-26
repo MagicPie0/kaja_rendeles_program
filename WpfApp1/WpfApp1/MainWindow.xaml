@@ -491,7 +491,7 @@
                 <ImageBrush ImageSource="/images/man.png" Stretch="Fill"/>
             </Button.Background>
         </Button>
-        <Grid x:Name="kosar" Margin="0,134,0,5" Visibility="Hidden">
+        <Grid x:Name="kosar" Margin="0,134,0,5" Visibility="Visible">
             <Rectangle Height="293" Margin="1050,70,0,0" VerticalAlignment="Top" Fill="White" Opacity="0.65" HorizontalAlignment="Left" Width="549"/>
             <Rectangle HorizontalAlignment="Left" Height="234" Margin="73,129,0,0" VerticalAlignment="Top" Width="943" Fill="White" Opacity="0.65"/>
             <Rectangle HorizontalAlignment="Left" Height="369" Margin="852,401,0,0" VerticalAlignment="Top" Width="747" Fill="White" Opacity="0.65"/>
@@ -514,6 +514,7 @@
             <TextBlock HorizontalAlignment="Left" Margin="1236,655,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="40" Width="160"/>
             <TextBlock HorizontalAlignment="Left" Margin="1418,700,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="40" Width="160"/>
             <TextBlock HorizontalAlignment="Left" Margin="1418,655,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="40" Width="160"/>
+            <TextBlock x:Name="ossz_ki" HorizontalAlignment="Left" Margin="1050,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="234" Width="549" FontSize="36" Text="erge5rge5" TextAlignment="Center"/>
         </Grid>
 
         <Button Style="{DynamicResource ButtonStyle2}" x:Name="coupon_button" Content="" HorizontalAlignment="Left" Margin="283,6,0,0" VerticalAlignment="Top" Height="126" Width="137" BorderBrush="{x:Null}" RenderTransformOrigin="0.5,0.5" Click="coupon_button_Click">
@@ -569,7 +570,7 @@
             <Image x:Name="etel1_kep_Copy3" Margin="673,606,795,180" Source="/images/fried-rice.png" Stretch="Fill"/>
             <Image x:Name="etel1_kep_Copy4" Margin="1197,606,271,180" Source="/images/meatballs.png" Stretch="Fill"/>
         </Grid>
-        <Grid Name="levesek" Margin="89,-5,-89,5">
+        <Grid Name="levesek" Margin="89,-5,-89,5" Visibility="Hidden">
             <Rectangle x:Name="etel7_hatter" HorizontalAlignment="Left" Height="351" Margin="1106,214,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
             <Rectangle x:Name="etel8_hatter" HorizontalAlignment="Left" Height="350" Margin="574,214,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>
             <Rectangle x:Name="etel9_hatter" HorizontalAlignment="Left" Height="351" Margin="46,214,0,0" VerticalAlignment="Top" Width="392" Fill="White" Opacity="0.65"/>

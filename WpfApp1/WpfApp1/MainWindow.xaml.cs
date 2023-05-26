@@ -117,7 +117,9 @@ namespace WpfApp1
         static int Etel30_ar = 800;
         static int Etel30_akcio = 0;
         //üdítők
-        public List<string> etelek = new List<string>();     
+        static List<string> etelek = new List<string>();
+        static int ossz_db = 0;
+        static int ossz_ar = 0;
 
         public MainWindow()
         {
@@ -294,6 +296,8 @@ namespace WpfApp1
             profil.Visibility = Visibility.Hidden;
             kijelzo.Content = "Kosár";
             //design
+
+            ossz_ki.Text = "Összegzés: " + ossz_db + "db " + ossz_ar + "Ft";
         }
 
         private void fo_button_Click(object sender, RoutedEventArgs e)
@@ -858,6 +862,7 @@ namespace WpfApp1
                     Etel1_akcio = szazalek;
                     akcio_etel1.Content = "-" + szazalek + "%";
                     etel1_ar.Content = "Ár: " + Akciozas(Etel1_ar, szazalek) + "Ft";
+                    Etel1_ar = Akciozas(Etel1_ar, szazalek);
                     break;
                 case 2:
                     coupon_nev.Text = "Pogácsa";
@@ -865,6 +870,7 @@ namespace WpfApp1
                     Etel2_akcio = szazalek;
                     akcio_etel2.Content = "-" + szazalek + "%";
                     etel2_ar.Content = "Ár: " + Akciozas(Etel2_ar, szazalek) + "Ft";
+                    Etel2_ar = Akciozas(Etel2_ar, szazalek);
                     break;
                 case 3:
                     coupon_nev.Text = "Szendvics";
@@ -872,6 +878,7 @@ namespace WpfApp1
                     Etel3_akcio = szazalek;
                     akcio_etel3.Content = "-" + szazalek + "%";
                     etel3_ar.Content = "Ár: " + Akciozas(Etel3_ar, szazalek) + "Ft";
+                    Etel3_ar = Akciozas(Etel3_ar, szazalek);
                     break;
                 case 4:
                     coupon_nev.Text = "Saláta";
@@ -879,6 +886,7 @@ namespace WpfApp1
                     Etel4_akcio = szazalek;
                     akcio_etel4.Content = "-" + szazalek + "%";
                     etel4_ar.Content = "Ár: " + Akciozas(Etel4_ar, szazalek) + "Ft";
+                    Etel4_ar = Akciozas(Etel4_ar, szazalek);
                     break;
                 case 5:
                     coupon_nev.Text = "Rántotta";
@@ -886,6 +894,7 @@ namespace WpfApp1
                     Etel5_akcio = szazalek;
                     akcio_etel5.Content = "-" + szazalek + "%";
                     etel5_ar.Content = "Ár: " + Akciozas(Etel5_ar, szazalek) + "Ft";
+                    Etel5_ar = Akciozas(Etel5_ar, szazalek);
                     break;
                 case 6:
                     coupon_nev.Text = "Fasírt";
@@ -893,6 +902,7 @@ namespace WpfApp1
                     Etel6_akcio = szazalek;
                     etel6_ar.Content = "Ár: " + Akciozas(Etel6_ar, szazalek) + "Ft";
                     akcio_etel6.Content = "-" + szazalek + "%";
+                    Etel6_ar = Akciozas(Etel6_ar, szazalek);
                     break;
                 case 7:
                     coupon_nev.Text = "Paradicsom leves";
@@ -900,6 +910,7 @@ namespace WpfApp1
                     Etel7_akcio = szazalek;
                     akcio_etel7.Content = "-" + szazalek + "%";
                     etel7_ar.Content = "Ár: " + Akciozas(Etel7_ar, szazalek) + "Ft";
+                    Etel7_ar = Akciozas(Etel7_ar, szazalek);
                     break;
                 case 8:
                     coupon_nev.Text = "Sajtleves";
@@ -907,6 +918,7 @@ namespace WpfApp1
                     Etel8_akcio = szazalek;
                     akcio_etel8.Content = "-" + szazalek + "%";
                     etel8_ar.Content = "Ár: " + Akciozas(Etel8_ar, szazalek) + "Ft";
+                    Etel8_ar = Akciozas(Etel8_ar, szazalek);
                     break;
                 case 9:
                     coupon_nev.Text = "Bableves";
@@ -914,6 +926,7 @@ namespace WpfApp1
                     Etel9_akcio = szazalek;
                     akcio_etel9.Content = "-" + szazalek + "%";
                     etel9_ar.Content = "Ár: " + Akciozas(Etel9_ar, szazalek) + "Ft";
+                    Etel9_ar = Akciozas(Etel9_ar, szazalek);
                     break;
                 case 10:
                     coupon_nev.Text = "Fokhagymaleves";
@@ -921,6 +934,7 @@ namespace WpfApp1
                     Etel10_akcio = szazalek;
                     akcio_etel10.Content = "-" + szazalek + "%";
                     etel10_ar.Content = "Ár: " + Akciozas(Etel10_ar, szazalek) + "Ft";
+                    Etel10_ar = Akciozas(Etel10_ar, szazalek);
                     break;
                 case 11:
                     coupon_nev.Text = "Halászlé";
@@ -928,6 +942,7 @@ namespace WpfApp1
                     Etel11_akcio = szazalek;
                     akcio_etel11.Content = "-" + szazalek + "%";
                     etel11_ar.Content = "Ár: " + Akciozas(Etel11_ar, szazalek) + "Ft";
+                    Etel11_ar = Akciozas(Etel11_ar, szazalek);
                     break;
                 case 12:
                     coupon_nev.Text = "Ramen";
@@ -935,13 +950,15 @@ namespace WpfApp1
                     Etel12_akcio = szazalek;
                     akcio_etel12.Content = "-" + szazalek + "%";
                     etel12_ar.Content = "Ár: " + Akciozas(Etel12_ar, szazalek) + "Ft";
+                    Etel12_ar = Akciozas(Etel12_ar, szazalek);
                     break;
                 case 13:
                     coupon_nev.Text = "Omelette";
                     coupon_kep.Source = Kep("/images/omelette.png");
                     Etel13_akcio = szazalek;
                     akcio_etel13.Content = "-" + szazalek + "%";
-                    etel3_ar.Content = "Ár: " + Akciozas(Etel13_ar, szazalek) + "Ft";
+                    etel13_ar.Content = "Ár: " + Akciozas(Etel13_ar, szazalek) + "Ft";
+                    Etel13_ar = Akciozas(Etel13_ar, szazalek);
                     break;
                 case 14:
                     coupon_nev.Text = "Mac 'N' Cheese";
@@ -949,6 +966,7 @@ namespace WpfApp1
                     Etel14_akcio = szazalek;
                     akcio_etel14.Content = "-" + szazalek + "%";
                     etel14_ar.Content = "Ár: " + Akciozas(Etel14_ar, szazalek) + "Ft";
+                    Etel14_ar = Akciozas(Etel14_ar, szazalek);
                     break;
                 case 15:
                     coupon_nev.Text = "Köfte";
@@ -956,6 +974,7 @@ namespace WpfApp1
                     Etel15_akcio = szazalek;
                     akcio_etel15.Content = "-" + szazalek + "%";
                     etel15_ar.Content = "Ár: " + Akciozas(Etel15_ar, szazalek) + "Ft";
+                    Etel15_ar = Akciozas(Etel15_ar, szazalek);
                     break;
                 case 16:
                     coupon_nev.Text = "Fisch And Chips";
@@ -963,6 +982,7 @@ namespace WpfApp1
                     Etel16_akcio = szazalek;
                     akcio_etel16.Content = "-" + szazalek + "%";
                     etel16_ar.Content = "Ár: " + Akciozas(Etel16_ar, szazalek) + "Ft";
+                    Etel16_ar = Akciozas(Etel16_ar, szazalek);
                     break;
                 case 17:
                     coupon_nev.Text = "Steak";
@@ -970,6 +990,7 @@ namespace WpfApp1
                     Etel17_akcio = szazalek;
                     akcio_etel17.Content = "-" + szazalek + "%";
                     etel17_ar.Content = "Ár: " + Akciozas(Etel17_ar, szazalek) + "Ft";
+                    Etel17_ar = Akciozas(Etel17_ar, szazalek);
                     break;
                 case 18:
                     coupon_nev.Text = "Teriyaki Tofu";
@@ -977,6 +998,7 @@ namespace WpfApp1
                     Etel18_akcio = szazalek;
                     akcio_etel18.Content = "-" + szazalek + "%";
                     etel18_ar.Content = "Ár: " + Akciozas(Etel18_ar, szazalek) + "Ft";
+                    Etel18_ar = Akciozas(Etel18_ar, szazalek);
                     break;
                 case 19:
                     coupon_nev.Text = "Fagylalt";
@@ -984,6 +1006,7 @@ namespace WpfApp1
                     Etel19_akcio = szazalek;
                     akcio_etel19.Content = "-" + szazalek + "%";
                     etel19_ar.Content = "Ár: " + Akciozas(Etel19_ar, szazalek) + "Ft";
+                    Etel19_ar = Akciozas(Etel19_ar, szazalek);
                     break;
                 case 20:
                     coupon_nev.Text = "Torta";
@@ -991,6 +1014,7 @@ namespace WpfApp1
                     Etel20_akcio = szazalek;
                     akcio_etel20.Content = "-" + szazalek + "%";
                     etel20_ar.Content = "Ár: " + Akciozas(Etel20_ar, szazalek) + "Ft";
+                    Etel20_ar = Akciozas(Etel20_ar, szazalek);
                     break;
                 case 21:
                     coupon_nev.Text = "Pite";
@@ -998,6 +1022,7 @@ namespace WpfApp1
                     Etel21_akcio = szazalek;
                     akcio_etel21.Content = "-" + szazalek + "%";
                     etel21_ar.Content = "Ár: " + Akciozas(Etel21_ar, szazalek) + "Ft";
+                    Etel21_ar = Akciozas(Etel21_ar, szazalek);
                     break;
                 case 22:
                     coupon_nev.Text = "Macaron";
@@ -1005,6 +1030,7 @@ namespace WpfApp1
                     Etel22_akcio = szazalek;
                     akcio_etel22.Content = "-" + szazalek + "%";
                     etel22_ar.Content = "Ár: " + Akciozas(Etel22_ar, szazalek) + "Ft";
+                    Etel22_ar = Akciozas(Etel22_ar, szazalek);
                     break;
                 case 23:
                     coupon_nev.Text = "Süti";
@@ -1012,6 +1038,7 @@ namespace WpfApp1
                     Etel23_akcio = szazalek;
                     akcio_etel23.Content = "-" + szazalek + "%";
                     etel23_ar.Content = "Ár: " + Akciozas(Etel23_ar, szazalek) + "Ft";
+                    Etel23_ar = Akciozas(Etel23_ar, szazalek);
                     break;
                 case 24:
                     coupon_nev.Text = "Fánk";
@@ -1019,6 +1046,7 @@ namespace WpfApp1
                     Etel24_akcio = szazalek;
                     akcio_etel24.Content = "-" + szazalek + "%";
                     etel24_ar.Content = "Ár: " + Akciozas(Etel24_ar, szazalek) + "Ft";
+                    Etel24_ar = Akciozas(Etel24_ar, szazalek);
                     break;
                 case 25:
                     coupon_nev.Text = "Coca-Cola";
@@ -1026,6 +1054,7 @@ namespace WpfApp1
                     Etel25_akcio = szazalek;
                     akcio_etel25.Content = "-" + szazalek + "%";
                     etel25_ar.Content = "Ár: " + Akciozas(Etel25_ar, szazalek) + "Ft";
+                    Etel25_ar = Akciozas(Etel25_ar, szazalek);
                     break;
                 case 26:
                     coupon_nev.Text = "Narancslé";
@@ -1033,6 +1062,7 @@ namespace WpfApp1
                     Etel26_akcio = szazalek;
                     akcio_etel26.Content = "-" + szazalek + "%";
                     etel26_ar.Content = "Ár: " + Akciozas(Etel26_ar, szazalek) + "Ft";
+                    Etel26_ar = Akciozas(Etel26_ar, szazalek);
                     break;
                 case 27:
                     coupon_nev.Text = "Almalé";
@@ -1040,6 +1070,7 @@ namespace WpfApp1
                     Etel27_akcio = szazalek;
                     akcio_etel27.Content = "-" + szazalek + "%";
                     etel27_ar.Content = "Ár: " + Akciozas(Etel27_ar, szazalek) + "Ft";
+                    Etel27_ar = Akciozas(Etel27_ar, szazalek);
                     break;
                 case 28:
                     coupon_nev.Text = "Kávé";
@@ -1047,6 +1078,7 @@ namespace WpfApp1
                     Etel28_akcio = szazalek;
                     akcio_etel28.Content = "-" + szazalek + "%";
                     etel28_ar.Content = "Ár: " + Akciozas(Etel28_ar, szazalek) + "Ft";
+                    Etel28_ar = Akciozas(Etel28_ar, szazalek);
                     break;
                 case 29:
                     coupon_nev.Text = "Tea";
@@ -1054,6 +1086,7 @@ namespace WpfApp1
                     Etel29_akcio = szazalek;
                     akcio_etel29.Content = "-" + szazalek + "%";
                     etel29_ar.Content = "Ár: " + Akciozas(Etel29_ar, szazalek) + "Ft";
+                    Etel29_ar = Akciozas(Etel29_ar, szazalek);
                     break;
                 case 30:
                     coupon_nev.Text = "Jeges tea";
@@ -1061,6 +1094,7 @@ namespace WpfApp1
                     Etel30_akcio = szazalek;
                     akcio_etel30.Content = "-" + szazalek + "%";
                     etel30_ar.Content = "Ár: " + Akciozas(Etel30_ar, szazalek) + "Ft";
+                    Etel30_ar = Akciozas(Etel30_ar, szazalek);
                     break;
             }
 
@@ -1238,6 +1272,8 @@ namespace WpfApp1
         //eloetelek gomb
         private void etel1_gomb_Click(object sender, RoutedEventArgs e)
         {
+            ossz_db++;
+            ossz_ar += Etel1_ar;
             etelek.Add("Bruschetta");
 
             int etel1 = 0;
@@ -1247,14 +1283,16 @@ namespace WpfApp1
             {
                 if (etel1 > 1)
                 {
-                    kosar_tartalma.Items.Remove("Bruschetta " + (etel1 - 1) + "db " + ((Akciozas(Etel1_ar, Etel1_akcio) * etel1) - Akciozas(Etel1_ar, Etel1_akcio)) + "Ft" + "\t");
+                    kosar_tartalma.Items.Remove("Bruschetta " + (etel1 - 1) + "db " + ((Etel1_ar * etel1) - Etel1_ar) + "Ft" + "\t");
                 }
-                kosar_tartalma.Items.Add("Bruschetta " + etel1 + "db " + (Akciozas(Etel1_ar, Etel1_akcio) * etel1) + "Ft" + "\t");
+                kosar_tartalma.Items.Add("Bruschetta " + etel1 + "db " + (Etel1_ar * etel1) + "Ft" + "\t");
             }
         }
 
         private void etel2_gomb_Click(object sender, RoutedEventArgs e)
         {
+            ossz_db++;
+            ossz_ar += Etel2_ar;
             etelek.Add("Pogácsa");
             int etel2 = 0;
             etel2 = etelek.Count(x => x == "Pogácsa");
@@ -1262,14 +1300,16 @@ namespace WpfApp1
             {
                 if (etel2 > 1)
                 {
-                    kosar_tartalma.Items.Remove("Pogácsa " + (etel2 - 1) + "db " + ((Akciozas(Etel2_ar, Etel2_akcio) * etel2) - Akciozas(Etel2_ar, Etel2_akcio)) + "Ft" + "\t");
+                    kosar_tartalma.Items.Remove("Pogácsa " + (etel2 - 1) + "db " + ((Etel2_ar * etel2) - Etel2_ar) + "Ft" + "\t");
                 }
-                kosar_tartalma.Items.Add("Pogácsa " + etel2 + "db " + (Akciozas(Etel2_ar, Etel2_akcio) * etel2) + "Ft" + "\t");
+                kosar_tartalma.Items.Add("Pogácsa " + etel2 + "db " + (Etel2_ar * etel2) + "Ft" + "\t");
             }
         }
 
         private void etel3_gomb_Click(object sender, RoutedEventArgs e)
         {
+            ossz_db++;
+            ossz_ar += Etel3_ar;
             etelek.Add("Szendvics");
             int etel2 = 0;
             etel2 = etelek.Count(x => x == "Szendvics");
@@ -1277,14 +1317,16 @@ namespace WpfApp1
             {
                 if (etel2 > 1)
                 {
-                    kosar_tartalma.Items.Remove("Szendvics " + (etel2 - 1) + "db " + ((Akciozas(Etel3_ar, Etel3_akcio) * etel2) - Akciozas(Etel3_ar, Etel3_akcio)) + "Ft" + "\t");
+                    kosar_tartalma.Items.Remove("Szendvics " + (etel2 - 1) + "db " + ((Etel3_ar * etel2) - Etel3_ar) + "Ft" + "\t");
                 }
-                kosar_tartalma.Items.Add("Szendvics " + etel2 + "db " + (Akciozas(Etel3_ar, Etel3_akcio) * etel2) + "Ft" + "\t");
+                kosar_tartalma.Items.Add("Szendvics " + etel2 + "db " + (Etel3_ar * etel2) + "Ft" + "\t");
             }
         }
 
         private void etel4_gomb_Click(object sender, RoutedEventArgs e)
         {
+            ossz_db++;
+            ossz_ar += Etel4_ar;
             etelek.Add("Saláta");
             int etel2 = 0;
             etel2 = etelek.Count(x => x == "Saláta");
@@ -1292,14 +1334,16 @@ namespace WpfApp1
             {
                 if (etel2 > 1)
                 {
-                    kosar_tartalma.Items.Remove("Saláta " + (etel2 - 1) + "db " + ((Akciozas(Etel4_ar, Etel4_akcio) * etel2) - Akciozas(Etel4_ar, Etel4_akcio)) + "Ft" + "\t");
+                    kosar_tartalma.Items.Remove("Saláta " + (etel2 - 1) + "db " + ((Etel4_ar * etel2) - Etel4_ar) + "Ft" + "\t");
                 }
-                kosar_tartalma.Items.Add("Saláta " + etel2 + "db " + (Akciozas(Etel4_ar, Etel4_akcio) * etel2) + "Ft" + "\t");
+                kosar_tartalma.Items.Add("Saláta " + etel2 + "db " + (Etel4_ar * etel2) + "Ft" + "\t");
             }
         }
 
         private void etel5_gomb_Click(object sender, RoutedEventArgs e)
         {
+            ossz_db++;
+            ossz_ar += Etel5_ar;
             etelek.Add("Rántotta");
             int etel2 = 0;
             etel2 = etelek.Count(x => x == "Rántotta");
@@ -1307,14 +1351,16 @@ namespace WpfApp1
             {
                 if (etel2 > 1)
                 {
-                    kosar_tartalma.Items.Remove("Rántotta " + (etel2 - 1) + "db " + ((Akciozas(Etel5_ar, Etel5_akcio) * etel2) - Akciozas(Etel5_ar, Etel5_akcio)) + "Ft" + "\t");
+                    kosar_tartalma.Items.Remove("Rántotta " + (etel2 - 1) + "db " + ((Etel5_ar * etel2) - Etel5_ar) + "Ft" + "\t");
                 }
-                kosar_tartalma.Items.Add("Rántotta " + etel2 + "db " + (Akciozas(Etel5_ar, Etel5_akcio) * etel2) + "Ft" + "\t");
+                kosar_tartalma.Items.Add("Rántotta " + etel2 + "db " + (Etel5_ar * etel2) + "Ft" + "\t");
             }
         }
 
         private void etel6_gomb_Click(object sender, RoutedEventArgs e)
         {
+            ossz_db++;
+            ossz_ar += Etel6_ar;
             etelek.Add("Fasírt");
             int etel2 = 0;
             etel2 = etelek.Count(x => x == "Fasírt");
@@ -1322,9 +1368,9 @@ namespace WpfApp1
             {
                 if (etel2 > 1)
                 {
-                    kosar_tartalma.Items.Remove("Fasírt " + (etel2 - 1) + "db " + ((Akciozas(Etel6_ar, Etel6_akcio) * etel2) - Akciozas(Etel6_ar, Etel6_akcio)) + "Ft" + "\t");
+                    kosar_tartalma.Items.Remove("Fasírt " + (etel2 - 1) + "db " + ((Etel6_ar * etel2) - Etel6_ar) + "Ft" + "\t");
                 }
-                kosar_tartalma.Items.Add("Fasírt " + etel2 + "db " + (Akciozas(Etel6_ar, Etel6_akcio) * etel2) + "Ft" + "\t");
+                kosar_tartalma.Items.Add("Fasírt " + etel2 + "db " + (Etel6_ar * etel2) + "Ft" + "\t");
             }
         }
         //eloetelek gomb
@@ -1332,6 +1378,8 @@ namespace WpfApp1
         //levesek gomb
         private void etel7_gomb_Click(object sender, RoutedEventArgs e)
         {
+            ossz_db++;
+            ossz_ar += Etel7_ar;
             etelek.Add("Paradicsom leves");
             int etel2 = 0;
             etel2 = etelek.Count(x => x == "Paradicsom leves");
@@ -1339,14 +1387,16 @@ namespace WpfApp1
             {
                 if (etel2 > 1)
                 {
-                    kosar_tartalma.Items.Remove("Paradicsom leves" + (etel2 - 1) + "db " + ((Akciozas(Etel7_ar, Etel7_akcio) * etel2) - Akciozas(Etel7_ar, Etel7_akcio)) + "Ft" + "\t");
+                    kosar_tartalma.Items.Remove("Paradicsom leves" + (etel2 - 1) + "db " + ((Etel7_ar * etel2) - Etel7_ar) + "Ft" + "\t");
                 }
-                kosar_tartalma.Items.Add("Paradicsom leves" + etel2 + "db " + (Akciozas(Etel7_ar, Etel7_akcio) * etel2) + "Ft" + "\t");
+                kosar_tartalma.Items.Add("Paradicsom leves" + etel2 + "db " + (Etel7_ar * etel2) + "Ft" + "\t");
             }
         }
 
         private void etel8_gomb_Click(object sender, RoutedEventArgs e)
         {
+            ossz_db++;
+            ossz_ar += Etel8_ar;
             etelek.Add("Sajtleves");
             int etel2 = 0;
             etel2 = etelek.Count(x => x == "Sajtleves");
@@ -1354,14 +1404,16 @@ namespace WpfApp1
             {
                 if (etel2 > 1)
                 {
-                    kosar_tartalma.Items.Remove("Sajtleves" + (etel2 - 1) + "db " + ((Akciozas(Etel8_ar, Etel8_akcio) * etel2) - Akciozas(Etel8_ar, Etel8_akcio)) + "Ft" + "\t");
+                    kosar_tartalma.Items.Remove("Sajtleves" + (etel2 - 1) + "db " + ((Etel8_ar * etel2) - Etel8_ar) + "Ft" + "\t");
                 }
-                kosar_tartalma.Items.Add("Sajtleves" + etel2 + "db " + (Akciozas(Etel8_ar, Etel8_akcio) * etel2) + "Ft" + "\t");
+                kosar_tartalma.Items.Add("Sajtleves" + etel2 + "db " + (Etel8_ar * etel2) + "Ft" + "\t");
             }
         }
 
         private void etel9_gomb_Click(object sender, RoutedEventArgs e)
         {
+            ossz_db++;
+            ossz_ar += Etel9_ar;
             etelek.Add("Bableves");
             int etel2 = 0;
             etel2 = etelek.Count(x => x == "Bableves");
@@ -1369,14 +1421,16 @@ namespace WpfApp1
             {
                 if (etel2 > 1)
                 {
-                    kosar_tartalma.Items.Remove("Bableves" + (etel2 - 1) + "db " + ((Akciozas(Etel9_ar, Etel9_akcio) * etel2) - Akciozas(Etel9_ar, Etel9_akcio)) + "Ft" + "\t");
+                    kosar_tartalma.Items.Remove("Bableves" + (etel2 - 1) + "db " + ((Etel9_ar * etel2) - Etel9_ar) + "Ft" + "\t");
                 }
-                kosar_tartalma.Items.Add("Bableves" + etel2 + "db " + (Akciozas(Etel9_ar, Etel9_akcio) * etel2) + "Ft" + "\t");
+                kosar_tartalma.Items.Add("Bableves" + etel2 + "db " + (Etel9_ar * etel2) + "Ft" + "\t");
             }
         }
 
         private void etel10_gomb_Click(object sender, RoutedEventArgs e)
         {
+            ossz_db++;
+            ossz_ar += Etel10_ar;
             etelek.Add("Fokhagymaleves");
             int etel2 = 0;
             etel2 = etelek.Count(x => x == "Fokhagymaleves");
@@ -1384,14 +1438,16 @@ namespace WpfApp1
             {
                 if (etel2 > 1)
                 {
-                    kosar_tartalma.Items.Remove("Fokhagymaleves" + (etel2 - 1) + "db " + ((Akciozas(Etel10_ar, Etel11_akcio) * etel2) - Akciozas(Etel10_ar, Etel10_akcio)) + "Ft" + "\t");
+                    kosar_tartalma.Items.Remove("Fokhagymaleves" + (etel2 - 1) + "db " + ((Etel10_ar * etel2) - Etel10_ar) + "Ft" + "\t");
                 }
-                kosar_tartalma.Items.Add("Fokhagymaleves" + etel2 + "db " + (Akciozas(Etel10_ar, Etel10_akcio) * etel2) + "Ft" + "\t");
+                kosar_tartalma.Items.Add("Fokhagymaleves" + etel2 + "db " + (Etel10_ar * etel2) + "Ft" + "\t");
             }
         }
 
         private void etel11_gomb_Click(object sender, RoutedEventArgs e)
         {
+            ossz_db++;
+            ossz_ar += Etel11_ar;
             etelek.Add("Halászlé");
             int etel2 = 0;
             etel2 = etelek.Count(x => x == "Halászlé");
@@ -1399,14 +1455,16 @@ namespace WpfApp1
             {
                 if (etel2 > 1)
                 {
-                    kosar_tartalma.Items.Remove("Halászlé" + (etel2 - 1) + "db " + ((Akciozas(Etel11_ar, Etel11_akcio) * etel2) - Akciozas(Etel11_ar, Etel11_akcio)) + "Ft" + "\t");
+                    kosar_tartalma.Items.Remove("Halászlé" + (etel2 - 1) + "db " + ((Etel11_ar * etel2) - Etel11_ar) + "Ft" + "\t");
                 }
-                kosar_tartalma.Items.Add("Halászlé" + etel2 + "db " + (Akciozas(Etel11_ar, Etel11_akcio) * etel2) + "Ft" + "\t");
+                kosar_tartalma.Items.Add("Halászlé" + etel2 + "db " + (Etel11_ar * etel2) + "Ft" + "\t");
             }
         }
 
         private void etel12_gomb_Click(object sender, RoutedEventArgs e)
         {
+            ossz_db++;
+            ossz_ar += Etel12_ar;
             etelek.Add("Ramen");
             int etel2 = 0;
             etel2 = etelek.Count(x => x == "Ramen");
@@ -1414,9 +1472,9 @@ namespace WpfApp1
             {
                 if (etel2 > 1)
                 {
-                    kosar_tartalma.Items.Remove("Ramen" + (etel2 - 1) + "db " + ((Akciozas(Etel12_ar, Etel12_akcio) * etel2) - Akciozas(Etel12_ar, Etel12_akcio)) + "Ft" + "\t");
+                    kosar_tartalma.Items.Remove("Ramen" + (etel2 - 1) + "db " + ((Etel12_ar * etel2) - Etel12_ar) + "Ft" + "\t");
                 }
-                kosar_tartalma.Items.Add("Ramen" + etel2 + "db " + (Akciozas(Etel12_ar, Etel12_akcio) * etel2) + "Ft" + "\t");
+                kosar_tartalma.Items.Add("Ramen" + etel2 + "db " + (Etel12_ar * etel2) + "Ft" + "\t");
             }
         }
         //levesek gomb
