@@ -121,6 +121,12 @@ namespace WpfApp1
         static int ossz_db = 0;
         static int ossz_ar = 0;
 
+        static int termek_kateegoriak = 0;
+        static int termek_1 = 0;
+        static int termek_2 = 0;
+        static int termek_3 = 0;
+        static int termek_4 = 0;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -280,6 +286,7 @@ namespace WpfApp1
 
             index = random.Next(0, szazalekok.Length);
             index2 = random.Next(0, nevek.Length);
+
             //design főoldal
         }
         //design főoldal
@@ -296,8 +303,158 @@ namespace WpfApp1
             profil.Visibility = Visibility.Hidden;
             kijelzo.Content = "Kosár";
             //design
-
+            vissza.Visibility = Visibility.Hidden;
+            tovabb.Visibility = Visibility.Hidden;
+            eloetel_jelzo.Visibility = Visibility.Hidden;
+            leves_jelzo.Visibility= Visibility.Hidden;
+            foetel_jelzo.Visibility = Visibility.Hidden;
+            desszert_jelzo.Visibility = Visibility.Hidden;
+            udito_jelzo.Visibility = Visibility.Hidden;
             ossz_ki.Text = "Összegzés: " + ossz_db + "db " + ossz_ar + "Ft";
+
+            string[] eloetelek_tomb = { "Bruschetta", "Pogácsa", "Szendvics", "Saláta", "Ránotta", "Fasírt" };
+            string[] levesek_tomb = { "Paradicsom leves", "Sajtleves", "Bableves", "Fokhagymaleves", "Halászlé", "Ramen" };
+            string[] foetelek_tomb = { "Omelette", "Mac 'N' Cheese", "Köfte", "Fisch And Chips", "Steak", "Teriyaki Tofu" };
+            string[] desszertek_tomb = { "Fagylalt", "Torta", "Pite", "Macaron", "Süti", "Fánk" };
+
+            termek_1 = random.Next(0, eloetelek_tomb.Length);
+            termek_2 = random.Next(0, levesek_tomb.Length);
+            termek_3 = random.Next(0, foetelek_tomb.Length);
+            termek_4 = random.Next(0, desszertek_tomb.Length);
+
+            switch (termek_1)
+            {
+                case 1:
+                    termek1_kep.Source = Kep("/images/bruschetta.png");
+                    termek1_nev.Text = "Bruschetta";
+                    termek1_ar.Text = Etel1_ar + "Ft";
+                    break;
+                case 2:
+                    termek1_kep.Source = Kep("/images/cake (1).png");
+                    termek1_nev.Text = "Pogácsa";
+                    termek1_ar.Text = Etel2_ar + "Ft";
+                    break;
+                case 3:
+                    termek1_kep.Source = Kep("/images/sandwich.png");
+                    termek1_nev.Text = "Szendvics";
+                    termek1_ar.Text = Etel3_ar + "Ft";
+                    break;
+                case 4:
+                    termek1_kep.Source = Kep("/images/salad (2).png");
+                    termek1_nev.Text = "Saláta";
+                    termek1_ar.Text = Etel4_ar + "Ft";
+                    break;
+                case 5:
+                    termek1_kep.Source = Kep("/images/fried-rice.png");
+                    termek1_nev.Text = "Rántotta";
+                    termek1_ar.Text = Etel5_ar + "Ft";
+                    break;
+                case 6:
+                    termek1_kep.Source = Kep("/images/meatballs.png");
+                    termek1_nev.Text = "Fasírt";
+                    termek1_ar.Text = Etel6_ar + "Ft";
+                    break;
+            }
+            switch (termek_2)
+            {
+                case 1:
+                    termek2_kep.Source = Kep("/images/meatball.png");
+                    termek2_nev.Text = "Paradicsom leves";
+                    termek2_ar.Text = Etel7_ar + "Ft";
+                    break;
+                case 2:
+                    termek2_kep.Source = Kep("/images/soup.png");
+                    termek2_nev.Text = "Sajtleves";
+                    termek2_ar.Text = Etel8_ar + "Ft";
+                    break;
+                case 3:
+                    termek2_kep.Source = Kep("/images/red-bean-soup.png");
+                    termek2_nev.Text = "Bableves";
+                    termek2_ar.Text = Etel9_ar + "Ft";
+                    break;
+                case 4:
+                    termek2_kep.Source = Kep("/images/garlic-soup.png");
+                    termek2_nev.Text = "Fokhagymaleves";
+                    termek2_ar.Text = Etel10_ar + "Ft";
+                    break;
+                case 5:
+                    termek2_kep.Source = Kep("/images/fish.png");
+                    termek2_nev.Text = "Halászlé";
+                    termek2_ar.Text = Etel11_ar + "Ft";
+                    break;
+                case 6:
+                    termek2_kep.Source = Kep("/images/ramen.png");
+                    termek2_nev.Text = "Ramen";
+                    termek2_ar.Text = Etel12_ar + "Ft";
+                    break;
+            }
+            switch (termek_3)
+            {
+                case 1:
+                    termek3_kep.Source = Kep("/images/omelette.png");
+                    termek3_nev.Text = "Omelette";
+                    termek3_ar.Text = Etel13_ar + "Ft";
+                    break;
+                case 2:
+                    termek3_kep.Source = Kep("/images/macaroni.png");
+                    termek3_nev.Text = "Mac 'N' Cheese";
+                    termek3_ar.Text = Etel14_ar + "Ft";
+                    break;
+                case 3:
+                    termek3_kep.Source = Kep("/images/kofte.png");
+                    termek3_nev.Text = "Köfte";
+                    termek3_ar.Text = Etel15_ar + "Ft";
+                    break;
+                case 4:
+                    termek3_kep.Source = Kep("/images/fish-and-chips.png");
+                    termek3_nev.Text = "Fisch And Chips";
+                    termek3_ar.Text = Etel16_ar + "Ft";
+                    break;
+                case 5:
+                    termek3_kep.Source = Kep("/images/steak.png");
+                    termek3_nev.Text = "Steak";
+                    termek3_ar.Text = Etel17_ar + "Ft";
+                    break;
+                case 6:
+                    termek3_kep.Source = Kep("/images/stinky-tofu.png");
+                    termek3_nev.Text = "Teriyaki Tofu";
+                    termek3_ar.Text = Etel18_ar + "Ft";
+                    break;
+            }
+            switch (termek_4)
+            {
+                case 1:
+                    termek4_kep.Source = Kep("/images/ice-cream.png");
+                    termek4_nev.Text = "Fagylalt";
+                    termek4_ar.Text = Etel19_ar + "Ft";
+                    break;
+                case 2:
+                    termek4_kep.Source = Kep("/images/cake.png");
+                    termek4_nev.Text = "Torta";
+                    termek4_ar.Text = Etel20_ar + "Ft";
+                    break;
+                case 3:
+                    termek4_kep.Source = Kep("/images/meat-pie.png");
+                    termek4_nev.Text = "Pite";
+                    termek4_ar.Text = Etel21_ar + "Ft";
+                    break;
+                case 4:
+                    termek4_kep.Source = Kep("/images/macaron.png");
+                    termek4_nev.Text = "Macaron";
+                    termek4_ar.Text = Etel22_ar + "Ft";
+                    break;
+                case 5:
+                    termek4_kep.Source = Kep("/images/choco-chip.png");
+                    termek4_nev.Text = "Süti";
+                    termek4_ar.Text = Etel23_ar + "Ft";
+                    break;
+                case 6:
+                    termek4_kep.Source = Kep("/images/donut.png");
+                    termek4_nev.Text = "Fánk";
+                    termek4_ar.Text = Etel24_ar + "Ft";
+                    break;
+            }
+
         }
 
         private void fo_button_Click(object sender, RoutedEventArgs e)
@@ -1172,7 +1329,8 @@ namespace WpfApp1
             kijelzo.Content = "Felhasználó";
             profil_ferfi.IsEnabled = false;
             profil_no.IsEnabled = false;
-
+            vissza.Visibility= Visibility.Hidden;
+            tovabb.Visibility = Visibility.Hidden;
             var etelek_jelzok = new[] { eloetel_jelzo, leves_jelzo, foetel_jelzo,
                                         desszert_jelzo, udito_jelzo};
             foreach (var item in etelek_jelzok) { item.Visibility = Visibility.Hidden; }
@@ -1480,5 +1638,336 @@ namespace WpfApp1
             }
         }
         //levesek gomb
+        //főételek gomb
+        private void etel13_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            ossz_db++;
+            ossz_ar += Etel13_ar;
+            etelek.Add("Omelette");
+            int etel2 = 0;
+            etel2 = etelek.Count(x => x == "Omelette");
+            if (etel2 > 0)
+            {
+                if (etel2 > 1)
+                {
+                    kosar_tartalma.Items.Remove("Omelette" + (etel2 - 1) + "db " + ((Etel13_ar * etel2) - Etel13_ar) + "Ft" + "\t");
+                }
+                kosar_tartalma.Items.Add("Omelette" + etel2 + "db " + (Etel13_ar * etel2) + "Ft" + "\t");
+            }
+        }
+
+        private void etel14_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            ossz_db++;
+            ossz_ar += Etel14_ar;
+            etelek.Add("Mac'N'Cheese");
+            int etel2 = 0;
+            etel2 = etelek.Count(x => x == "Mac'N'Cheese");
+            if (etel2 > 0)
+            {
+                if (etel2 > 1)
+                {
+                    kosar_tartalma.Items.Remove("Mac'N'Cheese" + (etel2 - 1) + "db " + ((Etel14_ar * etel2) - Etel14_ar) + "Ft" + "\t");
+                }
+                kosar_tartalma.Items.Add("Mac'N'Cheese" + etel2 + "db " + (Etel14_ar * etel2) + "Ft" + "\t");
+            }
+        }
+
+        private void etel15_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            ossz_db++;
+            ossz_ar += Etel15_ar;
+            etelek.Add("Köfte");
+            int etel2 = 0;
+            etel2 = etelek.Count(x => x == "Köfte");
+            if (etel2 > 0)
+            {
+                if (etel2 > 1)
+                {
+                    kosar_tartalma.Items.Remove("Köfte" + (etel2 - 1) + "db " + ((Etel15_ar * etel2) - Etel15_ar) + "Ft" + "\t");
+                }
+                kosar_tartalma.Items.Add("Köfte" + etel2 + "db " + (Etel15_ar * etel2) + "Ft" + "\t");
+            }
+        }
+
+        private void etel16_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            ossz_db++;
+            ossz_ar += Etel16_ar;
+            etelek.Add("Fisch and Chips");
+            int etel2 = 0;
+            etel2 = etelek.Count(x => x == "Fisch and Chips");
+            if (etel2 > 0)
+            {
+                if (etel2 > 1)
+                {
+                    kosar_tartalma.Items.Remove("Fisch and Chips" + (etel2 - 1) + "db " + ((Etel16_ar * etel2) - Etel16_ar) + "Ft" + "\t");
+                }
+                kosar_tartalma.Items.Add("Fisch and Chips" + etel2 + "db " + (Etel16_ar * etel2) + "Ft" + "\t");
+            }
+        }
+
+        private void etel17_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            ossz_db++;
+            ossz_ar += Etel17_ar;
+            etelek.Add("Steak");
+            int etel2 = 0;
+            etel2 = etelek.Count(x => x == "Steak");
+            if (etel2 > 0)
+            {
+                if (etel2 > 1)
+                {
+                    kosar_tartalma.Items.Remove("Steak" + (etel2 - 1) + "db " + ((Etel17_ar * etel2) - Etel17_ar) + "Ft" + "\t");
+                }
+                kosar_tartalma.Items.Add("Steak" + etel2 + "db " + (Etel17_ar * etel2) + "Ft" + "\t");
+            }
+        }
+
+        private void etel18_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            ossz_db++;
+            ossz_ar += Etel18_ar;
+            etelek.Add("Teriyaki Tofu");
+            int etel2 = 0;
+            etel2 = etelek.Count(x => x == "Teriyaki Tofu");
+            if (etel2 > 0)
+            {
+                if (etel2 > 1)
+                {
+                    kosar_tartalma.Items.Remove("Teriyaki Tofu" + (etel2 - 1) + "db " + ((Etel18_ar * etel2) - Etel18_ar) + "Ft" + "\t");
+                }
+                kosar_tartalma.Items.Add("Teriyaki Tofu" + etel2 + "db " + (Etel18_ar * etel2) + "Ft" + "\t");
+            }
+        }
+        //főételek gomb
+        //desszertek gomb
+        private void etel19_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            ossz_db++;
+            ossz_ar += Etel19_ar;
+            etelek.Add("Fagylalt");
+            int etel2 = 0;
+            etel2 = etelek.Count(x => x == "Fagylalt");
+            if (etel2 > 0)
+            {
+                if (etel2 > 1)
+                {
+                    kosar_tartalma.Items.Remove("Fagylalt" + (etel2 - 1) + "db " + ((Etel19_ar * etel2) - Etel19_ar) + "Ft" + "\t");
+                }
+                kosar_tartalma.Items.Add("Fagylalt" + etel2 + "db " + (Etel19_ar * etel2) + "Ft" + "\t");
+            }
+
+        }
+
+        private void etel20_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            ossz_db++;
+            ossz_ar += Etel20_ar;
+            etelek.Add("Torta");
+            int etel2 = 0;
+            etel2 = etelek.Count(x => x == "Torta");
+            if (etel2 > 0)
+            {
+                if (etel2 > 1)
+                {
+                    kosar_tartalma.Items.Remove("Torta" + (etel2 - 1) + "db " + ((Etel20_ar * etel2) - Etel20_ar) + "Ft" + "\t");
+                }
+                kosar_tartalma.Items.Add("Torta" + etel2 + "db " + (Etel20_ar * etel2) + "Ft" + "\t");
+            }
+        }
+
+        private void etel21_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            ossz_db++;
+            ossz_ar += Etel21_ar;
+            etelek.Add("Pite");
+            int etel2 = 0;
+            etel2 = etelek.Count(x => x == "Pite");
+            if (etel2 > 0)
+            {
+                if (etel2 > 1)
+                {
+                    kosar_tartalma.Items.Remove("Pite" + (etel2 - 1) + "db " + ((Etel21_ar * etel2) - Etel21_ar) + "Ft" + "\t");
+                }
+                kosar_tartalma.Items.Add("Pite" + etel2 + "db " + (Etel21_ar * etel2) + "Ft" + "\t");
+            }
+        }
+
+        private void etel22_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            ossz_db++;
+            ossz_ar += Etel22_ar;
+            etelek.Add("Macaron");
+            int etel2 = 0;
+            etel2 = etelek.Count(x => x == "Macaron");
+            if (etel2 > 0)
+            {
+                if (etel2 > 1)
+                {
+                    kosar_tartalma.Items.Remove("Macaron" + (etel2 - 1) + "db " + ((Etel22_ar * etel2) - Etel22_ar) + "Ft" + "\t");
+                }
+                kosar_tartalma.Items.Add("Macaron" + etel2 + "db " + (Etel22_ar * etel2) + "Ft" + "\t");
+            }
+        }
+
+        private void etel23_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            ossz_db++;
+            ossz_ar += Etel23_ar;
+            etelek.Add("Süti");
+            int etel2 = 0;
+            etel2 = etelek.Count(x => x == "Süti");
+            if (etel2 > 0)
+            {
+                if (etel2 > 1)
+                {
+                    kosar_tartalma.Items.Remove("Süti" + (etel2 - 1) + "db " + ((Etel23_ar * etel2) - Etel23_ar) + "Ft" + "\t");
+                }
+                kosar_tartalma.Items.Add("Süti" + etel2 + "db " + (Etel23_ar * etel2) + "Ft" + "\t");
+            }
+        }
+
+        private void etel24_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            ossz_db++;
+            ossz_ar += Etel24_ar;
+            etelek.Add("Fánk");
+            int etel2 = 0;
+            etel2 = etelek.Count(x => x == "Fánk");
+            if (etel2 > 0)
+            {
+                if (etel2 > 1)
+                {
+                    kosar_tartalma.Items.Remove("Fánk" + (etel2 - 1) + "db " + ((Etel24_ar * etel2) - Etel24_ar) + "Ft" + "\t");
+                }
+                kosar_tartalma.Items.Add("Fánk" + etel2 + "db " + (Etel24_ar * etel2) + "Ft" + "\t");
+            }
+        }
+        //desszertek gomb
+        //üdítők gomb
+        private void etel25_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            ossz_db++;
+            ossz_ar += Etel25_ar;
+            etelek.Add("Coca-Cola");
+            int etel2 = 0;
+            etel2 = etelek.Count(x => x == "Coca-Cola");
+            if (etel2 > 0)
+            {
+                if (etel2 > 1)
+                {
+                    kosar_tartalma.Items.Remove("Coca-Cola" + (etel2 - 1) + "db " + ((Etel25_ar * etel2) - Etel25_ar) + "Ft" + "\t");
+                }
+                kosar_tartalma.Items.Add("Coca-Cola" + etel2 + "db " + (Etel25_ar * etel2) + "Ft" + "\t");
+            }
+        }
+
+        private void etel26_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            ossz_db++;
+            ossz_ar += Etel26_ar;
+            etelek.Add("Narancslé");
+            int etel2 = 0;
+            etel2 = etelek.Count(x => x == "Narancslé");
+            if (etel2 > 0)
+            {
+                if (etel2 > 1)
+                {
+                    kosar_tartalma.Items.Remove("Narancslé" + (etel2 - 1) + "db " + ((Etel26_ar * etel2) - Etel26_ar) + "Ft" + "\t");
+                }
+                kosar_tartalma.Items.Add("Narancslé" + etel2 + "db " + (Etel26_ar * etel2) + "Ft" + "\t");
+            }
+        }
+
+        private void etel27_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            ossz_db++;
+            ossz_ar += Etel27_ar;
+            etelek.Add("Almalé");
+            int etel2 = 0;
+            etel2 = etelek.Count(x => x == "Almalé");
+            if (etel2 > 0)
+            {
+                if (etel2 > 1)
+                {
+                    kosar_tartalma.Items.Remove("Almalé" + (etel2 - 1) + "db " + ((Etel27_ar * etel2) - Etel27_ar) + "Ft" + "\t");
+                }
+                kosar_tartalma.Items.Add("Almalé" + etel2 + "db " + (Etel27_ar * etel2) + "Ft" + "\t");
+            }
+        }
+
+        private void etel28_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            ossz_db++;
+            ossz_ar += Etel28_ar;
+            etelek.Add("Kávé");
+            int etel2 = 0;
+            etel2 = etelek.Count(x => x == "Kávé");
+            if (etel2 > 0)
+            {
+                if (etel2 > 1)
+                {
+                    kosar_tartalma.Items.Remove("Kávé" + (etel2 - 1) + "db " + ((Etel28_ar * etel2) - Etel28_ar) + "Ft" + "\t");
+                }
+                kosar_tartalma.Items.Add("Kávé" + etel2 + "db " + (Etel28_ar * etel2) + "Ft" + "\t");
+            }
+        }
+
+        private void etel29_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            ossz_db++;
+            ossz_ar += Etel29_ar;
+            etelek.Add("Tea");
+            int etel2 = 0;
+            etel2 = etelek.Count(x => x == "Tea");
+            if (etel2 > 0)
+            {
+                if (etel2 > 1)
+                {
+                    kosar_tartalma.Items.Remove("Tea" + (etel2 - 1) + "db " + ((Etel29_ar * etel2) - Etel29_ar) + "Ft" + "\t");
+                }
+                kosar_tartalma.Items.Add("Tea" + etel2 + "db " + (Etel29_ar * etel2) + "Ft" + "\t");
+            }
+        }
+
+        private void etel30_gomb_Click(object sender, RoutedEventArgs e)
+        {
+            ossz_db++;
+            ossz_ar += Etel30_ar;
+            etelek.Add("Jeges Tea");
+            int etel2 = 0;
+            etel2 = etelek.Count(x => x == "Jeges Tea");
+            if (etel2 > 0)
+            {
+                if (etel2 > 1)
+                {
+                    kosar_tartalma.Items.Remove("Jeges Tea" + (etel2 - 1) + "db " + ((Etel30_ar * etel2) - Etel30_ar) + "Ft" + "\t");
+                }
+                kosar_tartalma.Items.Add("Jeges Tea" + etel2 + "db " + (Etel30_ar * etel2) + "Ft" + "\t");
+            }
+        }
+        //üdítők gomb
+        private void delete_Click(object sender, RoutedEventArgs e)
+        {
+            etelek.Clear();
+            kosar_tartalma.Items.Clear();
+            ossz_ar = 0;
+            ossz_db = 0;
+            ossz_ki.Text = "Összegzés: " + ossz_db + "db " + ossz_ar + "Ft";
+
+            MessageBox.Show("Az összes termék törölve lett!");
+        }
+
+        private void buy_Click(object sender, RoutedEventArgs e)
+        {
+            etelek.Clear();
+            kosar_tartalma.Items.Clear();
+            ossz_ar = 0;
+            ossz_db = 0;
+            ossz_ki.Text = "Összegzés: " + ossz_db + "db " + ossz_ar + "Ft";
+
+            MessageBox.Show("A rendelés elküldve, várhatóan a következő napon érkezik a termék!");
+        }
     }
 }
