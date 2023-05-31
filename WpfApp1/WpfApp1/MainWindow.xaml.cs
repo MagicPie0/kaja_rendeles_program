@@ -443,7 +443,7 @@ namespace WpfApp1
 
         //regisztrációs oldal
 
-        static string Jelszo_titkositas(string jelszo)
+        private static string Jelszo_titkositas(string jelszo)
         {
             char[] titkositott_jelszo = jelszo.ToCharArray();
 
@@ -451,11 +451,12 @@ namespace WpfApp1
             {
                 titkositott_jelszo[i] = (char)(titkositott_jelszo[i] + 10);
             }
+
             string titkos_jelszo = new string(titkositott_jelszo);
             return titkos_jelszo;
         }
 
-        static string Jelszo_visszaallitas(string jelszo)
+        private static string Jelszo_visszaallitas(string jelszo)
         {
             char[] visszaforditando_jelszo = jelszo.ToCharArray();
 
@@ -463,8 +464,9 @@ namespace WpfApp1
             {
                 visszaforditando_jelszo[i] = (char)(visszaforditando_jelszo[i] - 10);
             }
-            string titkos_jelszo = new string(visszaforditando_jelszo);
-            return titkos_jelszo;
+
+            string visszafejtett_jelszo = new string(visszaforditando_jelszo);
+            return visszafejtett_jelszo;
         }
 
         static BitmapImage Kep(string kep)
